@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Post 6 — AI Agent</title>
+<link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+<div class="post post--instagram">
+  <div class="bg-aurora"></div>
+  <div class="bg-grid"></div>
+
+  <div class="post-header">
+    <div class="post-logo">
+      <div class="post-logo-icon"></div>
+      <span>relay</span>
+    </div>
+    <div class="post-tagline">AI AGENT</div>
+  </div>
+
+  <div class="post-content">
+    <div class="post-label">Built-in AI · Shell-aware</div>
+    <h1 class="post-title">
+      Stuck?<br>
+      <span class="post-title-acc">Just ask.</span>
+    </h1>
+
+    <div class="term-mock" style="margin-top:32px;">
+      <div class="term-chrome">
+        <div class="term-dots"><span></span><span></span><span></span></div>
+        <div class="term-pane-badge">
+          <span class="term-pane-dot"></span>pane 0
+        </div>
+        <div class="term-cwd">~/dev/myproject</div>
+      </div>
+      <div class="term-body">
+        <div class="term-line">
+          <span class="term-prompt-out">[</span><span class="term-prompt-path">~/dev/myproject</span><span class="term-prompt-out">]</span>
+          <span class="term-prompt-cmd">&gt; relay ask "why is git rebase failing?"</span>
+        </div>
+        <div class="term-line"><span class="term-out">&nbsp;</span></div>
+        <div class="term-line"><span class="term-acc">▸ Analyzing context (last 3 commands, CWD)...</span></div>
+        <div class="term-line"><span class="term-out">&nbsp;</span></div>
+        <div class="term-line"><span class="term-out">  You have a merge conflict in src/index.ts.</span></div>
+        <div class="term-line"><span class="term-out">  Solution:</span></div>
+        <div class="term-line"><span class="term-acc">  → git rebase --continue after resolving conflict</span></div>
+        <div class="term-line"><span class="term-out">&nbsp;</span></div>
+        <div class="term-line">
+          <span class="term-prompt-out">[</span><span class="term-prompt-path">~/dev/myproject</span><span class="term-prompt-out">]</span>
+          <span class="term-prompt-cmd">&gt; </span><span class="term-cursor"></span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:32px; margin-top:32px; font-family:var(--mono); font-size:14px; color:var(--sec);">
+      <span><span style="color:var(--acc);">●</span> OpenAI</span>
+      <span><span style="color:var(--acc);">●</span> Anthropic</span>
+      <span><span style="color:var(--acc);">●</span> /save · /run · /context</span>
+    </div>
+  </div>
+
+  <div class="post-footer">
+    <span class="post-footer-url">→ relay.app/docs#agent</span>
+    <span class="post-footer-num">06 / 09</span>
+  </div>
+</div>
+</body>
+</html>

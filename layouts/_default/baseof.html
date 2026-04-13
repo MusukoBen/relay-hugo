@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<script>try{if(localStorage.getItem('relay-theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+<head>{{ partial "head.html" . }}</head>
+<body>
+{{ partial "nav.html" . }}
+<main>{{ block "main" . }}{{ end }}</main>
+{{ partial "footer.html" . }}
+<script src="/js/main.js"></script>
+</body>
+</html>

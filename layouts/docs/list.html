@@ -1,0 +1,536 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="section-inner">
+    <div class="section-label">{{ i18n "docs_label" }}</div>
+    <h1 class="page-title">{{ i18n "docs_title" }}</h1>
+    <p class="page-sub">{{ i18n "docs_sub" }}</p>
+  </div>
+</section>
+
+<section class="docs">
+  <div class="docs-inner">
+
+    <!-- Sidebar TOC -->
+    <nav class="docs-nav">
+      <div class="docs-nav-group">
+        <div class="docs-nav-label">{{ i18n "docs_nav_start" }}</div>
+        <a href="#installation" class="docs-nav-link">{{ i18n "docs_nav_installation" }}</a>
+        <a href="#first-steps" class="docs-nav-link">{{ i18n "docs_nav_first_steps" }}</a>
+        <a href="#shortcuts" class="docs-nav-link">{{ i18n "docs_nav_shortcuts" }}</a>
+      </div>
+      <div class="docs-nav-group">
+        <div class="docs-nav-label">{{ i18n "docs_nav_features" }}</div>
+        <a href="#themes" class="docs-nav-link">{{ i18n "docs_nav_themes" }}</a>
+        <a href="#light-theme" class="docs-nav-link">{{ i18n "docs_nav_light_theme" }}</a>
+        <a href="#layouts" class="docs-nav-link">{{ i18n "docs_nav_layouts" }}</a>
+        <a href="#prompts" class="docs-nav-link">{{ i18n "docs_nav_prompts" }}</a>
+        <a href="#workspaces" class="docs-nav-link">{{ i18n "docs_nav_workspaces" }}</a>
+        <a href="#project-memory" class="docs-nav-link">{{ i18n "docs_nav_project_memory" }}</a>
+      </div>
+      <div class="docs-nav-group">
+        <div class="docs-nav-label">{{ i18n "docs_nav_terminal" }}</div>
+        <a href="#shell" class="docs-nav-link">{{ i18n "docs_nav_shell" }}</a>
+        <a href="#shell-toggle" class="docs-nav-link">{{ i18n "docs_nav_shell_toggle" }}</a>
+        <a href="#infopanel" class="docs-nav-link">{{ i18n "docs_nav_infopanel" }}</a>
+        <a href="#ports" class="docs-nav-link">{{ i18n "docs_nav_ports" }}</a>
+        <a href="#agent" class="docs-nav-link">{{ i18n "docs_nav_agent" }}</a>
+        <a href="#explain-error" class="docs-nav-link">{{ i18n "docs_nav_explain_error" }}</a>
+        <a href="#semantic" class="docs-nav-link">{{ i18n "docs_nav_semantic" }}</a>
+      </div>
+      <div class="docs-nav-group">
+        <div class="docs-nav-label">{{ i18n "docs_nav_config" }}</div>
+        <a href="#settings" class="docs-nav-link">{{ i18n "docs_nav_settings" }}</a>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="docs-content">
+
+      <!-- ── INSTALLATION ── -->
+      <div class="docs-section" id="installation">
+        <h2>{{ i18n "docs_install_title" }}</h2>
+        <p>{{ i18n "docs_install_desc" }}</p>
+        <div class="docs-methods">
+          <div class="docs-method">
+            <h4>{{ i18n "docs_install_dmg" }}</h4>
+            <p>{{ i18n "docs_install_dmg_desc" }}</p>
+            <a href="/download/" class="btn btn--primary btn--sm">{{ i18n "docs_install_dmg_btn" }}</a>
+          </div>
+          <div class="docs-method">
+            <h4>Homebrew</h4>
+            <div class="docs-code"><code>brew install --cask relay</code></div>
+          </div>
+        </div>
+        <div class="docs-info">
+          <strong>{{ i18n "docs_install_req" }}</strong>: macOS 14 Sonoma+, Universal Binary (Apple Silicon & Intel)
+        </div>
+      </div>
+
+      <!-- ── FIRST STEPS ── -->
+      <div class="docs-section" id="first-steps">
+        <h2>{{ i18n "docs_first_title" }}</h2>
+        <p>{{ i18n "docs_first_desc" }}</p>
+        <div class="docs-grid-3">
+          <div class="docs-step">
+            <div class="docs-step-num">1</div>
+            <h4>{{ i18n "docs_first_step1_title" }}</h4>
+            <p>{{ i18n "docs_first_step1_desc" }}</p>
+          </div>
+          <div class="docs-step">
+            <div class="docs-step-num">2</div>
+            <h4>{{ i18n "docs_first_step2_title" }}</h4>
+            <p>{{ i18n "docs_first_step2_desc" }}</p>
+          </div>
+          <div class="docs-step">
+            <div class="docs-step-num">3</div>
+            <h4>{{ i18n "docs_first_step3_title" }}</h4>
+            <p>{{ i18n "docs_first_step3_desc" }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── KEYBOARD SHORTCUTS ── -->
+      <div class="docs-section" id="shortcuts">
+        <h2>{{ i18n "docs_shortcuts_title" }}</h2>
+        <p>{{ i18n "docs_shortcuts_desc" }}</p>
+        <table class="docs-table">
+          <thead>
+            <tr><th>{{ i18n "docs_shortcuts_col_key" }}</th><th>{{ i18n "docs_shortcuts_col_action" }}</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><kbd>⌘T</kbd></td><td>{{ i18n "docs_sc_new_pane" }}</td></tr>
+            <tr><td><kbd>⌘W</kbd></td><td>{{ i18n "docs_sc_close_pane" }}</td></tr>
+            <tr><td><kbd>⌘D</kbd></td><td>{{ i18n "docs_sc_split_h" }}</td></tr>
+            <tr><td><kbd>⌘⇧D</kbd></td><td>{{ i18n "docs_sc_split_v" }}</td></tr>
+            <tr><td><kbd>⌘⌥]</kbd></td><td>{{ i18n "docs_sc_focus_next" }}</td></tr>
+            <tr><td><kbd>⌘⌥[</kbd></td><td>{{ i18n "docs_sc_focus_prev" }}</td></tr>
+            <tr><td><kbd>⌘+</kbd></td><td>{{ i18n "docs_sc_font_up" }}</td></tr>
+            <tr><td><kbd>⌘−</kbd></td><td>{{ i18n "docs_sc_font_down" }}</td></tr>
+            <tr><td><kbd>⌘0</kbd></td><td>{{ i18n "docs_sc_font_reset" }}</td></tr>
+            <tr><td><kbd>⌘I</kbd></td><td>{{ i18n "docs_sc_info_panel" }}</td></tr>
+            <tr><td><kbd>⌘\</kbd></td><td>{{ i18n "docs_sc_icon_rail" }}</td></tr>
+            <tr><td><kbd>⌘P</kbd></td><td>{{ i18n "docs_sc_palette" }}</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ── THEMES ── -->
+      <div class="docs-section" id="themes">
+        <h2>{{ i18n "docs_themes_title" }}</h2>
+        <p>{{ i18n "docs_themes_desc" }}</p>
+
+        <h3>{{ i18n "docs_themes_layers_title" }}</h3>
+        <p>{{ i18n "docs_themes_layers_desc" }}</p>
+        <div class="docs-grid-3">
+          <div class="docs-card">
+            <div class="docs-card-label">Layer 1</div>
+            <h4>AppTheme</h4>
+            <p>{{ i18n "docs_themes_layer1" }}</p>
+          </div>
+          <div class="docs-card">
+            <div class="docs-card-label">Layer 2</div>
+            <h4>TerminalTheme</h4>
+            <p>{{ i18n "docs_themes_layer2" }}</p>
+          </div>
+          <div class="docs-card">
+            <div class="docs-card-label">Layer 3</div>
+            <h4>PromptStyle</h4>
+            <p>{{ i18n "docs_themes_layer3" }}</p>
+          </div>
+        </div>
+
+        <h3>{{ i18n "docs_themes_glass_title" }}</h3>
+        <p>{{ i18n "docs_themes_glass_desc" }}</p>
+        <div class="docs-theme-list">
+          <span class="docs-theme-chip" style="--tc:#4af09a">Relay Dark</span>
+          <span class="docs-theme-chip" style="--tc:#6c8fff">Midnight</span>
+          <span class="docs-theme-chip" style="--tc:#c084fc">Aurora</span>
+          <span class="docs-theme-chip" style="--tc:#f59e0b">Obsidian</span>
+          <span class="docs-theme-chip" style="--tc:#ff6b6b">Sunset</span>
+          <span class="docs-theme-chip" style="--tc:#67e8f9">Arctic</span>
+        </div>
+
+        <h3>{{ i18n "docs_themes_retro_title" }}</h3>
+        <p>{{ i18n "docs_themes_retro_desc" }}</p>
+        <div class="docs-theme-list">
+          <span class="docs-theme-chip docs-theme-chip--retro" style="--tc:#ff4400">BBC Micro</span>
+          <span class="docs-theme-chip docs-theme-chip--retro" style="--tc:#33ff33">Apple II</span>
+          <span class="docs-theme-chip docs-theme-chip--retro" style="--tc:#00ffff">Amstrad CPC</span>
+          <span class="docs-theme-chip docs-theme-chip--retro" style="--tc:#ffb000">VT100 Amber</span>
+          <span class="docs-theme-chip docs-theme-chip--retro" style="--tc:#00cc44">IBM 3270</span>
+          <span class="docs-theme-chip docs-theme-chip--retro" style="--tc:#1a1a1a;--bg:#f5f0e8">Xerox Alto</span>
+          <span class="docs-theme-chip docs-theme-chip--retro" style="--tc:#8bac0f">Game Boy</span>
+          <span class="docs-theme-chip docs-theme-chip--retro" style="--tc:#ffff00">ZX Spectrum</span>
+          <span class="docs-theme-chip docs-theme-chip--retro" style="--tc:#00aaaa">Retro DOS</span>
+          <span class="docs-theme-chip docs-theme-chip--retro" style="--tc:#8080ff">C64</span>
+        </div>
+
+        <h3>{{ i18n "docs_themes_tokens_title" }}</h3>
+        <p>{{ i18n "docs_themes_tokens_desc" }}</p>
+        <div class="docs-code"><code>bg · bgElevated · bgTerm · bgTabBar
+accent · accentGlow · accentDim
+border · borderHi
+fg · fgSecond · fgTertiary
+glassTint · glassBorder · glassHighlight
+scanlines · suggestedFontName · suggestedPromptStyle</code></div>
+      </div>
+
+      <!-- ── LIGHT THEME & AUTO-SWITCH ── -->
+      <div class="docs-section" id="light-theme">
+        <h2>{{ i18n "docs_light_title" }}</h2>
+        <p>{{ i18n "docs_light_desc" }}</p>
+        <h3>{{ i18n "docs_light_scheme_title" }}</h3>
+        <table class="docs-table">
+          <thead><tr><th>{{ i18n "docs_light_col_mode" }}</th><th>{{ i18n "docs_settings_col_desc" }}</th></tr></thead>
+          <tbody>
+            <tr><td><strong>{{ i18n "docs_light_mode_dark" }}</strong></td><td>{{ i18n "docs_light_mode_dark_desc" }}</td></tr>
+            <tr><td><strong>{{ i18n "docs_light_mode_light" }}</strong></td><td>{{ i18n "docs_light_mode_light_desc" }}</td></tr>
+            <tr><td><strong>{{ i18n "docs_light_mode_auto" }}</strong></td><td>{{ i18n "docs_light_mode_auto_desc" }}</td></tr>
+          </tbody>
+        </table>
+        <p class="docs-note">{{ i18n "docs_light_note" }}</p>
+      </div>
+
+      <!-- ── PANE LAYOUTS ── -->
+      <div class="docs-section" id="layouts">
+        <h2>{{ i18n "docs_layouts_title" }}</h2>
+        <p>{{ i18n "docs_layouts_desc" }}</p>
+        <table class="docs-table">
+          <thead>
+            <tr><th>Layout</th><th>{{ i18n "docs_layouts_col_panes" }}</th><th>{{ i18n "docs_layouts_col_desc" }}</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>Single</code></td><td>1</td><td>{{ i18n "docs_layout_single" }}</td></tr>
+            <tr><td><code>2 Side</code></td><td>2</td><td>{{ i18n "docs_layout_2side" }}</td></tr>
+            <tr><td><code>2 Stack</code></td><td>2</td><td>{{ i18n "docs_layout_2stack" }}</td></tr>
+            <tr><td><code>1+2</code></td><td>3</td><td>{{ i18n "docs_layout_1plus2" }}</td></tr>
+            <tr><td><code>2×2</code></td><td>4</td><td>{{ i18n "docs_layout_2x2" }}</td></tr>
+            <tr><td><code>Focus</code></td><td>2</td><td>{{ i18n "docs_layout_focus" }}</td></tr>
+          </tbody>
+        </table>
+        <div class="docs-info">{{ i18n "docs_layouts_info" }}</div>
+      </div>
+
+      <!-- ── PROMPT STYLES ── -->
+      <div class="docs-section" id="prompts">
+        <h2>{{ i18n "docs_prompts_title" }}</h2>
+        <p>{{ i18n "docs_prompts_desc" }}</p>
+        <table class="docs-table">
+          <thead>
+            <tr><th>{{ i18n "docs_prompts_col_style" }}</th><th>{{ i18n "docs_prompts_col_origin" }}</th><th>{{ i18n "docs_prompts_col_powerline" }}</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Relay Compact</td><td>Built-in</td><td>—</td></tr>
+            <tr><td>Robbyrussell</td><td>Oh My Zsh</td><td>—</td></tr>
+            <tr><td>Bureau</td><td>Oh My Zsh</td><td>—</td></tr>
+            <tr><td>Minimal</td><td>Built-in</td><td>—</td></tr>
+            <tr><td>Bira</td><td>Oh My Zsh</td><td>—</td></tr>
+            <tr><td>Lambda</td><td>Oh My Zsh</td><td>—</td></tr>
+            <tr><td>Powerblocks</td><td>Built-in</td><td>✓</td></tr>
+            <tr><td>Agnoster</td><td>Plugin</td><td>✓</td></tr>
+            <tr><td>Spaceship</td><td>Plugin</td><td>—</td></tr>
+            <tr><td>Powerlevel10k</td><td>Plugin</td><td>✓</td></tr>
+            <tr><td>Starship</td><td>{{ i18n "docs_prompts_external" }}</td><td>—</td></tr>
+          </tbody>
+        </table>
+        <div class="docs-info">{{ i18n "docs_prompts_info" }}</div>
+      </div>
+
+      <!-- ── WORKSPACES ── -->
+      <div class="docs-section" id="workspaces">
+        <h2>{{ i18n "docs_workspaces_title" }}</h2>
+        <p>{{ i18n "docs_workspaces_desc" }}</p>
+        <ul class="docs-list">
+          <li>{{ i18n "docs_ws_own_theme" }}</li>
+          <li>{{ i18n "docs_ws_own_layout" }}</li>
+          <li>{{ i18n "docs_ws_own_panes" }}</li>
+          <li>{{ i18n "docs_ws_persist" }}</li>
+          <li>{{ i18n "docs_ws_broadcast" }}</li>
+          <li>{{ i18n "docs_ws_shell" }}</li>
+        </ul>
+      </div>
+
+      <!-- ── PROJECT MEMORY ── -->
+      <div class="docs-section" id="project-memory">
+        <h2>{{ i18n "docs_pmem_title" }}</h2>
+        <p>{{ i18n "docs_pmem_desc" }}</p>
+        <ul class="docs-list">
+          <li>{{ i18n "docs_pmem_commands" }}</li>
+          <li>{{ i18n "docs_pmem_dirs" }}</li>
+          <li>{{ i18n "docs_pmem_retention" }}</li>
+          <li>{{ i18n "docs_pmem_sidebar" }}</li>
+        </ul>
+        <h3>{{ i18n "docs_pmem_storage_title" }}</h3>
+        <p>{{ i18n "docs_pmem_storage_desc" }}</p>
+        <div class="docs-code"><code>~/.config/relay/memory/&lt;hash&gt;.json</code></div>
+        <p class="docs-note">{{ i18n "docs_pmem_note" }}</p>
+      </div>
+
+      <!-- ── SHELL INTEGRATION ── -->
+      <div class="docs-section" id="shell">
+        <h2>{{ i18n "docs_shell_title" }}</h2>
+        <p>{{ i18n "docs_shell_desc" }}</p>
+
+        <h3>{{ i18n "docs_shell_supported" }}</h3>
+        <table class="docs-table">
+          <thead>
+            <tr><th>Shell</th><th>{{ i18n "docs_shell_col_integration" }}</th><th>{{ i18n "docs_shell_col_hooks" }}</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>zsh</code></td><td>ZDOTDIR → <code>~/.config/relay/</code></td><td>precmd / preexec</td></tr>
+            <tr><td><code>bash</code></td><td>--rcfile <code>~/.config/relay/.bashrc</code></td><td>PROMPT_COMMAND + DEBUG trap</td></tr>
+            <tr><td><code>fish</code></td><td>-C source <code>~/.config/relay/fish/</code></td><td>fish_preexec / fish_postexec</td></tr>
+          </tbody>
+        </table>
+
+        <h3>{{ i18n "docs_shell_osc_title" }}</h3>
+        <p>{{ i18n "docs_shell_osc_desc" }}</p>
+        <table class="docs-table docs-table--compact">
+          <thead>
+            <tr><th>OSC</th><th>{{ i18n "docs_shell_col_purpose" }}</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>OSC 133;A</code></td><td>{{ i18n "docs_osc_133a" }}</td></tr>
+            <tr><td><code>OSC 133;B</code></td><td>{{ i18n "docs_osc_133b" }}</td></tr>
+            <tr><td><code>OSC 133;C</code></td><td>{{ i18n "docs_osc_133c" }}</td></tr>
+            <tr><td><code>OSC 133;D;exit</code></td><td>{{ i18n "docs_osc_133d" }}</td></tr>
+            <tr><td><code>OSC 7</code></td><td>{{ i18n "docs_osc_7" }}</td></tr>
+            <tr><td><code>OSC 1337</code></td><td>{{ i18n "docs_osc_1337" }}</td></tr>
+            <tr><td><code>OSC 9999;ask</code></td><td>{{ i18n "docs_osc_9999" }}</td></tr>
+          </tbody>
+        </table>
+
+        <h3>{{ i18n "docs_shell_modes_title" }}</h3>
+        <p>{{ i18n "docs_shell_modes_desc" }}</p>
+        <div class="docs-grid-2">
+          <div class="docs-card">
+            <h4>{{ i18n "docs_shell_mode_relay" }}</h4>
+            <p>{{ i18n "docs_shell_mode_relay_desc" }}</p>
+          </div>
+          <div class="docs-card">
+            <h4>{{ i18n "docs_shell_mode_user" }}</h4>
+            <p>{{ i18n "docs_shell_mode_user_desc" }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PER-PANE SHELL TOGGLE ── -->
+      <div class="docs-section" id="shell-toggle">
+        <h2>{{ i18n "docs_toggle_title" }}</h2>
+        <p>{{ i18n "docs_toggle_desc" }}</p>
+        <ul class="docs-list">
+          <li>{{ i18n "docs_toggle_badge" }}</li>
+          <li>{{ i18n "docs_toggle_click" }}</li>
+          <li>{{ i18n "docs_toggle_independent" }}</li>
+        </ul>
+      </div>
+
+      <!-- ── INFO PANEL ── -->
+      <div class="docs-section" id="infopanel">
+        <h2>{{ i18n "docs_info_title" }}</h2>
+        <p>{{ i18n "docs_info_desc" }}</p>
+        <div class="docs-grid-2">
+          <div class="docs-card">
+            <h4>{{ i18n "docs_info_memory" }}</h4>
+            <p>{{ i18n "docs_info_memory_desc" }}</p>
+          </div>
+          <div class="docs-card">
+            <h4>{{ i18n "docs_info_recent" }}</h4>
+            <p>{{ i18n "docs_info_recent_desc" }}</p>
+          </div>
+          <div class="docs-card">
+            <h4>{{ i18n "docs_info_favorites" }}</h4>
+            <p>{{ i18n "docs_info_favorites_desc" }}</p>
+          </div>
+          <div class="docs-card">
+            <h4>{{ i18n "docs_info_dirs" }}</h4>
+            <p>{{ i18n "docs_info_dirs_desc" }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── OPEN PORTS ── -->
+      <div class="docs-section" id="ports">
+        <h2>{{ i18n "docs_ports_title" }}</h2>
+        <p>{{ i18n "docs_ports_desc" }}</p>
+        <ul class="docs-list">
+          <li>{{ i18n "docs_ports_detect" }}</li>
+          <li>{{ i18n "docs_ports_pid" }}</li>
+          <li>{{ i18n "docs_ports_kill" }}</li>
+          <li>{{ i18n "docs_ports_sudo" }}</li>
+        </ul>
+        <h3>{{ i18n "docs_vpn_title" }}</h3>
+        <p>{{ i18n "docs_vpn_desc" }}</p>
+      </div>
+
+      <!-- ── AI AGENT ── -->
+      <div class="docs-section" id="agent">
+        <h2>{{ i18n "docs_agent_title" }}</h2>
+        <p>{{ i18n "docs_agent_desc" }}</p>
+
+        <h3>{{ i18n "docs_agent_usage_title" }}</h3>
+        <div class="docs-code"><code>relay ask "{{ i18n "docs_agent_example" }}"</code></div>
+
+        <h3>{{ i18n "docs_agent_providers_title" }}</h3>
+        <table class="docs-table docs-table--compact">
+          <thead>
+            <tr><th>Provider</th><th>{{ i18n "docs_agent_col_models" }}</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>OpenAI</td><td>gpt-4o-mini, gpt-4, gpt-4o</td></tr>
+            <tr><td>Anthropic</td><td>claude-haiku-4-5, claude-sonnet, claude-opus</td></tr>
+          </tbody>
+        </table>
+
+        <h3>{{ i18n "docs_agent_commands_title" }}</h3>
+        <table class="docs-table docs-table--compact">
+          <thead>
+            <tr><th>{{ i18n "docs_agent_col_cmd" }}</th><th>{{ i18n "docs_agent_col_desc" }}</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>/help</code></td><td>{{ i18n "docs_agent_cmd_help" }}</td></tr>
+            <tr><td><code>/save</code></td><td>{{ i18n "docs_agent_cmd_save" }}</td></tr>
+            <tr><td><code>/clear</code></td><td>{{ i18n "docs_agent_cmd_clear" }}</td></tr>
+            <tr><td><code>/model</code></td><td>{{ i18n "docs_agent_cmd_model" }}</td></tr>
+            <tr><td><code>/copy</code></td><td>{{ i18n "docs_agent_cmd_copy" }}</td></tr>
+            <tr><td><code>/context</code></td><td>{{ i18n "docs_agent_cmd_context" }}</td></tr>
+            <tr><td><code>/run</code></td><td>{{ i18n "docs_agent_cmd_run" }}</td></tr>
+            <tr><td><code>/tokens</code></td><td>{{ i18n "docs_agent_cmd_tokens" }}</td></tr>
+            <tr><td><code>/exit</code></td><td>{{ i18n "docs_agent_cmd_exit" }}</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ── EXPLAIN ERROR ── -->
+      <div class="docs-section" id="explain-error">
+        <h2>{{ i18n "docs_explain_title" }}</h2>
+        <p>{{ i18n "docs_explain_desc" }}</p>
+        <ul class="docs-list">
+          <li>{{ i18n "docs_explain_badge" }}</li>
+          <li>{{ i18n "docs_explain_click" }}</li>
+          <li>{{ i18n "docs_explain_requires" }}</li>
+        </ul>
+      </div>
+
+      <!-- ── SEMANTIC COLORIZER ── -->
+      <div class="docs-section" id="semantic">
+        <h2>{{ i18n "docs_semantic_title" }}</h2>
+        <p>{{ i18n "docs_semantic_desc" }}</p>
+        <table class="docs-table">
+          <thead>
+            <tr><th>{{ i18n "docs_semantic_col_pattern" }}</th><th>{{ i18n "docs_semantic_col_color" }}</th><th>{{ i18n "docs_semantic_col_example" }}</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>{{ i18n "docs_sem_errors" }}</td><td style="color:#ff5f57">{{ i18n "docs_sem_red" }}</td><td><code>error, fatal, exception</code></td></tr>
+            <tr><td>{{ i18n "docs_sem_warnings" }}</td><td style="color:#ffbd2e">{{ i18n "docs_sem_yellow" }}</td><td><code>warning, deprecated</code></td></tr>
+            <tr><td>{{ i18n "docs_sem_success" }}</td><td style="color:#28c840">{{ i18n "docs_sem_green" }}</td><td><code>OK, Done, PASSED, ✓</code></td></tr>
+            <tr><td>URLs</td><td style="color:#5d8bff">{{ i18n "docs_sem_blue" }}</td><td><code>https://...</code></td></tr>
+            <tr><td>{{ i18n "docs_sem_paths" }}</td><td style="color:#4af09a">Cyan</td><td><code>/usr/local/bin</code></td></tr>
+            <tr><td>IPv4</td><td style="color:#ffbd2e">{{ i18n "docs_sem_yellow" }}</td><td><code>192.168.1.1</code></td></tr>
+            <tr><td>{{ i18n "docs_sem_numbers" }}</td><td style="color:#bd79ff">{{ i18n "docs_sem_magenta" }}</td><td><code>340ms, 18.4MB</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ── SETTINGS (7 Pages) ── -->
+      <div class="docs-section" id="settings">
+        <h2>{{ i18n "docs_settings_title" }}</h2>
+        <p>{{ i18n "docs_settings_desc_v2" }}</p>
+
+        <!-- Page 1: Erscheinungsbild -->
+        <h3>{{ i18n "docs_sp_appearance" }}</h3>
+        <p>{{ i18n "docs_sp_appearance_desc" }}</p>
+        <table class="docs-table docs-table--compact">
+          <thead><tr><th>{{ i18n "docs_settings_col_setting" }}</th><th>{{ i18n "docs_settings_col_default" }}</th><th>{{ i18n "docs_settings_col_desc" }}</th></tr></thead>
+          <tbody>
+            <tr><td><code>colorSchemeEnabled</code></td><td>false</td><td>{{ i18n "docs_sp_colorscheme" }}</td></tr>
+            <tr><td><code>colorScheme</code></td><td>dark</td><td>{{ i18n "docs_sp_colorscheme_mode" }}</td></tr>
+            <tr><td><code>appThemeID</code></td><td>relay-dark</td><td>{{ i18n "docs_sp_apptheme" }}</td></tr>
+            <tr><td><code>themeID</code></td><td>dark-default</td><td>{{ i18n "docs_sp_shelltheme" }}</td></tr>
+            <tr><td><code>promptStyleID</code></td><td>robbyrussell</td><td>{{ i18n "docs_sp_prompt" }}</td></tr>
+            <tr><td><code>fontSize</code></td><td>13</td><td>{{ i18n "docs_set_fontsize" }}</td></tr>
+            <tr><td><code>fontName</code></td><td>JetBrains Mono Nerd</td><td>{{ i18n "docs_set_fontname" }}</td></tr>
+            <tr><td><code>backgroundOpacity</code></td><td>0.7</td><td>{{ i18n "docs_set_opacity" }}</td></tr>
+            <tr><td><code>semanticHighlighting</code></td><td>true</td><td>{{ i18n "docs_sp_semantic" }}</td></tr>
+            <tr><td><code>cursorShape</code></td><td>block</td><td>block · bar · underline</td></tr>
+            <tr><td><code>cursorBlink</code></td><td>true</td><td>{{ i18n "docs_set_cursorblink" }}</td></tr>
+            <tr><td><code>cursorColorHex</code></td><td>#4af09a</td><td>{{ i18n "docs_sp_cursorcolor" }}</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Page 2: Tastatur -->
+        <h3>{{ i18n "docs_sp_keyboard" }}</h3>
+        <p>{{ i18n "docs_sp_keyboard_desc" }}</p>
+
+        <!-- Page 3: Shell & Umgebung -->
+        <h3>{{ i18n "docs_sp_shell" }}</h3>
+        <p>{{ i18n "docs_sp_shell_desc" }}</p>
+        <table class="docs-table docs-table--compact">
+          <thead><tr><th>{{ i18n "docs_settings_col_setting" }}</th><th>{{ i18n "docs_settings_col_default" }}</th><th>{{ i18n "docs_settings_col_desc" }}</th></tr></thead>
+          <tbody>
+            <tr><td><code>shellPath</code></td><td>$SHELL</td><td>{{ i18n "docs_set_shellpath" }}</td></tr>
+            <tr><td><code>shellLoginMode</code></td><td>true</td><td>{{ i18n "docs_set_loginmode" }}</td></tr>
+            <tr><td><code>shellArgs</code></td><td>—</td><td>{{ i18n "docs_sp_shellargs" }}</td></tr>
+            <tr><td><code>useUserZshrc</code></td><td>false</td><td>{{ i18n "docs_set_userzshrc" }}</td></tr>
+            <tr><td><code>optionAsMeta</code></td><td>false</td><td>{{ i18n "docs_set_optionmeta" }}</td></tr>
+            <tr><td><code>inheritSystemEnv</code></td><td>true</td><td>{{ i18n "docs_env_inherit" }}</td></tr>
+            <tr><td><code>pathExtensions</code></td><td>—</td><td>{{ i18n "docs_env_path" }}</td></tr>
+            <tr><td><code>autoLoadDotenv</code></td><td>false</td><td>{{ i18n "docs_env_dotenv" }}</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Page 4: Benachrichtigungen -->
+        <h3>{{ i18n "docs_sp_notifications" }}</h3>
+        <p>{{ i18n "docs_sp_notifications_desc" }}</p>
+        <table class="docs-table docs-table--compact">
+          <thead><tr><th>{{ i18n "docs_settings_col_setting" }}</th><th>{{ i18n "docs_settings_col_default" }}</th><th>{{ i18n "docs_settings_col_desc" }}</th></tr></thead>
+          <tbody>
+            <tr><td><code>audibleBell</code></td><td>false</td><td>{{ i18n "docs_sp_audiblebell" }}</td></tr>
+            <tr><td><code>visualBell</code></td><td>true</td><td>{{ i18n "docs_sp_visualbell" }}</td></tr>
+            <tr><td><code>notifyLongCommand</code></td><td>true</td><td>{{ i18n "docs_sp_longcmd" }}</td></tr>
+            <tr><td><code>webhookURL</code></td><td>—</td><td>{{ i18n "docs_sp_webhook" }}</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Page 5: Speicher & Sessions -->
+        <h3>{{ i18n "docs_sp_storage" }}</h3>
+        <p>{{ i18n "docs_sp_storage_desc" }}</p>
+        <table class="docs-table docs-table--compact">
+          <thead><tr><th>{{ i18n "docs_settings_col_setting" }}</th><th>{{ i18n "docs_settings_col_default" }}</th><th>{{ i18n "docs_settings_col_desc" }}</th></tr></thead>
+          <tbody>
+            <tr><td><code>projectMemoryEnabled</code></td><td>true</td><td>{{ i18n "docs_sp_pmem" }}</td></tr>
+            <tr><td><code>projectMemoryRetention</code></td><td>30 Tage</td><td>{{ i18n "docs_sp_retention" }}</td></tr>
+            <tr><td><code>saveTabsOnQuit</code></td><td>true</td><td>{{ i18n "docs_sp_savetabs" }}</td></tr>
+            <tr><td><code>restoreWorkspacesOnLaunch</code></td><td>true</td><td>{{ i18n "docs_sp_restore" }}</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Page 6: Shell Integration -->
+        <h3>{{ i18n "docs_sp_integration" }}</h3>
+        <p>{{ i18n "docs_sp_integration_desc" }}</p>
+
+        <!-- Page 7: KI-Assistent -->
+        <h3>{{ i18n "docs_sp_ai" }}</h3>
+        <p>{{ i18n "docs_sp_ai_desc" }}</p>
+        <table class="docs-table docs-table--compact">
+          <thead><tr><th>{{ i18n "docs_settings_col_setting" }}</th><th>{{ i18n "docs_settings_col_default" }}</th><th>{{ i18n "docs_settings_col_desc" }}</th></tr></thead>
+          <tbody>
+            <tr><td><code>aiEnabled</code></td><td>false</td><td>{{ i18n "docs_sp_aienabled" }}</td></tr>
+            <tr><td><code>aiProvider</code></td><td>anthropic</td><td>{{ i18n "docs_sp_aiprovider" }}</td></tr>
+            <tr><td><code>aiContextLines</code></td><td>50</td><td>{{ i18n "docs_sp_aicontext" }}</td></tr>
+          </tbody>
+        </table>
+
+        <!-- Env vars -->
+        <h3>{{ i18n "docs_env_relay_title" }}</h3>
+        <div class="docs-code"><code>RELAY_PROMPT_STYLE    # {{ i18n "docs_env_var_prompt" }}
+RELAY_AI_PROVIDER     # {{ i18n "docs_env_var_provider" }}
+RELAY_AI_API_KEY      # {{ i18n "docs_env_var_key" }}
+RELAY_AI_MODEL        # {{ i18n "docs_env_var_model" }}
+RELAY_AI_CONTEXT      # {{ i18n "docs_env_var_context" }}</code></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{{ end }}

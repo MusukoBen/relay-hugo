@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="section-inner">
+    <div class="section-label">{{ .Title }}</div>
+    <h1 class="page-title">{{ .Title }}</h1>
+  </div>
+</section>
+<div class="section-inner" style="padding: 60px 24px;">
+  {{ .Content }}
+</div>
+{{ end }}

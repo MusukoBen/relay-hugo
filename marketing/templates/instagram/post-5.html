@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Post 5 — Pane Layouts</title>
+<link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+<div class="post post--instagram">
+  <div class="bg-aurora"></div>
+  <div class="bg-grid"></div>
+
+  <div class="post-header">
+    <div class="post-logo">
+      <div class="post-logo-icon"></div>
+      <span>relay</span>
+    </div>
+    <div class="post-tagline">PANE LAYOUTS</div>
+  </div>
+
+  <div class="post-content">
+    <div class="post-label">9 layouts · per workspace</div>
+    <h1 class="post-title">
+      Dein <span class="post-title-acc">Workspace</span>.<br>
+      Your layout.
+    </h1>
+
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:32px;">
+
+      <div class="feat-card" style="padding:20px;">
+        <div style="height:80px; background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+        <div class="feat-card-title" style="margin-top:12px; font-size:16px;">Single</div>
+      </div>
+
+      <div class="feat-card" style="padding:20px;">
+        <div style="height:80px; display:flex; gap:4px;">
+          <div style="flex:1; background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+          <div style="flex:1; background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+        </div>
+        <div class="feat-card-title" style="margin-top:12px; font-size:16px;">2 Side</div>
+      </div>
+
+      <div class="feat-card" style="padding:20px;">
+        <div style="height:80px; display:flex; flex-direction:column; gap:4px;">
+          <div style="flex:1; background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+          <div style="flex:1; background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+        </div>
+        <div class="feat-card-title" style="margin-top:12px; font-size:16px;">2 Stack</div>
+      </div>
+
+      <div class="feat-card" style="padding:20px;">
+        <div style="height:80px; display:flex; gap:4px;">
+          <div style="flex:1.5; background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+          <div style="flex:1; display:flex; flex-direction:column; gap:4px;">
+            <div style="flex:1; background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+            <div style="flex:1; background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+          </div>
+        </div>
+        <div class="feat-card-title" style="margin-top:12px; font-size:16px;">1 + 2</div>
+      </div>
+
+      <div class="feat-card" style="padding:20px;">
+        <div style="height:80px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:4px;">
+          <div style="background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+          <div style="background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+          <div style="background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+          <div style="background:rgba(74,240,154,.08); border:1px solid var(--acc); border-radius:6px;"></div>
+        </div>
+        <div class="feat-card-title" style="margin-top:12px; font-size:16px;">2 × 2</div>
+      </div>
+
+      <div class="feat-card" style="padding:20px;">
+        <div style="height:80px; display:flex; gap:4px;">
+          <div style="flex:1.8; background:rgba(74,240,154,.18); border:1px solid var(--acc); border-radius:6px;"></div>
+          <div style="flex:1; background:rgba(74,240,154,.04); border:1px solid var(--border); border-radius:6px;"></div>
+        </div>
+        <div class="feat-card-title" style="margin-top:12px; font-size:16px;">Focus</div>
+      </div>
+
+    </div>
+
+    <div style="display:flex; gap:24px; margin-top:36px; font-family:var(--mono); font-size:16px; color:var(--sec);">
+      <span><kbd style="background:var(--surface); border:1px solid var(--border); padding:4px 10px; border-radius:6px; color:var(--text);">⌘D</kbd> Split H</span>
+      <span><kbd style="background:var(--surface); border:1px solid var(--border); padding:4px 10px; border-radius:6px; color:var(--text);">⌘⇧D</kbd> Split V</span>
+      <span><kbd style="background:var(--surface); border:1px solid var(--border); padding:4px 10px; border-radius:6px; color:var(--text);">⌘⌥]</kbd> Next</span>
+    </div>
+  </div>
+
+  <div class="post-footer">
+    <span class="post-footer-url">→ relay.app/features</span>
+    <span class="post-footer-num">05 / 09</span>
+  </div>
+</div>
+</body>
+</html>

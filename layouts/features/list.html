@@ -1,0 +1,521 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="section-inner">
+    <div class="section-label">{{ i18n "features_label" }}</div>
+    <h1 class="page-title">{{ i18n "feat_page_title" }}</h1>
+    <p class="page-sub">{{ i18n "feat_page_sub" }}</p>
+  </div>
+</section>
+
+<section class="feat-deep section-inner">
+
+  <div class="feat-deep-row">
+    <div class="feat-deep-text">
+      <div class="section-label">{{ i18n "feat_theme_system_label" }}</div>
+      <h2>{{ i18n "feat_theme_system_title" }}</h2>
+      <p>{{ i18n "feat_theme_system_desc" }}</p>
+      <ul class="feat-deep-list">
+        <li>{{ i18n "feat_ts_li_1" }}</li>
+        <li>{{ i18n "feat_ts_li_2" }}</li>
+        <li>{{ i18n "feat_ts_li_3" }}</li>
+        <li>{{ i18n "feat_ts_li_4" }}</li>
+        <li>{{ i18n "feat_ts_li_5" }}</li>
+      </ul>
+    </div>
+    <div class="feat-deep-visual">
+      <div class="theme-showcase">
+        <div class="ts-card" style="--tc:#4af09a;--tb:rgba(74,240,154,.1)">
+          <div class="ts-dot"></div>
+          <div class="ts-name">Relay Dark</div>
+          <div class="ts-type">Glass</div>
+        </div>
+        <div class="ts-card" style="--tc:#5d8bff;--tb:rgba(93,139,255,.1)">
+          <div class="ts-dot"></div>
+          <div class="ts-name">Midnight</div>
+          <div class="ts-type">Glass · Outlined</div>
+        </div>
+        <div class="ts-card" style="--tc:#a78bfa;--tb:rgba(167,139,250,.1)">
+          <div class="ts-dot"></div>
+          <div class="ts-name">Aurora</div>
+          <div class="ts-type">Glass · Serif</div>
+        </div>
+        <div class="ts-card" style="--tc:#ff4400;--tb:rgba(255,68,0,.15);font-family:'VT323',monospace">
+          <div class="ts-dot"></div>
+          <div class="ts-name">BBC Micro</div>
+          <div class="ts-type">Retro · 1981</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PANE LAYOUTS (interactive) ── -->
+  <div class="feat-deep-row feat-deep-row--rev">
+    <div class="feat-deep-text">
+      <div class="section-label">{{ i18n "feat_pane_label" }}</div>
+      <h2>{{ i18n "feat_pane_title" }}</h2>
+      <p>{{ i18n "feat_pane_desc" }}</p>
+      <ul class="feat-deep-list">
+        <li>{{ i18n "feat_pane_li_1" }}</li>
+        <li>{{ i18n "feat_pane_li_2" }}</li>
+        <li>{{ i18n "feat_pane_li_3" }}</li>
+        <li>{{ i18n "feat_pane_li_4" }}</li>
+      </ul>
+    </div>
+    <div class="feat-deep-visual">
+
+      <!-- Pane preview window -->
+      <div class="pd-win">
+        <div class="pd-chrome">
+          <div class="pd-dots">
+            <span style="background:#ff5f57"></span>
+            <span style="background:#ffbd2e"></span>
+            <span style="background:#28c840"></span>
+          </div>
+          <span class="pd-layout-name" id="pdLayoutName">Single</span>
+        </div>
+        <div class="pd-body" id="pdBody">
+          <!-- filled by JS -->
+        </div>
+      </div>
+
+      <!-- Layout chips -->
+      <div class="pd-chips">
+        <button class="pd-chip pd-chip--active" data-layout="single">Single</button>
+        <button class="pd-chip" data-layout="twoHoriz">2 Side</button>
+        <button class="pd-chip" data-layout="twoVert">2 Stack</button>
+        <button class="pd-chip" data-layout="onePlusTwo">1+2</button>
+        <button class="pd-chip" data-layout="twoByTwo">2×2</button>
+        <button class="pd-chip" data-layout="focus">Focus</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── PROMPT STYLES (interactive) ── -->
+  <div class="feat-deep-row">
+    <div class="feat-deep-text">
+      <div class="section-label">{{ i18n "feat_prompt_label" }}</div>
+      <h2>{{ i18n "feat_prompt_title" }}</h2>
+      <p>{{ i18n "feat_prompt_desc" }}</p>
+      <ul class="feat-deep-list">
+        <li>{{ i18n "feat_prompt_li_1" }}</li>
+        <li>{{ i18n "feat_prompt_li_2" }}</li>
+        <li>{{ i18n "feat_prompt_li_3" }}</li>
+        <li>{{ i18n "feat_prompt_li_4" }}</li>
+      </ul>
+    </div>
+    <div class="feat-deep-visual">
+
+      <!-- Prompt terminal mock -->
+      <div class="pp-win">
+        <div class="pp-chrome">
+          <div class="pp-dots">
+            <span style="background:#ff5f57"></span>
+            <span style="background:#ffbd2e"></span>
+            <span style="background:#28c840"></span>
+          </div>
+          <span class="pp-style-label" id="ppStyleLabel">Pure</span>
+          <span class="pp-origin" id="ppOrigin">Plugin</span>
+        </div>
+        <div class="pp-term" id="ppTerm">
+          <!-- filled by JS -->
+        </div>
+      </div>
+
+      <!-- Prompt chips -->
+      <div class="pp-chips">
+        <button class="pp-chip pp-chip--active" data-prompt="pure">Pure</button>
+        <button class="pp-chip" data-prompt="robbyrussell">Robbyrussell</button>
+        <button class="pp-chip" data-prompt="agnoster">Agnoster</button>
+        <button class="pp-chip" data-prompt="spaceship">Spaceship</button>
+        <button class="pp-chip" data-prompt="powerlevel10k">Powerlevel10k</button>
+        <button class="pp-chip" data-prompt="starship">Starship</button>
+        <button class="pp-chip" data-prompt="bureau">Bureau</button>
+        <button class="pp-chip" data-prompt="bira">Bira</button>
+        <button class="pp-chip" data-prompt="minimal">Minimal</button>
+        <button class="pp-chip" data-prompt="fino">Fino</button>
+        <button class="pp-chip" data-prompt="lambda">Lambda</button>
+        <button class="pp-chip" data-prompt="typewritten">Typewritten</button>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+(function () {
+'use strict';
+
+// ── ANSI color palette (Relay Dark defaults) ───────────────────────────────
+// Maps ANSI index to CSS color. Index 0-7 = normal, matches TerminalTheme.darkDefault
+var ANSI = [
+  '#1e1e26', // 0 black
+  '#ff5f57', // 1 red
+  '#28c840', // 2 green
+  '#ffbd2e', // 3 yellow
+  '#5d8bff', // 4 blue
+  '#bd79ff', // 5 magenta
+  '#4af09a', // 6 cyan
+  '#c7c7d4', // 7 white
+];
+var ACC  = '#4af09a';
+var FG   = '#e2e2ea';
+var DIM  = '#38384a';
+
+// ── PROMPT DATA ────────────────────────────────────────────────────────────
+// Token types:
+//   {t:'fg'|'dim'|'acc'|'cursor', v}   — plain colored text
+//   {t:'a', i:0-7, v}                  — ANSI palette color
+//   {t:'block', bg, fg, v}             — Powerline filled block segment
+//   {t:'sep', prev, next}              — Powerline CSS-triangle separator
+var PROMPTS = {
+  'pure': {
+    name: 'Pure', origin: 'Plugin', powerline: false,
+    rows: [
+      [ {t:'fg', v:'~/relay'}, {t:'a', i:6, v:' \ue0a0 main'} ],
+      [ {t:'acc', v:'\u276f '}, {t:'cursor'} ],
+    ]
+  },
+  'robbyrussell': {
+    name: 'Robbyrussell', origin: 'Oh My Zsh', powerline: false,
+    rows: [
+      [ {t:'acc', v:'\u279c '}, {t:'a', i:2, v:'~/relay '}, {t:'a', i:4, v:'git:('}, {t:'a', i:1, v:'main'}, {t:'a', i:4, v:') '}, {t:'a', i:3, v:'\u2717 '}, {t:'cursor'} ],
+    ]
+  },
+  'agnoster': {
+    name: 'Agnoster', origin: 'Oh My Zsh', powerline: true,
+    rows: [
+      [
+        {t:'block', bg:'#4a4a6a', fg:'#e2e2ea', v:' \ue0a2 user '},
+        {t:'sep',   prev:'#4a4a6a', next:ANSI[4]},
+        {t:'block', bg:ANSI[4], fg:'#fff', v:' \ue0b1 ~/relay '},
+        {t:'sep',   prev:ANSI[4], next:ANSI[2]},
+        {t:'block', bg:ANSI[2], fg:'#000', v:' \ue0a0 main '},
+        {t:'sep',   prev:ANSI[2], next:'transparent'},
+        {t:'fg', v:' '}, {t:'cursor'},
+      ],
+    ]
+  },
+  'spaceship': {
+    name: 'Spaceship', origin: 'Plugin', powerline: false,
+    rows: [
+      [ {t:'a', i:4, v:'~/relay '}, {t:'a', i:2, v:'\ue0a0 main '}, {t:'a', i:3, v:'\u2753 '}, {t:'a', i:6, v:'v20 '}, {t:'a', i:5, v:'\u2b21 18 '} ],
+      [ {t:'acc', v:'\u276f '}, {t:'cursor'} ],
+    ]
+  },
+  'powerlevel10k': {
+    name: 'Powerlevel10k', origin: 'Plugin', powerline: true,
+    rows: [
+      [
+        {t:'block', bg:ANSI[4], fg:'#fff',  v:' \uf07c ~/relay '},
+        {t:'sep',   prev:ANSI[4], next:ANSI[2]},
+        {t:'block', bg:ANSI[2], fg:'#000',  v:' \ue0a0 main '},
+        {t:'sep',   prev:ANSI[2], next:ANSI[3]},
+        {t:'block', bg:ANSI[3], fg:'#000',  v:' \uf071 !1 '},
+        {t:'sep',   prev:ANSI[3], next:'transparent'},
+        {t:'dim',   v:'  took 2s'},
+      ],
+      [
+        {t:'acc', v:'\u276f '}, {t:'cursor'},
+      ],
+    ]
+  },
+  'starship': {
+    name: 'Starship', origin: 'Extern (Rust)', powerline: false,
+    rows: [
+      [ {t:'a', i:4, v:'~/relay '}, {t:'a', i:2, v:'\ue0a0 main '}, {t:'a', i:3, v:'?1 '}, {t:'acc', v:'\u276f '}, {t:'cursor'} ],
+    ]
+  },
+  'bureau': {
+    name: 'Bureau', origin: 'Oh My Zsh', powerline: false,
+    rows: [
+      [ {t:'a', i:2, v:'user'}, {t:'fg', v:'@'}, {t:'a', i:4, v:'mac'}, {t:'fg', v:':'}, {t:'fg', v:'~/relay '}, {t:'a', i:3, v:'(main) '}, {t:'acc', v:'\u276f '}, {t:'cursor'} ],
+    ]
+  },
+  'minimal': {
+    name: 'Minimal', origin: 'Built-in', powerline: false,
+    rows: [
+      [ {t:'dim', v:'\u203a '}, {t:'cursor'} ],
+    ]
+  },
+  'bira': {
+    name: 'Bira', origin: 'Oh My Zsh', powerline: false,
+    rows: [
+      [ {t:'a', i:4, v:'\u256d\u2500['}, {t:'a', i:2, v:'user@mac'}, {t:'a', i:4, v:'] ['}, {t:'fg', v:'~/relay'}, {t:'a', i:4, v:'] ['}, {t:'a', i:3, v:'main'}, {t:'a', i:4, v:']'} ],
+      [ {t:'a', i:4, v:'\u2570\u2500'}, {t:'acc', v:'$ '}, {t:'cursor'} ],
+    ]
+  },
+  'fino': {
+    name: 'Fino', origin: 'Oh My Zsh', powerline: false,
+    rows: [
+      [ {t:'a', i:4, v:'\u256d\u2500['}, {t:'fg', v:'~/relay'}, {t:'a', i:4, v:'] \u00b1 '}, {t:'a', i:2, v:'main \u2713'} ],
+      [ {t:'a', i:4, v:'\u2570\u2500\u2500'}, {t:'acc', v:'\u276f '}, {t:'cursor'} ],
+    ]
+  },
+  'lambda': {
+    name: 'Lambda', origin: 'Oh My Zsh', powerline: false,
+    rows: [
+      [ {t:'acc', v:'\u03bb '}, {t:'fg', v:'relay'}, {t:'dim', v:' \u00b7 '}, {t:'a', i:2, v:'main'}, {t:'dim', v:' \u00b7 '}, {t:'cursor'} ],
+    ]
+  },
+  'typewritten': {
+    name: 'Typewritten', origin: 'Plugin', powerline: false,
+    rows: [
+      [ {t:'acc', v:'\u276f '}, {t:'cursor'}, {t:'dim', v:'          '}, {t:'a', i:2, v:'main'}, {t:'dim', v:' ~/relay'} ],
+    ]
+  },
+};
+
+// ── PANE LAYOUT DATA ───────────────────────────────────────────────────────
+// Each layout is an array of pane descriptors: { label, flex, col, row, opacity }
+// We build CSS grid via inline styles on each pane div.
+var LAYOUTS = {
+  'single': {
+    name: 'Single',
+    panes: [
+      { label: 'zsh', col: '1', row: '1' }
+    ],
+    grid: '1fr', gridRows: '1fr'
+  },
+  'twoHoriz': {
+    name: '2 Side',
+    panes: [
+      { label: 'zsh', col: '1', row: '1' },
+      { label: 'zsh', col: '2', row: '1' },
+    ],
+    grid: '1fr 1fr', gridRows: '1fr'
+  },
+  'twoVert': {
+    name: '2 Stack',
+    panes: [
+      { label: 'zsh', col: '1', row: '1' },
+      { label: 'zsh', col: '1', row: '2' },
+    ],
+    grid: '1fr', gridRows: '1fr 1fr'
+  },
+  'onePlusTwo': {
+    name: '1+2',
+    panes: [
+      { label: 'zsh', col: '1', row: '1 / span 2' },
+      { label: 'zsh', col: '2', row: '1' },
+      { label: 'zsh', col: '2', row: '2' },
+    ],
+    grid: '1.5fr 1fr', gridRows: '1fr 1fr'
+  },
+  'twoByTwo': {
+    name: '2\u00d72',
+    panes: [
+      { label: 'zsh', col: '1', row: '1' },
+      { label: 'zsh', col: '2', row: '1' },
+      { label: 'zsh', col: '1', row: '2' },
+      { label: 'zsh', col: '2', row: '2' },
+    ],
+    grid: '1fr 1fr', gridRows: '1fr 1fr'
+  },
+  'focus': {
+    name: 'Focus',
+    panes: [
+      { label: 'zsh', col: '1', row: '1', primary: true },
+      { label: 'zsh', col: '2', row: '1', secondary: true },
+    ],
+    grid: '1.8fr 1fr', gridRows: '1fr'
+  },
+};
+
+// ── PANE CONTENT (static terminal lines per pane index) ───────────────────
+var PANE_CONTENT = [
+  [ '~/dev/relay \u00a0main', '❯ git status', 'Nothing to commit.' ],
+  [ '~/dev/relay \u00a0server', '❯ npm run dev', '\u25b8 localhost:3000' ],
+  [ '~/dev/relay \u00a0logs', '❯ tail -f app.log', '[INFO] ready' ],
+  [ '~/dev/relay \u00a0build', '❯ tsc --watch', 'Watching...' ],
+];
+
+// ── DOM ────────────────────────────────────────────────────────────────────
+var pdBody       = document.getElementById('pdBody');
+var pdLayoutName = document.getElementById('pdLayoutName');
+var ppTerm       = document.getElementById('ppTerm');
+var ppStyleLabel = document.getElementById('ppStyleLabel');
+var ppOrigin     = document.getElementById('ppOrigin');
+
+// ── BUILD PANE ─────────────────────────────────────────────────────────────
+function buildPaneBody(layoutId) {
+  var layout = LAYOUTS[layoutId];
+  if (!layout) return;
+
+  pdLayoutName.textContent = layout.name;
+
+  while (pdBody.firstChild) pdBody.removeChild(pdBody.firstChild);
+
+  pdBody.style.display             = 'grid';
+  pdBody.style.gridTemplateColumns = layout.grid;
+  pdBody.style.gridTemplateRows    = layout.gridRows;
+  pdBody.style.gap                 = '3px';
+  pdBody.style.padding             = '3px';
+
+  layout.panes.forEach(function (p, i) {
+    var pane = document.createElement('div');
+    pane.className = 'pd-pane' + (p.secondary ? ' pd-pane--secondary' : '');
+    pane.style.gridColumn = p.col;
+    pane.style.gridRow    = p.row;
+
+    var content = PANE_CONTENT[i % PANE_CONTENT.length];
+
+    var header = document.createElement('div');
+    header.className = 'pd-pane-header';
+    var dot = document.createElement('span');
+    dot.className = 'pd-pane-dot';
+    var lbl = document.createElement('span');
+    lbl.className = 'pd-pane-label';
+    lbl.textContent = content[0];
+    header.appendChild(dot);
+    header.appendChild(lbl);
+
+    var body = document.createElement('div');
+    body.className = 'pd-pane-body';
+
+    var l1 = document.createElement('div');
+    l1.className = 'pd-line pd-line--cmd';
+    l1.textContent = content[1];
+
+    var l2 = document.createElement('div');
+    l2.className = 'pd-line pd-line--out';
+    l2.textContent = content[2];
+
+    var l3 = document.createElement('div');
+    l3.className = 'pd-line';
+    var cur = document.createElement('span');
+    cur.className = 'pd-cursor tl-cursor-blink';
+    cur.textContent = '\u2588';
+    l3.appendChild(cur);
+
+    body.appendChild(l1);
+    body.appendChild(l2);
+    body.appendChild(l3);
+
+    pane.appendChild(header);
+    pane.appendChild(body);
+    pdBody.appendChild(pane);
+  });
+}
+
+// ── BUILD PROMPT ───────────────────────────────────────────────────────────
+function buildPrompt(id) {
+  var p = PROMPTS[id];
+  if (!p) return;
+
+  ppStyleLabel.textContent = p.name;
+  ppOrigin.textContent     = p.origin;
+
+  while (ppTerm.firstChild) ppTerm.removeChild(ppTerm.firstChild);
+
+  // Static output lines above prompt
+  var staticLines = [
+    { text: 'On branch main. Nothing to commit.', color: '#6a6a80' },
+    { text: 'npm run dev', color: '#e2e2ea', prefix: { text: '\u276f\u00a0', color: ACC } },
+    { text: '\u25b8 Server running at http://localhost:3000', color: ACC },
+    { text: '' },
+  ];
+  staticLines.forEach(function (sl) {
+    var row = document.createElement('div');
+    row.className = 'pp-line';
+    if (sl.prefix) {
+      var pre = document.createElement('span');
+      pre.textContent = sl.prefix.text;
+      pre.style.color = sl.prefix.color;
+      row.appendChild(pre);
+    }
+    var txt = document.createElement('span');
+    txt.textContent = sl.text;
+    txt.style.color = sl.color || FG;
+    row.appendChild(txt);
+    ppTerm.appendChild(row);
+  });
+
+  // Prompt rows
+  p.rows.forEach(function (row) {
+    var line = document.createElement('div');
+    line.className = 'pp-line pp-line--prompt' + (p.powerline ? ' pp-line--powerline' : '');
+
+    row.forEach(function (tok) {
+      if (tok.t === 'cursor') {
+        var cur = document.createElement('span');
+        cur.className = 'tl-cursor-blink';
+        cur.style.color = ACC;
+        cur.textContent = '\u2588';
+        line.appendChild(cur);
+
+      } else if (tok.t === 'block') {
+        // Filled Powerline segment: background + foreground text
+        var blk = document.createElement('span');
+        blk.className = 'pp-block';
+        blk.textContent = tok.v;
+        blk.style.background = tok.bg;
+        blk.style.color      = tok.fg;
+        line.appendChild(blk);
+
+      } else if (tok.t === 'sep') {
+        // CSS-triangle separator — no Nerd Font needed
+        var sep = document.createElement('span');
+        sep.className = 'pp-sep';
+        sep.style.borderLeftColor = tok.prev;
+        // background = next segment color (or transparent at end)
+        if (tok.next && tok.next !== 'transparent') {
+          sep.style.background = tok.next;
+        }
+        line.appendChild(sep);
+
+      } else {
+        var color = tok.t === 'acc' ? ACC
+                  : tok.t === 'dim' ? DIM
+                  : tok.t === 'fg'  ? FG
+                  : tok.t === 'a'   ? (ANSI[tok.i] || FG)
+                  : FG;
+        var sp = document.createElement('span');
+        sp.textContent = tok.v;
+        sp.style.color = color;
+        line.appendChild(sp);
+      }
+    });
+    ppTerm.appendChild(line);
+  });
+}
+
+// ── CHIP HANDLERS ──────────────────────────────────────────────────────────
+document.querySelectorAll('.pd-chip').forEach(function (chip) {
+  chip.addEventListener('click', function () {
+    document.querySelectorAll('.pd-chip').forEach(function (c) {
+      c.classList.remove('pd-chip--active');
+    });
+    chip.classList.add('pd-chip--active');
+    pdBody.style.opacity = '0';
+    pdBody.style.transition = 'opacity .14s';
+    setTimeout(function () {
+      buildPaneBody(chip.dataset.layout);
+      pdBody.style.opacity = '1';
+    }, 140);
+  });
+});
+
+document.querySelectorAll('.pp-chip').forEach(function (chip) {
+  chip.addEventListener('click', function () {
+    document.querySelectorAll('.pp-chip').forEach(function (c) {
+      c.classList.remove('pp-chip--active');
+    });
+    chip.classList.add('pp-chip--active');
+    ppTerm.style.opacity = '0';
+    ppTerm.style.transition = 'opacity .14s';
+    setTimeout(function () {
+      buildPrompt(chip.dataset.prompt);
+      ppTerm.style.opacity = '1';
+    }, 140);
+  });
+});
+
+// Init
+buildPaneBody('single');
+buildPrompt('pure');
+
+}());
+</script>
+
+</section>
+{{ end }}

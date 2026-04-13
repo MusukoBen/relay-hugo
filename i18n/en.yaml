@@ -1,0 +1,1049 @@
+# =============================================================================
+# English (en) i18n strings for Relay Hugo website
+# =============================================================================
+
+# =============================================================================
+# HERO
+# =============================================================================
+hero_badge:
+  other: "New"
+hero_title_line1:
+  other: "A terminal"
+hero_title_line2:
+  other: "you build"
+hero_title_line3:
+  other: "— the way you need it."
+hero_sub:
+  other: "16 themes. 12 prompt styles. 9 pane layouts. All at once, all live. Relay is the first terminal where the entire visual system transforms — not just the colors."
+hero_cta_download:
+  other: "Download free"
+hero_cta_pricing:
+  other: "See pricing →"
+hero_meta_platform:
+  other: "macOS Universal · Apple Silicon & Intel"
+hero_meta_free:
+  other: "Free to try · No account needed"
+
+# =============================================================================
+# LOGOS / PRESS
+# =============================================================================
+logos_label:
+  other: "Built by developers · for developers"
+logos_tmux:
+  other: "Tmux-compatible"
+
+# =============================================================================
+# FEATURES (HOME)
+# =============================================================================
+features_label:
+  other: "Features"
+features_title:
+  other: "Not just another terminal."
+features_sub:
+  other: "Relay rethinks the terminal concept. Every setting affects the entire system — simultaneously and live."
+feat_themes_title:
+  other: "16 Themes — not just color palettes"
+feat_themes_desc:
+  other: "Each theme transforms fonts, radius, spacing, glassmorphism, and typography at once. Midnight feels like a different app than Aurora — because it is."
+feat_tag_glass:
+  other: "6 Glass"
+feat_tag_retro:
+  other: "10 Retro"
+feat_tag_preview:
+  other: "Live preview"
+feat_panes_title:
+  other: "9 Pane Layouts"
+feat_panes_desc:
+  other: "Split view from two tabs. 2×2 grid, focus mode, 1+2, 3 side by side — configurable per workspace."
+feat_prompts_title:
+  other: "12 Prompt Styles"
+feat_prompts_desc:
+  other: "Robbyrussell, Pure, Powerlevel10k, Starship and more — select in settings, preview live."
+feat_shell_title:
+  other: "Shell Variations"
+feat_shell_desc:
+  other: "Each theme has 2–4 ANSI color variations. Same themes, different shell energy — for every workflow."
+feat_native_title:
+  other: "Native SwiftUI"
+feat_native_desc:
+  other: "No Electron. No web renderer. Pure SwiftUI for macOS — fast, responsive, and battery-friendly."
+feat_workspaces_title:
+  other: "Workspaces"
+feat_workspaces_desc:
+  other: "Multiple projects, each with its own theme, tabs, and layout. Everything persists between sessions."
+
+# =============================================================================
+# FEATURES PAGE
+# =============================================================================
+feat_page_title:
+  other: "What makes Relay different."
+feat_page_sub:
+  other: "Every decision in Relay starts with one question: What would a developer actually want?"
+feat_theme_system_label:
+  other: "Theme System"
+feat_theme_system_title:
+  other: "Not just colors. An entire visual system."
+feat_theme_system_desc:
+  other: "Other terminals swap color palettes. Relay swaps the entire design: typography, border radius, spacing, glassmorphism, scanlines, fonts — all at once. Midnight feels like a different app than Obsidian. Because it is."
+feat_ts_li_1:
+  other: "93 design tokens per theme"
+feat_ts_li_2:
+  other: "6 modern glass themes"
+feat_ts_li_3:
+  other: "10 historical retro themes (BBC Micro to Game Boy)"
+feat_ts_li_4:
+  other: "Live preview on switch"
+feat_ts_li_5:
+  other: "Animated theme transition (0.35s)"
+feat_pane_label:
+  other: "Pane Layouts"
+feat_pane_title:
+  other: "Your workspace. Your layout."
+feat_pane_desc:
+  other: "From two tabs, you can split the active workspace into panes. The layout is per-workspace and persists between sessions."
+feat_pane_li_1:
+  other: "6 layouts: from single to 2×2 grid"
+feat_pane_li_2:
+  other: "Focus mode: 1 large + secondary pane dimmed"
+feat_pane_li_3:
+  other: "Per-workspace configuration"
+feat_pane_li_4:
+  other: "Layouts are persisted"
+feat_prompt_label:
+  other: "Prompt Styles"
+feat_prompt_title:
+  other: "12 styles. One of them is yours."
+feat_prompt_desc:
+  other: "From minimalist Pure to information-dense Powerlevel10k — all prompt styles are built into Relay and configurable live. No manual .zshrc editing needed."
+feat_prompt_li_1:
+  other: "Robbyrussell, Pure, Agnoster, Spaceship"
+feat_prompt_li_2:
+  other: "Powerlevel10k, Starship, Bureau, Bira"
+feat_prompt_li_3:
+  other: "Minimal, Fino, Lambda, Typewritten"
+feat_prompt_li_4:
+  other: ".zshrc is generated automatically"
+
+# =============================================================================
+# RETRO SECTION
+# =============================================================================
+retro_label:
+  other: "Retro Themes"
+retro_title:
+  other: "From 1971 to 1989."
+retro_sub:
+  other: "Ten historical systems as complete visual experiences — not skinned themes, but standalone identities with their own fonts, quirks, and atmospheres."
+
+# =============================================================================
+# PRICING (HOME TEASER)
+# =============================================================================
+pricing_label:
+  other: "Pricing"
+pricing_title:
+  other: "Simple. Fair. One-time."
+pricing_sub:
+  other: "Try Relay for free — forever. Unlock all features with Pro or Lifetime."
+pricing_free:
+  other: "Free"
+pricing_free_price:
+  other: "$0"
+pricing_free_period:
+  other: "forever"
+pricing_pf_free_1:
+  other: "3 Themes (Relay Dark, Retro DOS, Game Boy)"
+pricing_pf_free_2:
+  other: "Single-Pane Terminal"
+pricing_pf_free_3:
+  other: "2 Workspaces"
+pricing_pf_free_4:
+  other: "3 Prompt Styles"
+pricing_pf_free_no_1:
+  other: "All 16 Themes"
+pricing_pf_free_no_2:
+  other: "9 Pane Layouts"
+pricing_pf_free_no_3:
+  other: "iCloud Sync"
+pricing_free_cta:
+  other: "Download free"
+pricing_recommended:
+  other: "Recommended"
+pricing_pro:
+  other: "Pro"
+pricing_pro_price:
+  other: "$7.99"
+pricing_pro_mo:
+  other: "/month"
+pricing_pro_period:
+  other: "or $64.99/year (save 32%)"
+pricing_pf_pro_1:
+  other: "All 16 Themes"
+pricing_pf_pro_2:
+  other: "All 9 Pane Layouts"
+pricing_pf_pro_3:
+  other: "Unlimited Workspaces"
+pricing_pf_pro_4:
+  other: "All 12 Prompt Styles"
+pricing_pf_pro_5:
+  other: "Shell Variations"
+pricing_pf_pro_6:
+  other: "iCloud Sync"
+pricing_pf_pro_7:
+  other: "Priority Support"
+pricing_pro_cta:
+  other: "Start Pro"
+pricing_lifetime:
+  other: "Lifetime"
+pricing_lifetime_price:
+  other: "$139"
+pricing_lifetime_period:
+  other: "one-time · all future updates"
+pricing_pf_lt_1:
+  other: "Everything in Pro"
+pricing_pf_lt_2:
+  other: "All future themes"
+pricing_pf_lt_3:
+  other: "All future features"
+pricing_pf_lt_4:
+  other: "No subscription · ever"
+pricing_pf_lt_5:
+  other: "Early access to betas"
+pricing_pf_lt_6:
+  other: "Lifetime support"
+pricing_pf_lt_7:
+  other: "Name in credits 👋"
+pricing_lifetime_cta:
+  other: "Buy Lifetime"
+pricing_note:
+  other: "30-day money-back guarantee · Payment via Stripe · No hidden costs"
+
+# =============================================================================
+# PRICING PAGE
+# =============================================================================
+pricing_page_title:
+  other: "Simple. Fair. One-time."
+pricing_page_sub:
+  other: "Try for free. Upgrade when you're ready."
+pricing_page_free_period:
+  other: "free forever"
+pricing_page_free_cta:
+  other: "Download now"
+pricing_free_feat_title:
+  other: "Included in Free:"
+pricing_page_pf_free_1:
+  other: "Relay Dark, Retro DOS, Game Boy"
+pricing_page_pf_free_2:
+  other: "Single-Pane Terminal"
+pricing_page_pf_free_3:
+  other: "2 Workspaces"
+pricing_page_pf_free_4:
+  other: "Robbyrussell, Pure, Minimal"
+pricing_page_pf_free_5:
+  other: "zsh Integration"
+pricing_page_pf_free_no_1:
+  other: "Additional themes"
+pricing_page_pf_free_no_2:
+  other: "Split view & pane layouts"
+pricing_page_pf_free_no_3:
+  other: "More than 2 workspaces"
+pricing_page_pf_free_no_4:
+  other: "All prompt styles"
+pricing_page_pf_free_no_5:
+  other: "Shell variations"
+pricing_page_pf_free_no_6:
+  other: "iCloud Sync"
+pricing_page_pf_free_no_7:
+  other: "Priority support"
+pricing_popular:
+  other: "Most Popular"
+pricing_monthly:
+  other: "Monthly"
+pricing_yearly:
+  other: "Yearly"
+pricing_pro_price_yearly:
+  other: ""
+pricing_pro_year:
+  other: ""
+pricing_monthly_cancel:
+  other: "cancel anytime"
+pricing_yearly_equiv:
+  other: "equals $5.42/month"
+pricing_pro_feat_title:
+  other: "Everything in Free, plus:"
+pricing_page_pf_pro_1:
+  other: "All 16 themes (6 Glass + 10 Retro)"
+pricing_page_pf_pro_2:
+  other: "All 9 pane layouts"
+pricing_page_pf_pro_3:
+  other: "Unlimited workspaces"
+pricing_page_pf_pro_4:
+  other: "All 12 prompt styles"
+pricing_page_pf_pro_5:
+  other: "Shell variations per theme"
+pricing_page_pf_pro_6:
+  other: "iCloud Sync for all settings"
+pricing_page_pf_pro_7:
+  other: "Priority email support"
+pricing_page_pf_pro_8:
+  other: "Early access to beta features"
+pricing_lt_period:
+  other: "one-time · includes all future updates"
+pricing_lt_feat_title:
+  other: "Everything in Pro, plus:"
+pricing_page_pf_lt_1:
+  other: "No subscription — ever"
+pricing_page_pf_lt_2:
+  other: "All future themes"
+pricing_page_pf_lt_3:
+  other: "All future features"
+pricing_page_pf_lt_4:
+  other: "Early access to all betas"
+pricing_page_pf_lt_5:
+  other: "Lifetime support guaranteed"
+pricing_page_pf_lt_6:
+  other: "Name in app credits 👋"
+pricing_page_pf_lt_7:
+  other: "Vote in feature polls"
+pricing_guarantee_title:
+  other: "30-day money-back guarantee."
+pricing_guarantee_desc:
+  other: "If you're not satisfied with Relay, we'll refund you in full — no questions asked."
+pricing_faq_title:
+  other: "Frequently Asked Questions"
+pricing_faq_q1:
+  other: "Can I try Relay before buying?"
+pricing_faq_a1:
+  other: "Yes — the Free plan is permanently free and includes three complete themes. No time limit, no account required."
+pricing_faq_q2:
+  other: "What does \"all future updates\" mean with Lifetime?"
+pricing_faq_a2:
+  other: "You'll receive all new themes, features, and major versions (Relay 2, 3, etc.) at no additional cost — as long as Relay exists."
+pricing_faq_q3:
+  other: "Which payment methods are accepted?"
+pricing_faq_a3:
+  other: "Credit card, SEPA direct debit, PayPal, and Apple Pay — processed via Stripe. Invoices available on request."
+pricing_faq_q4:
+  other: "Are there discounts for teams or schools?"
+pricing_faq_a4:
+  other: "Yes — from 5 licenses there's a 20% team discount. Educational institutions get 50% off. Contact us via email."
+pricing_faq_q5:
+  other: "Does Relay run on older Macs?"
+pricing_faq_a5:
+  other: "Relay requires macOS 14 Sonoma or later. Universal Binary — runs natively on Apple Silicon and Intel."
+pricing_faq_q6:
+  other: "What happens if I cancel my subscription?"
+pricing_faq_a6:
+  other: "You keep access until the end of the billing period. After that, the app reverts to the Free plan — your data is preserved."
+
+# =============================================================================
+# DOWNLOAD (HOME CTA)
+# =============================================================================
+dl_label:
+  other: "Download"
+dl_title:
+  other: "Ready to build your terminal?"
+dl_sub:
+  other: "Download for free. No account. No email. Just open and go."
+dl_btn:
+  other: "Download relay-1.0.dmg"
+dl_brew_label:
+  other: "or via Homebrew:"
+dl_brew_copy:
+  other: "Copy"
+
+# =============================================================================
+# DOWNLOAD PAGE
+# =============================================================================
+dl_page_title:
+  other: "Download Relay."
+dl_page_sub:
+  other: "Free. No account. Just open and go."
+dl_requires:
+  other: "Requires macOS"
+dl_size:
+  other: "18.4 MB · Signed & notarized by Apple"
+dl_homebrew:
+  other: "Homebrew Cask"
+dl_appstore:
+  other: "Mac App Store"
+dl_appstore_soon:
+  other: "Coming soon"
+dl_appstore_btn:
+  other: "App Store (coming soon)"
+dl_sysreq_title:
+  other: "System Requirements"
+dl_sysreq_macos:
+  other: "14 Sonoma or later"
+dl_sysreq_arch_label:
+  other: "Architecture"
+dl_sysreq_arch:
+  other: "Universal Binary (Apple Silicon + Intel)"
+dl_sysreq_storage_label:
+  other: "Storage"
+dl_sysreq_storage:
+  other: "50 MB free space"
+dl_sysreq_shell:
+  other: "zsh (pre-installed on macOS)"
+dl_sysreq_optional_label:
+  other: "Optional"
+dl_sysreq_optional:
+  other: "Nerd Fonts for Powerline prompts"
+dl_sysreq_internet:
+  other: "Only for iCloud Sync (Pro)"
+dl_changelog_title:
+  other: "What's new in 1.0"
+dl_cl_new:
+  other: "New"
+dl_cl_1:
+  other: "16 themes — 6 Glass, 10 Retro. Complete visual system per theme."
+dl_cl_2:
+  other: "9 pane layouts. Split view from two tabs, configurable per workspace."
+dl_cl_3:
+  other: "12 prompt styles. From Minimal to Powerlevel10k — selectable live in the app."
+dl_cl_4:
+  other: "Shell variations: 2–4 ANSI color variants per theme."
+dl_cl_fix:
+  other: "Fix"
+dl_cl_5:
+  other: "First public release. No fix without a bug. 🙂"
+
+# =============================================================================
+# THEMES PAGE
+# =============================================================================
+themes_page_title:
+  other: "16 Themes. One app."
+themes_page_sub:
+  other: "Each theme transforms the entire visual system — not just the colors."
+themes_glass_label:
+  other: "Glass Themes"
+themes_retro_label:
+  other: "Retro Themes"
+themes_tag_relay_dark:
+  other: "Default · Green"
+themes_tag_midnight:
+  other: "Deep Blue · Indigo"
+themes_tag_aurora:
+  other: "Northern Lights · Purple"
+themes_tag_obsidian:
+  other: "Minimal · Amber"
+themes_tag_sunset:
+  other: "Warm · Coral"
+themes_tag_arctic:
+  other: "Ice Blue · Cold"
+themes_tag_bbc:
+  other: "1981 · British 8-bit"
+themes_tag_apple:
+  other: "1977 · Green Phosphor"
+themes_tag_amstrad:
+  other: "1984 · Cyan on Black"
+themes_tag_vt100:
+  other: "1978 · Unix Workhorse"
+themes_tag_ibm:
+  other: "1971 · Mainframe Green"
+themes_tag_xerox:
+  other: "1973 · The First GUI Terminal"
+themes_tag_gameboy:
+  other: "1989 · 4-Color LCD"
+themes_tag_zx:
+  other: "1982 · Yellow Keys"
+themes_tag_dos:
+  other: "DOS · Blue Background"
+themes_tag_c64:
+  other: "1982 · Commodore"
+th_relay_dark_desc:
+  other: "The default theme. Deep black, green accent, soft glassmorphism cards. Minimal and focused."
+th_midnight_desc:
+  other: "Geometric and architectural. Transparent cards with visible borders. Uppercase everywhere."
+th_aurora_desc:
+  other: "Purple gradient buttons, Playfair Display for headings, italic descriptions. Elegant and soft."
+th_obsidian_desc:
+  other: "Yellow accent, IBM Plex Mono, sharp 2px radius. Technical and precise."
+th_sunset_desc:
+  other: "Rosé and coral. Gradient save button, large rounded radius. Warm and inviting."
+th_arctic_desc:
+  other: "Ice blue. Space Mono, angular 2px radius. Clear and cold like a server room."
+th_bbc_desc:
+  other: "British 8-bit computer. Orange-red phosphor, scanline overlay, full uppercase."
+th_apple2_desc:
+  other: "The original. Green phosphor on black. The screen of the first hackers."
+th_amstrad_desc:
+  other: "Cyan on black. No scanline overlay — the CPC display was remarkably clear."
+th_vt100_desc:
+  other: "The Unix workhorse. Warm amber phosphor, IBM Plex Mono, scanline grid."
+th_ibm3270_desc:
+  other: "The oldest terminal in the set. Mainframe green, IBM Plex Mono. No frills."
+th_xerox_desc:
+  other: "The only light retro theme. Paper-white background, Lora serif, classic typography."
+th_gameboy_desc:
+  other: "4-color LCD palette. Press Start 2P, 4px LCD scanlines. The most pixelated theme in the set."
+th_zx_desc:
+  other: "Yellow on black. No scanlines — the ZX had a sharp, clear display."
+th_dos_desc:
+  other: "Blue DOS background, cyan accent. Heavy CRT effect. C:\\> feeling."
+th_c64_desc:
+  other: "Commodore 64. Blue background, purple text. READY. The classic."
+th_tag_green:
+  other: "Green"
+th_tag_bright:
+  other: "Light"
+th_tag_yellow:
+  other: "Yellow"
+
+# =============================================================================
+# FOOTER
+# =============================================================================
+footer_tagline:
+  other: "A terminal you build —\nthe way you need it."
+footer_col_product:
+  other: "Product"
+footer_changelog:
+  other: "Changelog"
+footer_col_developers:
+  other: "Developers"
+footer_docs:
+  other: "Documentation"
+footer_theme_api:
+  other: "Theme API"
+footer_zsh_integration:
+  other: "Zsh Integration"
+footer_col_legal:
+  other: "Legal"
+footer_privacy:
+  other: "Privacy"
+footer_terms:
+  other: "Terms of Service"
+footer_press:
+  other: "Press Kit"
+footer_rights:
+  other: "All rights reserved."
+
+# ── DOCS PAGE ──
+docs_label:
+  other: "Documentation"
+docs_title:
+  other: "Relay Documentation"
+docs_sub:
+  other: "Everything you need to get the most out of Relay."
+docs_nav_start:
+  other: "Getting Started"
+docs_nav_installation:
+  other: "Installation"
+docs_nav_first_steps:
+  other: "First Steps"
+docs_nav_shortcuts:
+  other: "Shortcuts"
+docs_nav_features:
+  other: "Features"
+docs_nav_themes:
+  other: "Themes"
+docs_nav_layouts:
+  other: "Pane Layouts"
+docs_nav_prompts:
+  other: "Prompt Styles"
+docs_nav_workspaces:
+  other: "Workspaces"
+docs_nav_terminal:
+  other: "Terminal"
+docs_nav_shell:
+  other: "Shell Integration"
+docs_nav_infopanel:
+  other: "Info Panel"
+docs_nav_ports:
+  other: "Open Ports"
+docs_nav_agent:
+  other: "AI Agent"
+docs_nav_semantic:
+  other: "Semantic Colorizer"
+docs_nav_config:
+  other: "Configuration"
+docs_nav_settings:
+  other: "Settings"
+docs_nav_env:
+  other: "Environment Variables"
+docs_install_title:
+  other: "Installation"
+docs_install_desc:
+  other: "Relay can be installed as a DMG or via Homebrew."
+docs_install_dmg:
+  other: "Direct Download"
+docs_install_dmg_desc:
+  other: "Universal Binary for Apple Silicon and Intel."
+docs_install_dmg_btn:
+  other: "Download Page"
+docs_install_req:
+  other: "Requirements"
+docs_first_title:
+  other: "First Steps"
+docs_first_desc:
+  other: "After installation, you're ready in three steps."
+docs_first_step1_title:
+  other: "Choose a theme"
+docs_first_step1_desc:
+  other: "Open Settings and pick one of 16 themes. The entire visual system changes instantly."
+docs_first_step2_title:
+  other: "Set your prompt style"
+docs_first_step2_desc:
+  other: "Choose one of 12 prompt styles. The change is applied live to the current shell."
+docs_first_step3_title:
+  other: "Set up workspaces"
+docs_first_step3_desc:
+  other: "Create workspaces for different projects. Each workspace has its own panes, themes, and layouts."
+docs_shortcuts_title:
+  other: "Keyboard Shortcuts"
+docs_shortcuts_desc:
+  other: "Essential keyboard shortcuts for fast workflows."
+docs_shortcuts_col_key:
+  other: "Shortcut"
+docs_shortcuts_col_action:
+  other: "Action"
+docs_sc_new_pane:
+  other: "New pane"
+docs_sc_close_pane:
+  other: "Close pane"
+docs_sc_split_h:
+  other: "Split horizontal"
+docs_sc_split_v:
+  other: "Split vertical"
+docs_sc_focus_next:
+  other: "Focus next pane"
+docs_sc_focus_prev:
+  other: "Focus previous pane"
+docs_sc_font_up:
+  other: "Increase font size"
+docs_sc_font_down:
+  other: "Decrease font size"
+docs_sc_font_reset:
+  other: "Reset font size (13)"
+docs_sc_info_panel:
+  other: "Toggle info panel"
+docs_sc_icon_rail:
+  other: "Toggle icon rail"
+docs_sc_palette:
+  other: "Command palette"
+docs_themes_title:
+  other: "Theme System"
+docs_themes_desc:
+  other: "Relay's theme system consists of three layers that together control the entire look and feel of the app."
+docs_themes_layers_title:
+  other: "Three-Layer Architecture"
+docs_themes_layers_desc:
+  other: "Each theme is composed of three independent layers that work together."
+docs_themes_layer1:
+  other: "Controls the app chrome: backgrounds, borders, accent color, glassmorphism, glow effects."
+docs_themes_layer2:
+  other: "Defines the ANSI color palette: 8 normal + 8 bright colors, cursor, selection, background."
+docs_themes_layer3:
+  other: "Determines the prompt layout: symbols, colors, powerline segments, git info display."
+docs_themes_glass_title:
+  other: "Glass Themes"
+docs_themes_glass_desc:
+  other: "Six modern themes with glassmorphism, glow effects, and unique typography."
+docs_themes_retro_title:
+  other: "Retro Themes"
+docs_themes_retro_desc:
+  other: "Ten historical terminals (1971–1989) as complete visual identities with scanlines and period-accurate fonts."
+docs_themes_tokens_title:
+  other: "Design Tokens"
+docs_themes_tokens_desc:
+  other: "Each theme defines 93 design tokens that control the entire visual appearance."
+docs_layouts_title:
+  other: "Pane Layouts"
+docs_layouts_desc:
+  other: "Six layout presets let you split a workspace into up to 4 panes. Layouts are saved per workspace."
+docs_layouts_col_panes:
+  other: "Panes"
+docs_layouts_col_desc:
+  other: "Description"
+docs_layout_single:
+  other: "Default — a single pane"
+docs_layout_2side:
+  other: "Two panes side by side"
+docs_layout_2stack:
+  other: "Two panes stacked"
+docs_layout_1plus2:
+  other: "One large pane left, two small on the right"
+docs_layout_2x2:
+  other: "Four panes in a 2×2 grid"
+docs_layout_focus:
+  other: "One focused pane, one dimmed secondary pane"
+docs_layouts_info:
+  other: "Layouts auto-adjust: adding a pane upgrades the layout, removing one downgrades it."
+docs_prompts_title:
+  other: "Prompt Styles"
+docs_prompts_desc:
+  other: "11 built-in prompt styles — selectable in Settings, applied live instantly. No .zshrc editing needed."
+docs_prompts_col_style:
+  other: "Style"
+docs_prompts_col_origin:
+  other: "Origin"
+docs_prompts_col_powerline:
+  other: "Powerline"
+docs_prompts_external:
+  other: "External (Rust)"
+docs_prompts_info:
+  other: "Powerline styles require a Nerd Font. Relay uses JetBrains Mono Nerd Font by default."
+docs_workspaces_title:
+  other: "Workspaces"
+docs_workspaces_desc:
+  other: "Workspaces are isolated environments with their own state. Each workspace stores:"
+docs_ws_own_theme:
+  other: "Its own theme and terminal color palette"
+docs_ws_own_layout:
+  other: "Its own pane layout (Single, 2×2, Focus, etc.)"
+docs_ws_own_panes:
+  other: "Its own panes with individual shells"
+docs_ws_persist:
+  other: "Persistence between sessions (tabs, CWD, layout)"
+docs_ws_broadcast:
+  other: "Broadcast mode: send input to multiple panes at once"
+docs_ws_shell:
+  other: "Optional custom shell path per workspace"
+docs_shell_title:
+  other: "Shell Integration"
+docs_shell_desc:
+  other: "Relay integrates deeply with the shell to track commands, exit codes, and working directories. The integration is installed automatically on every launch."
+docs_shell_supported:
+  other: "Supported Shells"
+docs_shell_col_integration:
+  other: "Integration"
+docs_shell_col_hooks:
+  other: "Hooks"
+docs_shell_osc_title:
+  other: "OSC Sequences"
+docs_shell_osc_desc:
+  other: "Relay uses Operating System Command (OSC) sequences for communication between shell and app."
+docs_shell_col_purpose:
+  other: "Purpose"
+docs_osc_133a:
+  other: "Prompt start"
+docs_osc_133b:
+  other: "Command start (user typing)"
+docs_osc_133c:
+  other: "Output start (command submitted)"
+docs_osc_133d:
+  other: "Command finished with exit code"
+docs_osc_7:
+  other: "Current working directory"
+docs_osc_1337:
+  other: "iTerm2 compatibility (CurrentDir)"
+docs_osc_9999:
+  other: "Relay commands (ask, save)"
+docs_shell_modes_title:
+  other: "Shell Modes"
+docs_shell_modes_desc:
+  other: "Relay offers two modes for shell configuration."
+docs_shell_mode_relay:
+  other: "Relay Prompt"
+docs_shell_mode_relay_desc:
+  other: "Isolated shell configuration. Relay manages the prompt entirely. Ideal for consistent behavior."
+docs_shell_mode_user:
+  other: "User .zshrc"
+docs_shell_mode_user_desc:
+  other: "Loads your own ~/.zshrc with Relay hooks. Compatible with oh-my-zsh, p10k, and Starship."
+docs_info_title:
+  other: "Info Panel"
+docs_info_desc:
+  other: "The Info Panel (⌘I) shows contextual information about the active workspace and pane."
+docs_info_memory:
+  other: "Project Memory"
+docs_info_memory_desc:
+  other: "Shows the current project context: path, git branch, runtime. Persistent between sessions."
+docs_info_recent:
+  other: "Recent Commands"
+docs_info_recent_desc:
+  other: "The last 5 commands with exit code badge (green/red/orange) and timestamp."
+docs_info_favorites:
+  other: "Favorites"
+docs_info_favorites_desc:
+  other: "Favorited commands and directories. Marked via star icon, persistently stored."
+docs_info_dirs:
+  other: "Working Directories"
+docs_info_dirs_desc:
+  other: "History of visited directories. Click to navigate there instantly."
+docs_ports_title:
+  other: "Open Ports"
+docs_ports_desc:
+  other: "Relay automatically detects open ports and their associated processes on the system."
+docs_ports_detect:
+  other: "Automatic detection of all listening TCP ports"
+docs_ports_pid:
+  other: "Display of port, process name, and PID"
+docs_ports_kill:
+  other: "Process tree kill per click (getpgid + SIGKILL)"
+docs_ports_sudo:
+  other: "Sudo fallback for insufficient permissions (copies command to clipboard)"
+docs_vpn_title:
+  other: "VPN Detection"
+docs_vpn_desc:
+  other: "Relay detects active VPN tunnels (OpenVPN, WireGuard, Tailscale, NordVPN, Mullvad, Cisco AnyConnect and 14+ more providers) and shows interface, IP, and provider in the Info Panel."
+docs_agent_title:
+  other: "AI Agent"
+docs_agent_desc:
+  other: "The built-in AI agent answers questions right in the terminal. It knows the shell context (recent commands, CWD, output) and can help with targeted assistance."
+docs_agent_usage_title:
+  other: "Usage"
+docs_agent_example:
+  other: "What does this command do?"
+docs_agent_providers_title:
+  other: "Providers"
+docs_agent_col_models:
+  other: "Models"
+docs_agent_commands_title:
+  other: "Slash Commands"
+docs_agent_col_cmd:
+  other: "Command"
+docs_agent_col_desc:
+  other: "Description"
+docs_agent_cmd_help:
+  other: "Show help"
+docs_agent_cmd_save:
+  other: "Save conversation"
+docs_agent_cmd_clear:
+  other: "Clear history"
+docs_agent_cmd_model:
+  other: "Switch model"
+docs_agent_cmd_copy:
+  other: "Copy last response"
+docs_agent_cmd_context:
+  other: "Show shell context"
+docs_agent_cmd_run:
+  other: "Execute command"
+docs_agent_cmd_tokens:
+  other: "Show token usage"
+docs_agent_cmd_exit:
+  other: "Exit agent"
+docs_semantic_title:
+  other: "Semantic Colorizer"
+docs_semantic_desc:
+  other: "Relay automatically colorizes terminal output: errors, warnings, URLs, paths, and numbers get context-aware colors — without overwriting existing ANSI output."
+docs_semantic_col_pattern:
+  other: "Pattern"
+docs_semantic_col_color:
+  other: "Color"
+docs_semantic_col_example:
+  other: "Example"
+docs_sem_errors:
+  other: "Errors"
+docs_sem_warnings:
+  other: "Warnings"
+docs_sem_success:
+  other: "Success"
+docs_sem_paths:
+  other: "Paths"
+docs_sem_numbers:
+  other: "Numbers + Units"
+docs_sem_red:
+  other: "Red (bold)"
+docs_sem_yellow:
+  other: "Yellow"
+docs_sem_green:
+  other: "Green"
+docs_sem_blue:
+  other: "Blue (underline)"
+docs_sem_magenta:
+  other: "Magenta"
+docs_settings_title:
+  other: "Settings"
+docs_settings_desc_v2:
+  other: "Relay organizes 40+ settings into 7 pages. All settings are stored in UserDefaults and take effect immediately. Groups: General (Appearance, Keyboard) · Terminal (Shell & Environment, Notifications) · Advanced (Storage & Sessions, Shell Integration, AI Assistant)."
+docs_settings_desc:
+  other: "All settings are stored in UserDefaults and take effect immediately."
+docs_settings_appearance:
+  other: "Appearance"
+docs_settings_cursor:
+  other: "Cursor"
+docs_settings_shell:
+  other: "Shell"
+docs_settings_col_setting:
+  other: "Setting"
+docs_settings_col_default:
+  other: "Default"
+docs_settings_col_desc:
+  other: "Description"
+docs_set_fontsize:
+  other: "Font size (8–32)"
+docs_set_fontname:
+  other: "Font family (Nerd Font recommended)"
+docs_set_linespacing:
+  other: "Line spacing"
+docs_set_opacity:
+  other: "Background opacity"
+docs_set_scrollback:
+  other: "Scrollback lines"
+docs_set_cursorblink:
+  other: "Cursor blinking on/off"
+docs_set_shellpath:
+  other: "Shell path (auto-detected)"
+docs_set_loginmode:
+  other: "Login shell (-l flag)"
+docs_set_userzshrc:
+  other: "Use own .zshrc"
+docs_set_optionmeta:
+  other: "Option key as Meta"
+docs_env_title:
+  other: "Environment Variables"
+docs_env_desc:
+  other: "Relay provides flexible control over environment variables."
+docs_env_inherit:
+  other: "Inherit system environment (default: enabled)"
+docs_env_global:
+  other: "Define global variables (key-value pairs)"
+docs_env_path:
+  other: "PATH extensions (prepended to PATH)"
+docs_env_dotenv:
+  other: "Auto-load .env files in the working directory"
+docs_env_relay_title:
+  other: "Relay-specific Variables"
+docs_env_var_prompt:
+  other: "Active prompt style"
+docs_env_var_provider:
+  other: "AI provider (anthropic/openai)"
+docs_env_var_key:
+  other: "API key"
+docs_env_var_model:
+  other: "Model ID"
+docs_env_var_context:
+  other: "Shell context for AI"
+
+# ── Light Theme & Auto-Switch ──────────────────────────────────────
+docs_nav_light_theme:
+  other: "Light/Dark Mode"
+docs_light_title:
+  other: "Light/Dark Mode"
+docs_light_desc:
+  other: "Relay supports a light and a dark theme with automatic switching based on macOS system appearance."
+docs_light_scheme_title:
+  other: "Color Scheme"
+docs_light_col_mode:
+  other: "Mode"
+docs_light_mode_dark:
+  other: "Dark"
+docs_light_mode_dark_desc:
+  other: "Uses the configured dark theme (default: Relay Dark)."
+docs_light_mode_light:
+  other: "Light"
+docs_light_mode_light_desc:
+  other: "Uses the configured light theme (default: Relay Light)."
+docs_light_mode_auto:
+  other: "System"
+docs_light_mode_auto_desc:
+  other: "Automatically switches between light and dark when macOS changes appearance."
+docs_light_note:
+  other: "Configure the mode in Settings → Appearance → Color Scheme. In System mode, Relay observes the macOS appearance and switches themes instantly."
+
+# ── Project Memory ─────────────────────────────────────────────────
+docs_nav_project_memory:
+  other: "Project Memory"
+docs_pmem_title:
+  other: "Project Memory"
+docs_pmem_desc:
+  other: "Relay persists per-project context to disk. Commands, directories, and usage frequency survive across sessions."
+docs_pmem_commands:
+  other: "Commands are deduplicated per project — stored with use count and last exit code"
+docs_pmem_dirs:
+  other: "Visited directories are tracked with visit count and timestamp"
+docs_pmem_retention:
+  other: "Retention is configurable: 7 days, 30 days, or unlimited"
+docs_pmem_sidebar:
+  other: "Most-used commands appear in the sidebar under 'Project History'"
+docs_pmem_storage_title:
+  other: "Storage"
+docs_pmem_storage_desc:
+  other: "One JSON file per project is stored under the configured path (default: ~/.config/relay/memory/). Max 500 commands and 200 directories per project."
+docs_pmem_note:
+  other: "On app launch, old entries are automatically pruned based on the retention setting. Empty project files are removed."
+
+# ── Per-Pane Shell Toggle ──────────────────────────────────────────
+docs_nav_shell_toggle:
+  other: "Shell Mode Toggle"
+docs_toggle_title:
+  other: "Per-Pane Shell Mode"
+docs_toggle_desc:
+  other: "Each pane can individually switch between Relay prompt and user zshrc — directly in the pane header, without opening settings."
+docs_toggle_badge:
+  other: "A badge in the pane header shows the active mode: 'relay' (terminal icon) or 'zshrc' (person icon)"
+docs_toggle_click:
+  other: "Clicking the badge terminates the current shell and relaunches it with the other mode immediately"
+docs_toggle_independent:
+  other: "Each pane keeps its own mode — independent of other panes and the global setting"
+
+# ── Explain Error ──────────────────────────────────────────────────
+docs_nav_explain_error:
+  other: "Explain Error"
+docs_explain_title:
+  other: "Automatic Error Explain"
+docs_explain_desc:
+  other: "When a command exits with a non-zero exit code, Relay offers to have the AI agent explain the error."
+docs_explain_badge:
+  other: "Failed commands show a red dot and an 'Explain?' badge in the sidebar on hover"
+docs_explain_click:
+  other: "Clicking 'Explain?' sends 'relay explain' to the shell — the AI agent explains the last command"
+docs_explain_requires:
+  other: "Requires a configured AI provider (Anthropic or OpenAI) in settings"
+
+# ── Settings Pages (7-Page Structure) ──────────────────────────────
+docs_sp_appearance:
+  other: "Page 1: Appearance"
+docs_sp_appearance_desc:
+  other: "Theme, color scheme, font, cursor, transparency, and semantic highlighting — all on one page."
+docs_sp_colorscheme:
+  other: "Enable auto appearance (Light/Dark/System)"
+docs_sp_colorscheme_mode:
+  other: "Mode: dark · light · auto (follows macOS)"
+docs_sp_apptheme:
+  other: "App theme (17 themes: 7 glass + 10 retro)"
+docs_sp_shelltheme:
+  other: "Terminal color palette (ANSI colors)"
+docs_sp_prompt:
+  other: "Prompt style (11 styles)"
+docs_sp_semantic:
+  other: "Auto-colorize errors, paths, URLs"
+docs_sp_cursorcolor:
+  other: "Cursor color (hex)"
+docs_sp_keyboard:
+  other: "Page 2: Keyboard"
+docs_sp_keyboard_desc:
+  other: "Overview of all 20 keyboard shortcuts — from ⌘T (new tab) to ⌘0 (reset font)."
+docs_sp_shell:
+  other: "Page 3: Shell & Environment"
+docs_sp_shell_desc:
+  other: "Shell program, login mode, startup directory, environment variables, and PATH extensions."
+docs_sp_shellargs:
+  other: "Additional shell arguments at launch"
+docs_sp_notifications:
+  other: "Page 4: Notifications"
+docs_sp_notifications_desc:
+  other: "Bell behavior, long-running command notifications, and webhook integration."
+docs_sp_audiblebell:
+  other: "System sound on terminal bell"
+docs_sp_visualbell:
+  other: "Brief flash on terminal bell"
+docs_sp_longcmd:
+  other: "Notify on commands > N seconds (background only)"
+docs_sp_webhook:
+  other: "POST request to custom URL on command finish"
+docs_sp_storage:
+  other: "Page 5: Storage & Sessions"
+docs_sp_storage_desc:
+  other: "Project memory, session persistence, backup, and broadcast controls."
+docs_sp_pmem:
+  other: "Enable project memory (per-directory context)"
+docs_sp_retention:
+  other: "Retention: 7 days · 30 days · Unlimited"
+docs_sp_savetabs:
+  other: "Save tabs on quit"
+docs_sp_restore:
+  other: "Restore workspaces on launch"
+docs_sp_integration:
+  other: "Page 6: Shell Integration"
+docs_sp_integration_desc:
+  other: "Optional shell script enabling precise command tracking via OSC 133/7. Can be toggled on/off."
+docs_sp_ai:
+  other: "Page 7: AI Assistant"
+docs_sp_ai_desc:
+  other: "Provider selection (Anthropic/OpenAI), API keys, model configuration, and context control."
+docs_sp_aienabled:
+  other: "Enable AI assistant (relay ask / relay explain)"
+docs_sp_aiprovider:
+  other: "Provider: anthropic · openai"
+docs_sp_aicontext:
+  other: "Number of shell history lines as context (0 = no context)"

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LinkedIn 2 — Architecture</title>
+<link rel="stylesheet" href="../shared.css">
+</head>
+<body>
+<div class="post post--linkedin">
+  <div class="bg-aurora"></div>
+  <div class="bg-grid"></div>
+
+  <div class="post-header">
+    <div class="post-logo">
+      <div class="post-logo-icon"></div>
+      <span>relay</span>
+    </div>
+    <div class="post-tagline">ARCHITECTURE</div>
+  </div>
+
+  <div class="post-content">
+    <div class="post-label">Three-Layer Theme System</div>
+    <h1 class="post-title">
+      Why themes <span class="post-title-acc">aren't just colors.</span>
+    </h1>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:16px;">
+      <div class="feat-card" style="padding:18px;">
+        <div style="font-family:var(--mono); font-size:11px; color:var(--acc); letter-spacing:1px; margin-bottom:6px;">LAYER 1</div>
+        <div class="feat-card-title" style="font-size:17px;">AppTheme</div>
+        <div class="feat-card-desc" style="font-size:12px; margin-top:4px;">Backgrounds, borders, glassmorphism, accent glow effects</div>
+      </div>
+      <div class="feat-card" style="padding:18px;">
+        <div style="font-family:var(--mono); font-size:11px; color:var(--acc); letter-spacing:1px; margin-bottom:6px;">LAYER 2</div>
+        <div class="feat-card-title" style="font-size:17px;">TerminalTheme</div>
+        <div class="feat-card-desc" style="font-size:12px; margin-top:4px;">ANSI 16-color palette, cursor, selection, terminal background</div>
+      </div>
+      <div class="feat-card" style="padding:18px;">
+        <div style="font-family:var(--mono); font-size:11px; color:var(--acc); letter-spacing:1px; margin-bottom:6px;">LAYER 3</div>
+        <div class="feat-card-title" style="font-size:17px;">PromptStyle</div>
+        <div class="feat-card-desc" style="font-size:12px; margin-top:4px;">Prompt symbols, layout, powerline segments, git info</div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:32px; margin-top:24px; padding-top:18px; border-top:1px solid var(--border);">
+      <div>
+        <div style="font-size:32px; font-weight:800; color:var(--acc);">93</div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--sec); letter-spacing:1px;">DESIGN TOKENS / THEME</div>
+      </div>
+      <div>
+        <div style="font-size:32px; font-weight:800; color:var(--acc);">16</div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--sec); letter-spacing:1px;">BUILT-IN THEMES</div>
+      </div>
+      <div>
+        <div style="font-size:32px; font-weight:800; color:var(--acc);">12</div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--sec); letter-spacing:1px;">PROMPT STYLES</div>
+      </div>
+      <div>
+        <div style="font-size:32px; font-weight:800; color:var(--acc);">0</div>
+        <div style="font-family:var(--mono); font-size:10px; color:var(--sec); letter-spacing:1px;">CONFIG FILES TO EDIT</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-footer">
+    <span class="post-footer-url">relay.app/docs</span>
+    <span class="post-footer-num">Read the architecture →</span>
+  </div>
+</div>
+</body>
+</html>

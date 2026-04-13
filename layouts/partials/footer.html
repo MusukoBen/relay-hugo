@@ -1,0 +1,46 @@
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">
+          <img src="/relay-logo-dark.svg" alt="Relay Logo" class="footer-logo-img footer-logo-img--dark" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 6px;">
+          <img src="/relay-logo-light.svg" alt="Relay Logo" class="footer-logo-img footer-logo-img--light" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 6px;">
+          relay
+        </span>
+        <p class="footer-tagline">{{ i18n "footer_tagline" }}</p>
+        <div class="footer-social">
+          <a href="{{ .Site.Params.twitterUrl }}" class="footer-social-link" aria-label="Twitter">𝕏</a>
+          <a href="{{ .Site.Params.githubUrl }}" class="footer-social-link" aria-label="GitHub">⌥</a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="footer-col-title">{{ i18n "footer_col_product" }}</div>
+          <a href="{{ relLangURL "/features/" }}" class="footer-col-link">Features</a>
+          <a href="{{ relLangURL "/themes/" }}" class="footer-col-link">Themes</a>
+          <a href="{{ relLangURL "/pricing/" }}" class="footer-col-link">Pricing</a>
+          <a href="{{ relLangURL "/download/" }}" class="footer-col-link">Download</a>
+          <a href="{{ relLangURL "/changelog/" }}" class="footer-col-link">{{ i18n "footer_changelog" }}</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">{{ i18n "footer_col_developers" }}</div>
+          <a href="{{ relLangURL "/docs/" }}" class="footer-col-link">{{ i18n "footer_docs" }}</a>
+          <a href="{{ relLangURL "/docs/themes/" }}" class="footer-col-link">{{ i18n "footer_theme_api" }}</a>
+          <a href="{{ relLangURL "/docs/zsh/" }}" class="footer-col-link">{{ i18n "footer_zsh_integration" }}</a>
+          <a href="https://github.com/relayapp" class="footer-col-link">GitHub</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">{{ i18n "footer_col_legal" }}</div>
+          <a href="{{ relLangURL "/privacy/" }}" class="footer-col-link">{{ i18n "footer_privacy" }}</a>
+          <a href="{{ relLangURL "/terms/" }}" class="footer-col-link">{{ i18n "footer_terms" }}</a>
+          <a href="{{ relLangURL "/eula/" }}" class="footer-col-link">EULA</a>
+          <a href="{{ relLangURL "/press/" }}" class="footer-col-link">{{ i18n "footer_press" }}</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; {{ now.Year }} Relay App. {{ i18n "footer_rights" }}</span>
+      <span class="footer-made">Made for macOS {{ .Site.Params.macosMin }}+</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,637 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="section-inner">
+    <div class="section-label">Themes</div>
+    <h1 class="page-title">{{ i18n "themes_page_title" }}</h1>
+    <p class="page-sub">{{ i18n "themes_page_sub" }}</p>
+  </div>
+</section>
+
+<!-- ── INTERACTIVE THEME PICKER ── -->
+<section class="theme-picker-section">
+  <div class="section-inner">
+
+    <!-- Terminal Mock -->
+    <div class="tpick-stage">
+      <div class="tpick-aurora" id="tpickAurora"></div>
+      <div class="tpick-win" id="tpickWin">
+        <div class="tpick-chrome" id="tpickChrome">
+          <div class="tpick-dots">
+            <span style="background:#ff5f57"></span>
+            <span style="background:#ffbd2e"></span>
+            <span style="background:#28c840"></span>
+          </div>
+          <div class="tpick-title" id="tpickTitle">relay — ~/dev/project</div>
+          <div class="tpick-controls">⊞ ⊟</div>
+        </div>
+        <div class="tpick-body">
+          <div class="tpick-sidebar" id="tpickSidebar">
+            <div class="tpick-ws tpick-ws--active" id="tpickWsActive">⬡</div>
+            <div class="tpick-ws">⬟</div>
+            <div class="tpick-ws">⬠</div>
+          </div>
+          <div class="tpick-main">
+            <div class="tpick-tabs" id="tpickTabs">
+              <div class="tpick-tab tpick-tab--active" id="tpickTabActive">main</div>
+              <div class="tpick-tab">server</div>
+              <div class="tpick-tab">logs</div>
+              <div class="tpick-tab">+</div>
+            </div>
+            <div class="tpick-term" id="tpickTerm"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active theme name -->
+    <div class="tpick-meta">
+      <span class="tpick-meta-name" id="tpickName">Relay Dark</span>
+      <span class="tpick-meta-tag" id="tpickTag">{{ i18n "themes_tag_relay_dark" }}</span>
+    </div>
+
+    <!-- Glass Themes -->
+    <div class="tpick-group-label">{{ i18n "themes_glass_label" }}</div>
+    <div class="tpick-chips" id="glassChips">
+      <button class="tpick-chip tpick-chip--active" data-theme="relay-dark"  style="--cc:#4af09a;--cb:#0c0c0f">
+        <span class="chip-dot"></span>Relay Dark
+      </button>
+      <button class="tpick-chip" data-theme="midnight"   style="--cc:#6c8fff;--cb:#070810">
+        <span class="chip-dot"></span>Midnight
+      </button>
+      <button class="tpick-chip" data-theme="aurora"     style="--cc:#c084fc;--cb:#08080e">
+        <span class="chip-dot"></span>Aurora
+      </button>
+      <button class="tpick-chip" data-theme="obsidian"   style="--cc:#f59e0b;--cb:#0d0d0d">
+        <span class="chip-dot"></span>Obsidian
+      </button>
+      <button class="tpick-chip" data-theme="sunset"     style="--cc:#ff6b6b;--cb:#0f0a09">
+        <span class="chip-dot"></span>Sunset
+      </button>
+      <button class="tpick-chip" data-theme="arctic"     style="--cc:#67e8f9;--cb:#01050a">
+        <span class="chip-dot"></span>Arctic
+      </button>
+    </div>
+
+    <!-- Retro Themes -->
+    <div class="tpick-group-label" style="margin-top:20px">{{ i18n "themes_retro_label" }}</div>
+    <div class="tpick-chips">
+      <button class="tpick-chip tpick-chip--retro" data-theme="bbc-micro"    style="--cc:#ff4400;--cb:#000000;font-family:'VT323',monospace;letter-spacing:2px">
+        <span class="chip-dot"></span>BBC Micro
+      </button>
+      <button class="tpick-chip tpick-chip--retro" data-theme="apple-ii"     style="--cc:#33ff33;--cb:#000000;font-family:'VT323',monospace">
+        <span class="chip-dot"></span>Apple II
+      </button>
+      <button class="tpick-chip tpick-chip--retro" data-theme="amstrad-cpc"  style="--cc:#00ffff;--cb:#000000;font-family:'VT323',monospace">
+        <span class="chip-dot"></span>Amstrad CPC
+      </button>
+      <button class="tpick-chip tpick-chip--retro" data-theme="vt100-amber"  style="--cc:#ffb000;--cb:#0a0700">
+        <span class="chip-dot"></span>VT100 Amber
+      </button>
+      <button class="tpick-chip tpick-chip--retro" data-theme="ibm-3270"     style="--cc:#00cc44;--cb:#000000">
+        <span class="chip-dot"></span>IBM 3270
+      </button>
+      <button class="tpick-chip tpick-chip--retro" data-theme="xerox-alto"   style="--cc:#1a1a1a;--cb:#f5f0e8">
+        <span class="chip-dot"></span>Xerox Alto
+      </button>
+      <button class="tpick-chip tpick-chip--retro" data-theme="game-boy"     style="--cc:#8bac0f;--cb:#0f380f;font-size:11px;letter-spacing:1px;text-transform:uppercase">
+        <span class="chip-dot"></span>Game Boy
+      </button>
+      <button class="tpick-chip tpick-chip--retro" data-theme="zx-spectrum"  style="--cc:#ffff00;--cb:#000000;font-family:'VT323',monospace">
+        <span class="chip-dot"></span>ZX Spectrum
+      </button>
+      <button class="tpick-chip tpick-chip--retro" data-theme="retro-dos"    style="--cc:#00aaaa;--cb:#0000aa;font-family:'VT323',monospace;letter-spacing:2px">
+        <span class="chip-dot"></span>Retro DOS
+      </button>
+      <button class="tpick-chip tpick-chip--retro" data-theme="c64"          style="--cc:#8080ff;--cb:#2121d5;font-family:'VT323',monospace">
+        <span class="chip-dot"></span>C64
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── THEME CARDS ── -->
+<section class="themes-page">
+  <div class="section-inner">
+    <div class="section-label">{{ i18n "themes_glass_label" }}</div>
+    <div class="themes-grid">
+      <div class="th-card" style="--tc:#4af09a;--tb:rgba(74,240,154,.08);--bg:#070710">
+        <div class="th-accent"></div>
+        <div class="th-name">Relay Dark</div>
+        <div class="th-tags"><span class="tag">Glass</span><span class="tag">Aurora</span><span class="tag">Geist</span></div>
+        <div class="th-desc">{{ i18n "th_relay_dark_desc" }}</div>
+      </div>
+      <div class="th-card" style="--tc:#5d8bff;--tb:rgba(93,139,255,.08);--bg:#010110">
+        <div class="th-accent"></div>
+        <div class="th-name">Midnight</div>
+        <div class="th-tags"><span class="tag">Glass</span><span class="tag">Outlined</span><span class="tag">Syne</span></div>
+        <div class="th-desc">{{ i18n "th_midnight_desc" }}</div>
+      </div>
+      <div class="th-card" style="--tc:#a78bfa;--tb:rgba(167,139,250,.08);--bg:#050212">
+        <div class="th-accent"></div>
+        <div class="th-name">Aurora</div>
+        <div class="th-tags"><span class="tag">Glass</span><span class="tag">Serif</span><span class="tag">Lora</span></div>
+        <div class="th-desc">{{ i18n "th_aurora_desc" }}</div>
+      </div>
+      <div class="th-card" style="--tc:#ffbd2e;--tb:rgba(255,189,46,.08);--bg:#060500">
+        <div class="th-accent"></div>
+        <div class="th-name">Obsidian</div>
+        <div class="th-tags"><span class="tag">Glass</span><span class="tag">Mono</span><span class="tag">IBM Plex</span></div>
+        <div class="th-desc">{{ i18n "th_obsidian_desc" }}</div>
+      </div>
+      <div class="th-card" style="--tc:#fb7185;--tb:rgba(251,113,133,.08);--bg:#0a0203">
+        <div class="th-accent"></div>
+        <div class="th-name">Sunset</div>
+        <div class="th-tags"><span class="tag">Glass</span><span class="tag">Warm</span><span class="tag">Lora</span></div>
+        <div class="th-desc">{{ i18n "th_sunset_desc" }}</div>
+      </div>
+      <div class="th-card" style="--tc:#67e8f9;--tb:rgba(103,232,249,.08);--bg:#01050a">
+        <div class="th-accent"></div>
+        <div class="th-name">Arctic</div>
+        <div class="th-tags"><span class="tag">Glass</span><span class="tag">Cold</span><span class="tag">Space Mono</span></div>
+        <div class="th-desc">{{ i18n "th_arctic_desc" }}</div>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top:64px">{{ i18n "themes_retro_label" }}</div>
+    <div class="themes-grid">
+      <div class="th-card th-card--retro" style="--tc:#ff4400;--bg:#000">
+        <div class="th-accent"></div>
+        <div class="th-name" style="font-family:'VT323',monospace;font-size:22px;letter-spacing:2px">BBC Micro</div>
+        <div class="th-tags"><span class="tag">1981</span><span class="tag">VT323</span><span class="tag">Scanlines</span></div>
+        <div class="th-desc">{{ i18n "th_bbc_desc" }}</div>
+      </div>
+      <div class="th-card th-card--retro" style="--tc:#33ff33;--bg:#000">
+        <div class="th-accent"></div>
+        <div class="th-name" style="font-family:'VT323',monospace;font-size:22px">Apple II</div>
+        <div class="th-tags"><span class="tag">1977</span><span class="tag">VT323</span><span class="tag">Phosphor</span></div>
+        <div class="th-desc">{{ i18n "th_apple2_desc" }}</div>
+      </div>
+      <div class="th-card th-card--retro" style="--tc:#00ffff;--bg:#000">
+        <div class="th-accent"></div>
+        <div class="th-name" style="font-family:'VT323',monospace;font-size:22px;letter-spacing:2px">Amstrad CPC</div>
+        <div class="th-tags"><span class="tag">1984</span><span class="tag">Cyan</span><span class="tag">Clean</span></div>
+        <div class="th-desc">{{ i18n "th_amstrad_desc" }}</div>
+      </div>
+      <div class="th-card th-card--retro" style="--tc:#ffb000;--bg:#0a0700">
+        <div class="th-accent"></div>
+        <div class="th-name" style="font-family:'Geist Mono',monospace;font-size:14px;letter-spacing:3px">VT100 AMBER</div>
+        <div class="th-tags"><span class="tag">1978</span><span class="tag">IBM Plex</span><span class="tag">Amber</span></div>
+        <div class="th-desc">{{ i18n "th_vt100_desc" }}</div>
+      </div>
+      <div class="th-card th-card--retro" style="--tc:#00cc44;--bg:#000">
+        <div class="th-accent"></div>
+        <div class="th-name" style="font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:4px">IBM 3270</div>
+        <div class="th-tags"><span class="tag">1971</span><span class="tag">Mainframe</span><span class="tag">{{ i18n "th_tag_green" }}</span></div>
+        <div class="th-desc">{{ i18n "th_ibm3270_desc" }}</div>
+      </div>
+      <div class="th-card th-card--retro" style="--tc:#1a1a1a;--bg:#f5f0e8">
+        <div class="th-accent" style="background:#1a1a1a"></div>
+        <div class="th-name" style="color:#1a1a1a;font-family:'Lora',serif;font-size:18px">Xerox Alto</div>
+        <div class="th-tags"><span class="tag" style="color:#1a1a1a;border-color:rgba(0,0,0,.2);background:rgba(0,0,0,.06)">1973</span><span class="tag" style="color:#1a1a1a;border-color:rgba(0,0,0,.2);background:rgba(0,0,0,.06)">Lora</span><span class="tag" style="color:#1a1a1a;border-color:rgba(0,0,0,.2);background:rgba(0,0,0,.06)">{{ i18n "th_tag_bright" }}</span></div>
+        <div class="th-desc" style="color:#555">{{ i18n "th_xerox_desc" }}</div>
+      </div>
+      <div class="th-card th-card--retro" style="--tc:#8bac0f;--bg:#0f380f">
+        <div class="th-accent"></div>
+        <div class="th-name" style="font-size:9px;letter-spacing:1px;text-transform:uppercase">GAME BOY</div>
+        <div class="th-tags"><span class="tag">1989</span><span class="tag">Press Start 2P</span><span class="tag">LCD</span></div>
+        <div class="th-desc">{{ i18n "th_gameboy_desc" }}</div>
+      </div>
+      <div class="th-card th-card--retro" style="--tc:#ffff00;--bg:#000">
+        <div class="th-accent"></div>
+        <div class="th-name" style="font-family:'VT323',monospace;font-size:22px;letter-spacing:1px">ZX Spectrum</div>
+        <div class="th-tags"><span class="tag">1982</span><span class="tag">{{ i18n "th_tag_yellow" }}</span><span class="tag">British</span></div>
+        <div class="th-desc">{{ i18n "th_zx_desc" }}</div>
+      </div>
+      <div class="th-card th-card--retro" style="--tc:#00aaaa;--bg:#0000aa">
+        <div class="th-accent"></div>
+        <div class="th-name" style="font-family:'VT323',monospace;font-size:22px;letter-spacing:3px">RETRO DOS</div>
+        <div class="th-tags"><span class="tag">DOS</span><span class="tag">VT323</span><span class="tag">Heavy CRT</span></div>
+        <div class="th-desc">{{ i18n "th_dos_desc" }}</div>
+      </div>
+      <div class="th-card th-card--retro" style="--tc:#8080ff;--bg:#2121d5">
+        <div class="th-accent"></div>
+        <div class="th-name" style="font-family:'VT323',monospace;font-size:22px;color:#8080ff"> C64</div>
+        <div class="th-tags"><span class="tag">1982</span><span class="tag">VT323</span><span class="tag">Commodore</span></div>
+        <div class="th-desc">{{ i18n "th_c64_desc" }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+'use strict';
+
+// ── THEME DATA (all values are static constants, no user input) ────────────
+var THEMES = {
+  'relay-dark': {
+    name: 'Relay Dark', tag: '{{ i18n "themes_tag_relay_dark" }}', isRetro: false,
+    win:  { bg: '#0c0c0f', chrome: '#111115', border: '#1e1e26', tab: '#0a0a0d' },
+    term: { bg: '#0a0a0d', fg: '#e2e2ea', path: '#5d8bff', acc: '#4af09a', out: '#6a6a80', cursor: '#4af09a' },
+    aurora: 'rgba(74,240,154,0.18)',
+    font: "'Geist Mono','JetBrains Mono',monospace",
+    prompt: '\u276f',
+    lines: null
+  },
+  'midnight': {
+    name: 'Midnight', tag: '{{ i18n "themes_tag_midnight" }}', isRetro: false,
+    win:  { bg: '#070810', chrome: '#0c0e1a', border: '#191d35', tab: '#060711' },
+    term: { bg: '#060711', fg: '#dde2f5', path: '#7ba7ff', acc: '#6c8fff', out: '#5a6080', cursor: '#6c8fff' },
+    aurora: 'rgba(108,143,255,0.18)',
+    font: "'Geist Mono','JetBrains Mono',monospace",
+    prompt: '\u276f',
+    lines: null
+  },
+  'aurora': {
+    name: 'Aurora', tag: '{{ i18n "themes_tag_aurora" }}', isRetro: false,
+    win:  { bg: '#08080e', chrome: '#0f0d18', border: '#211a33', tab: '#07060d' },
+    term: { bg: '#07060d', fg: '#e8e0f5', path: '#d49fff', acc: '#c084fc', out: '#6b5a80', cursor: '#c084fc' },
+    aurora: 'rgba(192,132,252,0.18)',
+    font: "'Geist Mono','JetBrains Mono',monospace",
+    prompt: '\u276f',
+    lines: null
+  },
+  'obsidian': {
+    name: 'Obsidian', tag: '{{ i18n "themes_tag_obsidian" }}', isRetro: false,
+    win:  { bg: '#0d0d0d', chrome: '#141414', border: '#222222', tab: '#0a0a0a' },
+    term: { bg: '#0a0a0a', fg: '#e8e8e8', path: '#83a598', acc: '#f59e0b', out: '#666666', cursor: '#f59e0b' },
+    aurora: 'rgba(245,158,11,0.14)',
+    font: "'IBM Plex Mono','Geist Mono',monospace",
+    prompt: '$',
+    lines: null
+  },
+  'sunset': {
+    name: 'Sunset', tag: '{{ i18n "themes_tag_sunset" }}', isRetro: false,
+    win:  { bg: '#0f0a09', chrome: '#18100e', border: '#2e1a16', tab: '#0c0807' },
+    term: { bg: '#0c0807', fg: '#f0e8e6', path: '#ff9c8a', acc: '#ff6b6b', out: '#7a5a55', cursor: '#ff6b6b' },
+    aurora: 'rgba(255,107,107,0.16)',
+    font: "'Geist Mono','JetBrains Mono',monospace",
+    prompt: '\u276f',
+    lines: null
+  },
+  'arctic': {
+    name: 'Arctic', tag: '{{ i18n "themes_tag_arctic" }}', isRetro: false,
+    win:  { bg: '#01050a', chrome: '#050d17', border: '#0d1f33', tab: '#030810' },
+    term: { bg: '#030810', fg: '#d8eeff', path: '#81c8ff', acc: '#67e8f9', out: '#4a6a80', cursor: '#67e8f9' },
+    aurora: 'rgba(103,232,249,0.14)',
+    font: "'Space Mono','Geist Mono',monospace",
+    prompt: '$',
+    lines: null
+  },
+  'bbc-micro': {
+    name: 'BBC Micro', tag: '{{ i18n "themes_tag_bbc" }}', isRetro: true,
+    win:  { bg: '#000000', chrome: '#080000', border: '#ff4400', tab: '#000000' },
+    term: { bg: '#000000', fg: '#ff4400', path: '#ff4400', acc: '#ff6630', out: '#cc3300', cursor: '#ff4400' },
+    aurora: 'rgba(255,68,0,0.12)',
+    font: "'VT323',monospace", fontSize: '20px', letterSpacing: '3px', textTransform: 'uppercase', scanlines: true,
+    prompt: '>',
+    lines: [
+      ['sys', 'BBC BASIC (Z80)'],
+      ['sys', '(C)1984 Amstrad Consumer Electronics plc'],
+      ['out', ''],
+      ['out', '>LIST'],
+      ['acc', '10 PRINT "HELLO WORLD"'],
+      ['out', '20 GOTO 10'],
+      ['sys', '>RUN'],
+      ['cursor', '']
+    ]
+  },
+  'apple-ii': {
+    name: 'Apple II', tag: '{{ i18n "themes_tag_apple" }}', isRetro: true,
+    win:  { bg: '#000000', chrome: '#050505', border: '#33ff33', tab: '#000000' },
+    term: { bg: '#000000', fg: '#33ff33', path: '#33ff33', acc: '#55ff55', out: '#228822', cursor: '#33ff33' },
+    aurora: 'rgba(51,255,51,0.12)',
+    font: "'VT323',monospace", fontSize: '18px', scanlines: true,
+    prompt: ']',
+    lines: [
+      ['sys', 'Apple II Plus'],
+      ['sys', '48K RAM SYSTEM 16384 LANGUAGE CARD'],
+      ['out', ''],
+      ['out', ']CATALOG'],
+      ['acc', 'DISK VOLUME 254'],
+      ['out', ' A 009 HELLO'],
+      ['out', ' B 034 RELAY.SYS'],
+      ['cursor', '']
+    ]
+  },
+  'amstrad-cpc': {
+    name: 'Amstrad CPC', tag: '{{ i18n "themes_tag_amstrad" }}', isRetro: true,
+    win:  { bg: '#000000', chrome: '#000008', border: '#00ffff', tab: '#000000' },
+    term: { bg: '#000000', fg: '#00ffff', path: '#00ffff', acc: '#44ffff', out: '#008888', cursor: '#00ffff' },
+    aurora: 'rgba(0,255,255,0.12)',
+    font: "'VT323',monospace", fontSize: '20px', letterSpacing: '2px',
+    prompt: '>',
+    lines: [
+      ['sys', 'Amstrad CPC 464'],
+      ['sys', '64K RAM  BASIC 1.1'],
+      ['out', ''],
+      ['out', '>DIR'],
+      ['acc', 'RELAY    .BAS'],
+      ['out', 'LOADER   .COM'],
+      ['out', ''],
+      ['cursor', '']
+    ]
+  },
+  'vt100-amber': {
+    name: 'VT100 Amber', tag: '{{ i18n "themes_tag_vt100" }}', isRetro: true,
+    win:  { bg: '#0a0700', chrome: '#100c00', border: '#ffb000', tab: '#080600' },
+    term: { bg: '#080600', fg: '#ffb000', path: '#ffd060', acc: '#ffb000', out: '#a07000', cursor: '#ffb000' },
+    aurora: 'rgba(255,176,0,0.12)',
+    font: "'IBM Plex Mono','Geist Mono',monospace", fontSize: '13px', letterSpacing: '2px', scanlines: true,
+    prompt: '$',
+    lines: [
+      ['sys', 'DEC VT100   firmware v2.0'],
+      ['sys', 'login: relay'],
+      ['acc', 'Last login: Fri Feb 21 21:00 on tty0'],
+      ['out', ''],
+      ['out', '$ ls -la'],
+      ['acc', 'drwxr-xr-x  relay/  projects/  .profile'],
+      ['out', ''],
+      ['cursor', '']
+    ]
+  },
+  'ibm-3270': {
+    name: 'IBM 3270', tag: '{{ i18n "themes_tag_ibm" }}', isRetro: true,
+    win:  { bg: '#000000', chrome: '#030303', border: '#00cc44', tab: '#000000' },
+    term: { bg: '#000000', fg: '#00cc44', path: '#00cc44', acc: '#00ff55', out: '#008833', cursor: '#00cc44' },
+    aurora: 'rgba(0,204,68,0.12)',
+    font: "'IBM Plex Mono','Geist Mono',monospace", fontSize: '13px', letterSpacing: '3px', textTransform: 'uppercase', scanlines: true,
+    prompt: '=====>',
+    lines: [
+      ['sys', 'IBM 3270 INFORMATION DISPLAY SYSTEM'],
+      ['sys', 'VTAM SESSION ESTABLISHED'],
+      ['out', ''],
+      ['acc', 'TSO/E LOGON IN PROGRESS'],
+      ['out', 'USERID   ===> RELAY'],
+      ['out', 'ACCOUNT  ===> DEV001'],
+      ['out', ''],
+      ['cursor', '']
+    ]
+  },
+  'xerox-alto': {
+    name: 'Xerox Alto', tag: '{{ i18n "themes_tag_xerox" }}', isRetro: true,
+    win:  { bg: '#f5f0e8', chrome: '#e8e3db', border: '#c8c0b0', tab: '#f0ebe0' },
+    term: { bg: '#f5f0e8', fg: '#1a1a1a', path: '#444488', acc: '#222266', out: '#555555', cursor: '#1a1a1a' },
+    aurora: 'rgba(0,0,0,0.04)',
+    font: "'Geist Mono',monospace", fontSize: '13px',
+    prompt: '%',
+    lines: [
+      ['sys', 'Alto Executive  Xerox PARC 1973'],
+      ['out', ''],
+      ['out', '% ls'],
+      ['acc', 'relay.alto   paint.dyn   bravo.doc'],
+      ['out', '% bravo relay.alto'],
+      ['sys', 'BRAVO  Alto Text Editor'],
+      ['acc', '[ document opened ]'],
+      ['cursor', '']
+    ]
+  },
+  'game-boy': {
+    name: 'Game Boy', tag: '{{ i18n "themes_tag_gameboy" }}', isRetro: true,
+    win:  { bg: '#0f380f', chrome: '#1a4a1a', border: '#8bac0f', tab: '#0f380f' },
+    term: { bg: '#0f380f', fg: '#8bac0f', path: '#8bac0f', acc: '#9bbc0f', out: '#306230', cursor: '#8bac0f' },
+    aurora: 'rgba(139,172,15,0.12)',
+    font: "'Press Start 2P','Geist Mono',monospace", fontSize: '8px', letterSpacing: '1px', scanlines: true,
+    prompt: '>',
+    lines: [
+      ['sys', 'GAME BOY'],
+      ['sys', 'NINTENDO 1989'],
+      ['out', ''],
+      ['acc', '>START RELAY.GB'],
+      ['out', 'LOADING...'],
+      ['acc', 'PRESS START'],
+      ['out', ''],
+      ['cursor', '']
+    ]
+  },
+  'zx-spectrum': {
+    name: 'ZX Spectrum', tag: '{{ i18n "themes_tag_zx" }}', isRetro: true,
+    win:  { bg: '#000000', chrome: '#050505', border: '#ffff00', tab: '#000000' },
+    term: { bg: '#000000', fg: '#ffffff', path: '#ffff00', acc: '#ffff00', out: '#aaaaaa', cursor: '#ffffff' },
+    aurora: 'rgba(255,255,0,0.10)',
+    font: "'VT323',monospace", fontSize: '20px',
+    prompt: '>',
+    lines: [
+      ['sys', 'Sinclair ZX Spectrum 48K'],
+      ['out', ''],
+      ['out', '10 LET A$="RELAY"'],
+      ['out', '20 PRINT A$'],
+      ['out', '30 GOTO 20'],
+      ['acc', 'RUN'],
+      ['sys', 'RELAY'],
+      ['cursor', '']
+    ]
+  },
+  'retro-dos': {
+    name: 'Retro DOS', tag: '{{ i18n "themes_tag_dos" }}', isRetro: true,
+    win:  { bg: '#0000aa', chrome: '#000080', border: '#00aaaa', tab: '#0000aa' },
+    term: { bg: '#0000aa', fg: '#aaaaaa', path: '#ffffff', acc: '#00aaaa', out: '#888888', cursor: '#aaaaaa' },
+    aurora: 'rgba(0,170,170,0.10)',
+    font: "'VT323',monospace", fontSize: '20px', letterSpacing: '2px', scanlines: true,
+    prompt: 'C:\\>',
+    lines: [
+      ['sys', 'MS-DOS Version 6.22'],
+      ['sys', '(C)Copyright Microsoft Corp 1981-1994.'],
+      ['out', ''],
+      ['out', 'C:\\>DIR RELAY\\'],
+      ['acc', ' Volume in drive C is RELAY'],
+      ['out', ' RELAY    EXE   148,224 02-21-26'],
+      ['out', ''],
+      ['cursor', '']
+    ]
+  },
+  'c64': {
+    name: 'C64', tag: '{{ i18n "themes_tag_c64" }}', isRetro: true,
+    win:  { bg: '#2121d5', chrome: '#1a1ab0', border: '#8080ff', tab: '#2121d5' },
+    term: { bg: '#2121d5', fg: '#8080ff', path: '#c0c0ff', acc: '#aaaaff', out: '#6060cc', cursor: '#8080ff' },
+    aurora: 'rgba(128,128,255,0.10)',
+    font: "'VT323',monospace", fontSize: '20px',
+    prompt: 'READY.',
+    lines: [
+      ['sys', '    **** COMMODORE 64 BASIC V2 ****'],
+      ['sys', ' 64K RAM SYSTEM  38911 BASIC BYTES FREE'],
+      ['out', ''],
+      ['acc', 'READY.'],
+      ['out', '10 PRINT "RELAY IS LOADING..."'],
+      ['out', '20 GOTO 10'],
+      ['acc', 'RUN'],
+      ['cursor', '']
+    ]
+  }
+};
+
+// ── MODERN LINES (no user input, static) ──────────────────────────────────
+var MODERN_LINES = [
+  { t: 'pb',  path: '~/dev/relay', branch: '\u00a0main' },
+  { t: 'cmd', text: 'git status' },
+  { t: 'out', text: 'On branch main. Nothing to commit.' },
+  { t: 'pb',  path: '~/dev/relay', branch: '\u00a0main' },
+  { t: 'cmd', text: 'npm run dev' },
+  { t: 'acc', text: '\u25b8 Server running at http://localhost:3000' },
+  { t: 'out', text: '\u00a0\u00a0watching for changes\u2026' },
+  { t: 'cursor' }
+];
+
+// ── DOM ────────────────────────────────────────────────────────────────────
+var elWin       = document.getElementById('tpickWin');
+var elChrome    = document.getElementById('tpickChrome');
+var elSidebar   = document.getElementById('tpickSidebar');
+var elTabs      = document.getElementById('tpickTabs');
+var elTabActive = document.getElementById('tpickTabActive');
+var elWsActive  = document.getElementById('tpickWsActive');
+var elTerm      = document.getElementById('tpickTerm');
+var elAurora    = document.getElementById('tpickAurora');
+var elTitle     = document.getElementById('tpickTitle');
+var elName      = document.getElementById('tpickName');
+var elTag       = document.getElementById('tpickTag');
+
+// ── LINE BUILDER (DOM-based, no innerHTML with variable data) ─────────────
+function makeLine(classes) {
+  var d = document.createElement('div');
+  d.className = 'tl' + (classes ? ' ' + classes : '');
+  return d;
+}
+
+function makeSpan(text, color) {
+  var s = document.createElement('span');
+  s.textContent = text;
+  if (color) s.style.color = color;
+  return s;
+}
+
+function buildLines(t) {
+  var frag = document.createDocumentFragment();
+
+  if (!t.isRetro) {
+    // Modern themes
+    MODERN_LINES.forEach(function (line) {
+      var row = makeLine();
+      if (line.t === 'pb') {
+        row.appendChild(makeSpan(line.path, t.term.path));
+        row.appendChild(document.createTextNode(' '));
+        row.appendChild(makeSpan(line.branch, t.term.acc));
+      } else if (line.t === 'cmd') {
+        row.appendChild(makeSpan(t.prompt + '\u00a0', t.term.acc));
+        row.appendChild(makeSpan(line.text, t.term.fg));
+      } else if (line.t === 'out') {
+        row.style.color = t.term.out;
+        row.textContent = line.text;
+      } else if (line.t === 'acc') {
+        row.style.color = t.term.acc;
+        row.textContent = line.text;
+      } else if (line.t === 'cursor') {
+        row.appendChild(makeSpan(t.prompt + '\u00a0', t.term.acc));
+        var cur = makeSpan('\u2588', t.term.cursor);
+        cur.className = 'tl-cursor-blink';
+        row.appendChild(cur);
+      }
+      frag.appendChild(row);
+    });
+  } else {
+    // Retro themes — lines is an array of [type, text]
+    t.lines.forEach(function (line) {
+      var type = line[0];
+      var text = line[1] || '';
+      var row  = makeLine();
+
+      if (type === 'cursor') {
+        var cur = makeSpan('\u2588', t.term.cursor);
+        cur.className = 'tl-cursor-blink';
+        row.appendChild(cur);
+      } else {
+        var color = type === 'acc' ? t.term.acc
+                  : type === 'out' ? t.term.out
+                  : t.term.fg;
+        row.style.color = color;
+        row.textContent = text === '' ? '\u00a0' : text;
+      }
+      frag.appendChild(row);
+    });
+  }
+
+  // Scanlines overlay element (purely decorative, no user data)
+  if (t.scanlines) {
+    var sc = document.createElement('div');
+    sc.className = 'tp-scanlines';
+    frag.appendChild(sc);
+  }
+
+  return frag;
+}
+
+// ── APPLY THEME ───────────────────────────────────────────────────────────
+function applyTheme(id) {
+  var t = THEMES[id];
+  if (!t) return;
+
+  // Window
+  elWin.style.background    = t.win.bg;
+  elWin.style.borderColor   = t.win.border;
+  elChrome.style.background = t.win.chrome;
+  elChrome.style.borderBottomColor = t.win.border + '66';
+  elSidebar.style.background = t.win.chrome + 'aa';
+  elTabs.style.background   = t.win.tab;
+  elTabs.style.borderBottomColor = t.win.border + '44';
+
+  // Active elements
+  elTabActive.style.color      = t.term.acc;
+  elTabActive.style.background = t.term.acc + '22';
+  elWsActive.style.color       = t.term.acc;
+  elWsActive.style.background  = t.term.acc + '22';
+  elWsActive.style.borderColor = t.term.acc + '55';
+
+  // Aurora
+  elAurora.style.background =
+    'radial-gradient(ellipse at 50% 60%, ' + t.aurora + ' 0%, transparent 65%)';
+
+  // Title
+  elTitle.textContent = 'relay \u2014 ~/' + id.replace(/-/g, '_');
+
+  // Terminal
+  elTerm.style.background    = t.term.bg;
+  elTerm.style.fontFamily    = t.font;
+  elTerm.style.fontSize      = t.fontSize     || '13px';
+  elTerm.style.letterSpacing = t.letterSpacing|| 'normal';
+  elTerm.style.textTransform = t.textTransform|| 'none';
+  elTerm.style.color         = t.term.fg;
+
+  // Rebuild lines
+  while (elTerm.firstChild) elTerm.removeChild(elTerm.firstChild);
+  elTerm.appendChild(buildLines(t));
+
+  // Meta
+  elName.textContent = t.name;
+  elName.style.color = t.term.acc;
+  elTag.textContent  = t.tag;
+
+  // Chips active state
+  document.querySelectorAll('.tpick-chip').forEach(function (c) {
+    if (c.dataset.theme === id) {
+      c.classList.add('tpick-chip--active');
+    } else {
+      c.classList.remove('tpick-chip--active');
+    }
+  });
+}
+
+// ── CLICK HANDLERS ────────────────────────────────────────────────────────
+document.querySelectorAll('.tpick-chip').forEach(function (chip) {
+  chip.addEventListener('click', function () {
+    var id = chip.dataset.theme;
+    elTerm.style.opacity    = '0';
+    elTerm.style.transition = 'opacity .14s';
+    elWin.style.transition  = 'background .28s, border-color .28s';
+    setTimeout(function () {
+      applyTheme(id);
+      elTerm.style.opacity = '1';
+    }, 140);
+  });
+});
+
+// Init
+applyTheme('relay-dark');
+
+}());
+</script>
+{{ end }}

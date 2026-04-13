@@ -1,0 +1,64 @@
+baseURL = "https://relay.app/"
+title = "Relay — A Terminal You Build"
+theme = ""
+defaultContentLanguage = "de"
+defaultContentLanguageInSubdir = false
+
+[params]
+  version = "1.0"
+  macosMin = "macOS 14 Sonoma"
+  downloadUrl = "#download"
+  appStoreUrl = "#"
+  twitterUrl = "https://twitter.com/relayapp"
+  githubUrl = "https://github.com/relayapp"
+
+[languages]
+  [languages.de]
+    languageCode = "de"
+    languageName = "Deutsch"
+    weight = 1
+    title = "Relay — Ein Terminal das man sich baut"
+    [languages.de.params]
+      description = "Ein Terminal das man sich baut — so wie man es braucht. 16 Themes, 12 Prompt-Stile, 9 Pane-Layouts."
+
+  [languages.en]
+    languageCode = "en"
+    languageName = "English"
+    weight = 2
+    title = "Relay — A Terminal You Build"
+    [languages.en.params]
+      description = "A terminal you build — the way you need it. 16 themes, 12 prompt styles, 9 pane layouts."
+
+[[languages.de.menus.main]]
+  name = "Features"
+  url = "/#features"
+  weight = 1
+[[languages.de.menus.main]]
+  name = "Themes"
+  url = "/#themes"
+  weight = 2
+[[languages.de.menus.main]]
+  name = "Pricing"
+  url = "/#pricing"
+  weight = 3
+[[languages.de.menus.main]]
+  name = "Download"
+  url = "/#download"
+  weight = 4
+
+[[languages.en.menus.main]]
+  name = "Features"
+  url = "/en/#features"
+  weight = 1
+[[languages.en.menus.main]]
+  name = "Themes"
+  url = "/en/#themes"
+  weight = 2
+[[languages.en.menus.main]]
+  name = "Pricing"
+  url = "/en/#pricing"
+  weight = 3
+[[languages.en.menus.main]]
+  name = "Download"
+  url = "/en/#download"
+  weight = 4

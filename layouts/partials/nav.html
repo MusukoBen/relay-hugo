@@ -1,0 +1,65 @@
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="{{ relLangURL "/" }}" class="nav-logo">
+      <img src="/relay-logo-dark.svg" alt="Relay Logo" class="nav-logo-icon nav-logo-icon--dark" style="width: 24px; height: 24px;">
+      <img src="/relay-logo-light.svg" alt="Relay Logo" class="nav-logo-icon nav-logo-icon--light" style="width: 24px; height: 24px;">
+      <span class="nav-logo-text">relay</span>
+    </a>
+    <div class="nav-links">
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}" class="nav-link {{ if eq .Name "Download" }}nav-link--cta{{ end }}">{{ .Name }}</a>
+      {{ end }}
+      <!-- Language Switcher -->
+      <div class="lang-switch">
+        {{ if eq .Site.Language.Lang "de" }}
+          <span class="lang-switch-active">DE</span>
+          <span class="lang-switch-sep">|</span>
+          {{ range .Translations }}
+            <a href="{{ .RelPermalink }}" class="lang-switch-link">EN</a>
+          {{ else }}
+            <a href="/en/" class="lang-switch-link">EN</a>
+          {{ end }}
+        {{ else }}
+          {{ range .Translations }}
+            <a href="{{ .RelPermalink }}" class="lang-switch-link">DE</a>
+          {{ else }}
+            <a href="/" class="lang-switch-link">DE</a>
+          {{ end }}
+          <span class="lang-switch-sep">|</span>
+          <span class="lang-switch-active">EN</span>
+        {{ end }}
+      </div>
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="theme-toggle-icon theme-toggle-icon--sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="theme-toggle-icon theme-toggle-icon--moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}" class="nav-mobile-link">{{ .Name }}</a>
+    {{ end }}
+    <div class="lang-switch-mobile">
+      {{ if eq .Site.Language.Lang "de" }}
+        {{ range .Translations }}
+          <a href="{{ .RelPermalink }}" class="nav-mobile-link">English</a>
+        {{ else }}
+          <a href="/en/" class="nav-mobile-link">English</a>
+        {{ end }}
+      {{ else }}
+        {{ range .Translations }}
+          <a href="{{ .RelPermalink }}" class="nav-mobile-link">Deutsch</a>
+        {{ else }}
+          <a href="/" class="nav-mobile-link">Deutsch</a>
+        {{ end }}
+      {{ end }}
+    </div>
+    <button class="theme-toggle-mobile" id="themeToggleMobile">
+      <span id="themeToggleMobileLabel">Light Mode</span>
+    </button>
+  </div>
+</nav>
