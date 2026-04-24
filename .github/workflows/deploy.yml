@@ -22,12 +22,12 @@ jobs:
         run: hugo --minify
 
       - name: Deploy via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: host254.checkdomain.de
           port: 22
-          protocol: sftp
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          local-dir: ./public/
-          server-dir: ${{ secrets.SFTP_SERVER_DIR }}
+          local_path: ./public/*
+          remote_path: ${{ secrets.SFTP_SERVER_DIR }}
+          sftp_only: true
