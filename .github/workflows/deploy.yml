@@ -19,9 +19,7 @@ jobs:
           extended: true
 
       - name: Build
-        env:
-          HUGO_ENVIRONMENT: production
-        run: hugo --minify --ignoreErrors=error-missing-instagram-accesstoken
+        run: hugo --minify
 
       - name: Deploy via SFTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
