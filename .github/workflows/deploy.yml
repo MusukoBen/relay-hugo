@@ -28,13 +28,6 @@ jobs:
           SFTP_DIR: ${{ secrets.SFTP_SERVER_DIR }}
         run: |
           sudo apt-get install -y sshpass lftp > /dev/null 2>&1
-          echo "=== Listing remote directories ==="
-          lftp -u "$SFTP_USER","$SFTP_PASS" -p 22 sftp://host254.checkdomain.de -e "
-            set sftp:auto-confirm yes;
-            ls;
-            quit
-          "
-          echo "=== Deploying to $SFTP_DIR ==="
           lftp -u "$SFTP_USER","$SFTP_PASS" -p 22 sftp://host254.checkdomain.de -e "
             set sftp:auto-confirm yes;
             mirror --reverse --delete --verbose ./public/ $SFTP_DIR;
