@@ -41,6 +41,7 @@ get_format_size() {
     twitter)   echo "1200x675"  ;;
     linkedin)  echo "1200x627"  ;;
     story)     echo "1080x1920" ;;
+    lemon)     echo "1600x1200" ;;
     *)         echo "" ;;
   esac
 }
@@ -99,7 +100,7 @@ render_format() {
 
 # Determine which formats to render
 if [ $# -eq 0 ]; then
-  TARGETS=("instagram" "twitter" "linkedin" "story")
+  TARGETS=("instagram" "twitter" "linkedin" "story" "lemon")
 else
   TARGETS=("$@")
 fi

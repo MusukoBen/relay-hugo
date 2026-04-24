@@ -570,58 +570,32 @@ applyHP('relay-dark');
     <div class="section-label">{{ i18n "pricing_label" }}</div>
     <h2 class="section-title">{{ i18n "pricing_title" }}</h2>
     <p class="section-sub">{{ i18n "pricing_sub" }}</p>
-    <div class="pricing-cards">
 
-      <div class="pricing-card">
-        <div class="pricing-tier">{{ i18n "pricing_free" }}</div>
-        <div class="pricing-price"><span class="pricing-amount">{{ i18n "pricing_free_price" }}</span></div>
-        <div class="pricing-period">{{ i18n "pricing_free_period" }}</div>
-        <ul class="pricing-features">
-          <li class="pf-yes">{{ i18n "pricing_pf_free_1" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_free_2" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_free_3" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_free_4" }}</li>
-          <li class="pf-no">{{ i18n "pricing_pf_free_no_1" }}</li>
-          <li class="pf-no">{{ i18n "pricing_pf_free_no_2" }}</li>
-          <li class="pf-no">{{ i18n "pricing_pf_free_no_3" }}</li>
+    <div class="pricing-pwyw">
+      <div class="pricing-card pricing-card--pwyw">
+        <div class="pwyw-price-block">
+          <span class="pwyw-from">{{ i18n "pricing_from" }}</span>
+          <span class="pwyw-amount">{{ i18n "pricing_amount" }}</span>
+        </div>
+        <div class="pwyw-tagline">{{ i18n "pricing_tagline" }}</div>
+
+        <a href="{{ relLangURL "/pricing/" }}" class="btn btn--primary btn--full btn--lg">{{ i18n "pricing_cta" }}</a>
+
+        <div class="pricing-divider"></div>
+        <div class="pricing-feat-title">{{ i18n "pricing_feat_title" }}</div>
+        <ul class="pricing-features pricing-features--full pricing-features--two-col">
+          <li class="pf-yes">{{ i18n "pricing_pf_1" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_pf_2" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_pf_3" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_pf_4" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_pf_5" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_pf_6" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_pf_7" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_pf_8" }}</li>
         </ul>
-        <a href="#download" class="btn btn--ghost btn--full">{{ i18n "pricing_free_cta" }}</a>
       </div>
-
-      <div class="pricing-card pricing-card--featured">
-        <div class="pricing-badge">{{ i18n "pricing_recommended" }}</div>
-        <div class="pricing-tier">{{ i18n "pricing_pro" }}</div>
-        <div class="pricing-price"><span class="pricing-amount">{{ i18n "pricing_pro_price" }}</span><span class="pricing-mo">{{ i18n "pricing_pro_mo" }}</span></div>
-        <div class="pricing-period">{{ i18n "pricing_pro_period" }}</div>
-        <ul class="pricing-features">
-          <li class="pf-yes">{{ i18n "pricing_pf_pro_1" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_pro_2" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_pro_3" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_pro_4" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_pro_5" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_pro_6" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_pro_7" }}</li>
-        </ul>
-        <a href="#download" class="btn btn--primary btn--full">{{ i18n "pricing_pro_cta" }}</a>
-      </div>
-
-      <div class="pricing-card">
-        <div class="pricing-tier">{{ i18n "pricing_lifetime" }}</div>
-        <div class="pricing-price"><span class="pricing-amount">{{ i18n "pricing_lifetime_price" }}</span></div>
-        <div class="pricing-period">{{ i18n "pricing_lifetime_period" }}</div>
-        <ul class="pricing-features">
-          <li class="pf-yes">{{ i18n "pricing_pf_lt_1" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_lt_2" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_lt_3" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_lt_4" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_lt_5" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_lt_6" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_pf_lt_7" }}</li>
-        </ul>
-        <a href="#pricing" class="btn btn--ghost btn--full">{{ i18n "pricing_lifetime_cta" }}</a>
-      </div>
-
     </div>
+
     <p class="pricing-note">{{ i18n "pricing_note" }}</p>
   </div>
 </section>

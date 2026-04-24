@@ -2216,6 +2216,87 @@ ul { list-style: none; }
   margin-bottom: 4px;
 }
 
+/* PWYW — single centered pricing card */
+.pricing-pwyw {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+.pricing-card--pwyw {
+  max-width: 640px;
+  width: 100%;
+  border-color: var(--acc);
+  box-shadow: 0 0 60px rgba(74,240,154,.12);
+  padding: 48px 40px;
+  text-align: center;
+}
+.pwyw-price-block {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.pwyw-from {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--sec);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.pwyw-amount {
+  font-size: 96px;
+  font-weight: 900;
+  color: var(--acc);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(74,240,154,.25);
+}
+.pwyw-tagline {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--sec);
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+}
+.pricing-features--two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 28px;
+  text-align: left;
+}
+@media (max-width: 640px) {
+  .pricing-card--pwyw {
+    padding: 36px 24px;
+  }
+  .pwyw-amount {
+    font-size: 72px;
+  }
+  .pricing-features--two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PWYW — "why pay what you want?" note block */
+.pwyw-note-block {
+  max-width: 720px;
+  margin: 0 auto 64px;
+  text-align: center;
+  padding: 32px 24px;
+}
+.pwyw-note-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.pwyw-note-desc {
+  font-size: 15px;
+  color: var(--sec);
+  line-height: 1.7;
+}
+
 /* FAQ */
 .faq-section {
   padding-top: 16px;
@@ -2949,4 +3030,49 @@ ul { list-style: none; }
   .docs-grid-3 { grid-template-columns: 1fr; }
   .docs-grid-2 { grid-template-columns: 1fr; }
   .docs-methods { grid-template-columns: 1fr; }
+}
+
+/* ── Privacy Page ───────────────────────────────────────────── */
+.privacy-content { padding: 40px 0 80px; }
+.privacy-body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.privacy-body h2 {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--fg);
+  margin: 36px 0 12px;
+  letter-spacing: -0.2px;
+}
+.privacy-body p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--fg2);
+  margin: 0 0 14px;
+}
+.privacy-body ul {
+  padding-left: 20px;
+  margin: 0 0 14px;
+}
+.privacy-body li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--fg2);
+  margin-bottom: 6px;
+}
+.privacy-body li strong {
+  color: var(--fg);
+}
+.privacy-body a {
+  color: var(--acc);
+  text-decoration: none;
+}
+.privacy-body a:hover { text-decoration: underline; }
+.privacy-updated {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg3);
+  margin-bottom: 32px;
 }

@@ -36,35 +36,6 @@ function showCopyFeedback(btn) {
   }, 1800);
 }
 
-// ── PRICING TOGGLE ────────────────────────────────────────────
-function showMonthly() {
-  const pm = document.getElementById('priceMonthly');
-  const py = document.getElementById('priceYearly');
-  const pdm = document.getElementById('periodMonthly');
-  const pdy = document.getElementById('periodYearly');
-  const bm = document.getElementById('btnMonthly');
-  const by = document.getElementById('btnYearly');
-  if (!pm) return;
-  pm.style.display = ''; py.style.display = 'none';
-  pdm.style.display = ''; pdy.style.display = 'none';
-  bm.classList.add('pt-btn--active');
-  by.classList.remove('pt-btn--active');
-}
-
-function showYearly() {
-  const pm = document.getElementById('priceMonthly');
-  const py = document.getElementById('priceYearly');
-  const pdm = document.getElementById('periodMonthly');
-  const pdy = document.getElementById('periodYearly');
-  const bm = document.getElementById('btnMonthly');
-  const by = document.getElementById('btnYearly');
-  if (!py) return;
-  pm.style.display = 'none'; py.style.display = '';
-  pdm.style.display = 'none'; pdy.style.display = '';
-  bm.classList.remove('pt-btn--active');
-  by.classList.add('pt-btn--active');
-}
-
 // ── NAV SCROLL (theme-aware) ──────────────────────────────────
 let lastY = 0;
 const nav = document.getElementById('nav');

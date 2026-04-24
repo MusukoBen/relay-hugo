@@ -1,0 +1,57 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="section-inner">
+    <div class="section-label">{{ i18n "privacy_label" }}</div>
+    <h1 class="page-title">{{ i18n "privacy_title" }}</h1>
+    <p class="page-sub">{{ i18n "privacy_sub" }}</p>
+  </div>
+</section>
+
+<section class="privacy-content">
+  <div class="section-inner">
+    <div class="privacy-body">
+
+      <p class="privacy-updated">{{ i18n "privacy_updated" }}</p>
+
+      <h2>{{ i18n "privacy_h_overview" }}</h2>
+      <p>{{ i18n "privacy_overview" }}</p>
+
+      <h2>{{ i18n "privacy_h_no_collection" }}</h2>
+      <p>{{ i18n "privacy_no_collection" }}</p>
+
+      <h2>{{ i18n "privacy_h_local_storage" }}</h2>
+      <p>{{ i18n "privacy_local_storage" }}</p>
+      <ul>
+        <li>{{ i18n "privacy_local_1" }}</li>
+        <li>{{ i18n "privacy_local_2" }}</li>
+        <li>{{ i18n "privacy_local_3" }}</li>
+        <li>{{ i18n "privacy_local_4" }}</li>
+        <li>{{ i18n "privacy_local_5" }}</li>
+      </ul>
+      <p>{{ i18n "privacy_local_note" }}</p>
+
+      <h2>{{ i18n "privacy_h_network" }}</h2>
+      <p>{{ i18n "privacy_network_intro" }}</p>
+      <ul>
+        <li><strong>{{ i18n "privacy_net_sparkle_title" }}</strong> {{ i18n "privacy_net_sparkle" }}</li>
+        <li><strong>{{ i18n "privacy_net_ai_title" }}</strong> {{ i18n "privacy_net_ai" }}</li>
+        <li><strong>{{ i18n "privacy_net_webhook_title" }}</strong> {{ i18n "privacy_net_webhook" }}</li>
+      </ul>
+      <p>{{ i18n "privacy_network_note" }}</p>
+
+      <h2>{{ i18n "privacy_h_third_party" }}</h2>
+      <p>{{ i18n "privacy_third_party" }}</p>
+
+      <h2>{{ i18n "privacy_h_children" }}</h2>
+      <p>{{ i18n "privacy_children" }}</p>
+
+      <h2>{{ i18n "privacy_h_changes" }}</h2>
+      <p>{{ i18n "privacy_changes" }}</p>
+
+      <h2>{{ i18n "privacy_h_contact" }}</h2>
+      <p>{{ i18n "privacy_contact" }}</p>
+
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -140,199 +140,99 @@ retro_sub:
 pricing_label:
   other: "Pricing"
 pricing_title:
-  other: "Simple. Fair. One-time."
+  other: "Pay what it's worth to you."
 pricing_sub:
-  other: "Try Relay for free — forever. Unlock all features with Pro or Lifetime."
-pricing_free:
-  other: "Free"
-pricing_free_price:
-  other: "$0"
-pricing_free_period:
-  other: "forever"
-pricing_pf_free_1:
-  other: "3 Themes (Relay Dark, Retro DOS, Game Boy)"
-pricing_pf_free_2:
-  other: "Single-Pane Terminal"
-pricing_pf_free_3:
-  other: "2 Workspaces"
-pricing_pf_free_4:
-  other: "3 Prompt Styles"
-pricing_pf_free_no_1:
-  other: "All 16 Themes"
-pricing_pf_free_no_2:
-  other: "9 Pane Layouts"
-pricing_pf_free_no_3:
-  other: "iCloud Sync"
-pricing_free_cta:
-  other: "Download free"
-pricing_recommended:
-  other: "Recommended"
-pricing_pro:
-  other: "Pro"
-pricing_pro_price:
-  other: "$7.99"
-pricing_pro_mo:
-  other: "/month"
-pricing_pro_period:
-  other: "or $64.99/year (save 32%)"
-pricing_pf_pro_1:
-  other: "All 16 Themes"
-pricing_pf_pro_2:
-  other: "All 9 Pane Layouts"
-pricing_pf_pro_3:
-  other: "Unlimited Workspaces"
-pricing_pf_pro_4:
-  other: "All 12 Prompt Styles"
-pricing_pf_pro_5:
-  other: "Shell Variations"
-pricing_pf_pro_6:
-  other: "iCloud Sync"
-pricing_pf_pro_7:
-  other: "Priority Support"
-pricing_pro_cta:
-  other: "Start Pro"
-pricing_lifetime:
-  other: "Lifetime"
-pricing_lifetime_price:
-  other: "$139"
-pricing_lifetime_period:
-  other: "one-time · all future updates"
-pricing_pf_lt_1:
-  other: "Everything in Pro"
-pricing_pf_lt_2:
-  other: "All future themes"
-pricing_pf_lt_3:
-  other: "All future features"
-pricing_pf_lt_4:
-  other: "No subscription · ever"
-pricing_pf_lt_5:
-  other: "Early access to betas"
-pricing_pf_lt_6:
-  other: "Lifetime support"
-pricing_pf_lt_7:
-  other: "Name in credits 👋"
-pricing_lifetime_cta:
-  other: "Buy Lifetime"
+  other: "One price. One-time. Yours forever. From €19."
+pricing_from:
+  other: "from"
+pricing_amount:
+  other: "€19"
+pricing_tagline:
+  other: "One-time · No subscription · Yours forever"
+pricing_cta:
+  other: "Get it now →"
 pricing_note:
-  other: "30-day money-back guarantee · Payment via Stripe · No hidden costs"
+  other: "Pay more if you like — it directly supports indie development."
+pricing_feat_title:
+  other: "What's included:"
+pricing_pf_1:
+  other: "All 16 themes (Glass · Retro · Classic)"
+pricing_pf_2:
+  other: "All 12 prompt styles"
+pricing_pf_3:
+  other: "All 9 pane layouts"
+pricing_pf_4:
+  other: "Built-in AI agent"
+pricing_pf_5:
+  other: "Per-project memory"
+pricing_pf_6:
+  other: "iCloud workspace sync"
+pricing_pf_7:
+  other: "Shell integrations"
+pricing_pf_8:
+  other: "All future v1.x updates"
 
 # =============================================================================
 # PRICING PAGE
 # =============================================================================
 pricing_page_title:
-  other: "Simple. Fair. One-time."
+  other: "Pay what it's worth to you."
 pricing_page_sub:
-  other: "Try for free. Upgrade when you're ready."
-pricing_page_free_period:
-  other: "free forever"
-pricing_page_free_cta:
-  other: "Download now"
-pricing_free_feat_title:
-  other: "Included in Free:"
-pricing_page_pf_free_1:
-  other: "Relay Dark, Retro DOS, Game Boy"
-pricing_page_pf_free_2:
-  other: "Single-Pane Terminal"
-pricing_page_pf_free_3:
-  other: "2 Workspaces"
-pricing_page_pf_free_4:
-  other: "Robbyrussell, Pure, Minimal"
-pricing_page_pf_free_5:
-  other: "zsh Integration"
-pricing_page_pf_free_no_1:
-  other: "Additional themes"
-pricing_page_pf_free_no_2:
-  other: "Split view & pane layouts"
-pricing_page_pf_free_no_3:
-  other: "More than 2 workspaces"
-pricing_page_pf_free_no_4:
-  other: "All prompt styles"
-pricing_page_pf_free_no_5:
-  other: "Shell variations"
-pricing_page_pf_free_no_6:
-  other: "iCloud Sync"
-pricing_page_pf_free_no_7:
-  other: "Priority support"
-pricing_popular:
-  other: "Most Popular"
-pricing_monthly:
-  other: "Monthly"
-pricing_yearly:
-  other: "Yearly"
-pricing_pro_price_yearly:
-  other: ""
-pricing_pro_year:
-  other: ""
-pricing_monthly_cancel:
-  other: "cancel anytime"
-pricing_yearly_equiv:
-  other: "equals $5.42/month"
-pricing_pro_feat_title:
-  other: "Everything in Free, plus:"
-pricing_page_pf_pro_1:
-  other: "All 16 themes (6 Glass + 10 Retro)"
-pricing_page_pf_pro_2:
-  other: "All 9 pane layouts"
-pricing_page_pf_pro_3:
-  other: "Unlimited workspaces"
-pricing_page_pf_pro_4:
+  other: "One price. One-time. Yours forever. From €19."
+pricing_page_cta:
+  other: "Get it on LemonSqueezy →"
+pricing_page_feat_title:
+  other: "What you get:"
+pricing_page_pf_1:
+  other: "All 16 themes (Glass · Retro · Classic)"
+pricing_page_pf_2:
   other: "All 12 prompt styles"
-pricing_page_pf_pro_5:
-  other: "Shell variations per theme"
-pricing_page_pf_pro_6:
+pricing_page_pf_3:
+  other: "All 9 pane layouts"
+pricing_page_pf_4:
+  other: "Unlimited workspaces"
+pricing_page_pf_5:
+  other: "Built-in AI agent with tool access"
+pricing_page_pf_6:
+  other: "Per-directory project memory"
+pricing_page_pf_7:
   other: "iCloud Sync for all settings"
-pricing_page_pf_pro_7:
-  other: "Priority email support"
-pricing_page_pf_pro_8:
-  other: "Early access to beta features"
-pricing_lt_period:
-  other: "one-time · includes all future updates"
-pricing_lt_feat_title:
-  other: "Everything in Pro, plus:"
-pricing_page_pf_lt_1:
-  other: "No subscription — ever"
-pricing_page_pf_lt_2:
-  other: "All future themes"
-pricing_page_pf_lt_3:
-  other: "All future features"
-pricing_page_pf_lt_4:
-  other: "Early access to all betas"
-pricing_page_pf_lt_5:
-  other: "Lifetime support guaranteed"
-pricing_page_pf_lt_6:
+pricing_page_pf_8:
+  other: "Shell integration (zsh, bash, fish)"
+pricing_page_pf_9:
+  other: "All future v1.x updates"
+pricing_page_pf_10:
   other: "Name in app credits 👋"
-pricing_page_pf_lt_7:
-  other: "Vote in feature polls"
-pricing_guarantee_title:
-  other: "30-day money-back guarantee."
-pricing_guarantee_desc:
-  other: "If you're not satisfied with Relay, we'll refund you in full — no questions asked."
+pricing_page_note_title:
+  other: "Why pay what you want?"
+pricing_page_note_desc:
+  other: "Relay was built by a single person. You decide what it's worth — pay more if you like. Every euro above the minimum goes directly into continued development."
 pricing_faq_title:
   other: "Frequently Asked Questions"
 pricing_faq_q1:
-  other: "Can I try Relay before buying?"
+  other: "What does \"pay what it's worth\" mean?"
 pricing_faq_a1:
-  other: "Yes — the Free plan is permanently free and includes three complete themes. No time limit, no account required."
+  other: "You pay at least €19 — that's the floor that keeps Relay sustainable. But you can pay €29, €49, or €100 if the product is worth more to you. Higher amounts directly support indie development."
 pricing_faq_q2:
-  other: "What does \"all future updates\" mean with Lifetime?"
+  other: "Is this a subscription?"
 pricing_faq_a2:
-  other: "You'll receive all new themes, features, and major versions (Relay 2, 3, etc.) at no additional cost — as long as Relay exists."
+  other: "No. It's a one-time payment. No monthly or yearly fees, no auto-renewal. You pay once and keep Relay forever."
 pricing_faq_q3:
-  other: "Which payment methods are accepted?"
+  other: "What do I get for my money?"
 pricing_faq_a3:
-  other: "Credit card, SEPA direct debit, PayPal, and Apple Pay — processed via Stripe. Invoices available on request."
+  other: "All 16 themes, 12 prompt styles, 9 pane layouts, the built-in AI agent, project memory, iCloud sync, and all future v1.x updates. No feature gates, no hidden paywalls."
 pricing_faq_q4:
-  other: "Are there discounts for teams or schools?"
+  other: "Which payment methods are accepted?"
 pricing_faq_a4:
-  other: "Yes — from 5 licenses there's a 20% team discount. Educational institutions get 50% off. Contact us via email."
+  other: "Credit card, PayPal, and Apple Pay — processed via LemonSqueezy (your merchant of record). VAT-compliant invoices are generated automatically."
 pricing_faq_q5:
   other: "Does Relay run on older Macs?"
 pricing_faq_a5:
   other: "Relay requires macOS 14 Sonoma or later. Universal Binary — runs natively on Apple Silicon and Intel."
 pricing_faq_q6:
-  other: "What happens if I cancel my subscription?"
+  other: "What does \"all future v1.x updates\" mean?"
 pricing_faq_a6:
-  other: "You keep access until the end of the billing period. After that, the app reverts to the Free plan — your data is preserved."
+  other: "You'll receive all new themes, features, and minor updates in the 1.x series for free. A future major version (2.0) would be a separate purchase — but not before 2028."
 
 # =============================================================================
 # DOWNLOAD (HOME CTA)
@@ -515,6 +415,74 @@ footer_press:
   other: "Press Kit"
 footer_rights:
   other: "All rights reserved."
+
+# ── PRIVACY PAGE ──
+privacy_label:
+  other: "Legal"
+privacy_title:
+  other: "Privacy Policy"
+privacy_sub:
+  other: "Relay is designed to keep your data on your machine."
+privacy_updated:
+  other: "Last updated: April 13, 2026"
+privacy_h_overview:
+  other: "Overview"
+privacy_overview:
+  other: "Relay is a native macOS terminal emulator. It runs entirely on your device. We do not operate servers that receive, store or process your data."
+privacy_h_no_collection:
+  other: "No data collection"
+privacy_no_collection:
+  other: "Relay does not collect analytics, telemetry, crash reports or usage data of any kind. We have no tracking pixels, no SDKs and no server-side logs. We literally do not know who you are."
+privacy_h_local_storage:
+  other: "What is stored locally"
+privacy_local_storage:
+  other: "The following data is stored on your Mac in UserDefaults and local config files. It never leaves your machine:"
+privacy_local_1:
+  other: "App preferences (theme, font, shell settings)"
+privacy_local_2:
+  other: "Command history and working directories"
+privacy_local_3:
+  other: "Saved AI conversation turns"
+privacy_local_4:
+  other: "License key (stored in the macOS Keychain)"
+privacy_local_5:
+  other: "AI provider API keys (stored in UserDefaults — never transmitted to us)"
+privacy_local_note:
+  other: "All of this data stays on your device. Uninstalling Relay removes it."
+privacy_h_network:
+  other: "Network connections"
+privacy_network_intro:
+  other: "Relay makes outbound network requests only in these cases, all initiated by you:"
+privacy_net_sparkle_title:
+  other: "Update checks —"
+privacy_net_sparkle:
+  other: "Sparkle checks for new versions by fetching an appcast XML file. This transmits your app version and macOS version. No personal data is sent."
+privacy_net_ai_title:
+  other: "AI assistant —"
+privacy_net_ai:
+  other: "When you use relay ask or relay explain, your query and shell context are sent to the AI provider you configured (OpenAI or Anthropic) using your own API key. Relay does not proxy, log or store these requests."
+privacy_net_webhook_title:
+  other: "Webhooks —"
+privacy_net_webhook:
+  other: "If you configure a webhook URL in Settings, Relay sends a POST request with command metadata to that URL when a command finishes. This is entirely opt-in and goes to a URL you control."
+privacy_network_note:
+  other: "Relay makes no other network connections. There is no phone-home, no license server, and no cloud sync."
+privacy_h_third_party:
+  other: "Third-party services"
+privacy_third_party:
+  other: "Relay itself does not integrate with any third-party analytics or advertising services. If you use the AI assistant feature, your requests are handled by OpenAI or Anthropic under their respective privacy policies. Relay has no affiliation with either provider."
+privacy_h_children:
+  other: "Children"
+privacy_children:
+  other: "Relay is not directed at children under 13 and does not knowingly collect data from children."
+privacy_h_changes:
+  other: "Changes to this policy"
+privacy_changes:
+  other: "If we update this policy, we will post the changes on this page with a new date. Since Relay collects no data, changes are unlikely to be material."
+privacy_h_contact:
+  other: "Contact"
+privacy_contact:
+  other: "Questions about this policy? Email <a href=\"mailto:relay-support@notetheco.de\">relay-support@notetheco.de</a>"
 
 # ── DOCS PAGE ──
 docs_label:
@@ -1047,3 +1015,132 @@ docs_sp_aiprovider:
   other: "Provider: anthropic · openai"
 docs_sp_aicontext:
   other: "Number of shell history lines as context (0 = no context)"
+
+# ── Super Features (NEW) ──────────────────────────────────
+docs_nav_superfeatures:
+  other: "SUPER FEATURES"
+docs_nav_command_blocks:
+  other: "Command Blocks"
+docs_nav_autocomplete:
+  other: "Autocomplete"
+docs_nav_images:
+  other: "Inline Images"
+docs_nav_profile_switching:
+  other: "Profile Switching"
+docs_nav_clickable_paths:
+  other: "Clickable Paths"
+docs_nav_triggers:
+  other: "Regex Triggers"
+docs_nav_snippets:
+  other: "Snippets"
+docs_nav_sticky_header:
+  other: "Sticky Header"
+docs_nav_blueprints:
+  other: "Blueprints"
+docs_nav_pane_coloring:
+  other: "Pane Coloring"
+docs_nav_pipeline:
+  other: "CI/CD Pipeline"
+
+docs_blocks_title:
+  other: "Command Blocks"
+docs_blocks_desc:
+  other: "Every command and its output is treated as a discrete block with visual separators. Right-click any command in RECENT for block actions."
+docs_blocks_separators:
+  other: "Visual Separators"
+docs_blocks_separators_desc:
+  other: "Subtle gradient lines between commands make the terminal scannable at a glance."
+docs_blocks_actions:
+  other: "Block Actions"
+docs_blocks_actions_desc:
+  other: "Right-click in RECENT → Copy Output, Re-run, Scroll to Block, Add Favorite."
+docs_blocks_nav:
+  other: "Block Navigation"
+docs_blocks_nav_desc:
+  other: "⌘⇧↑ / ⌘⇧↓ to jump between command blocks."
+
+docs_autocomplete_title:
+  other: "Inline Autocomplete"
+docs_autocomplete_desc:
+  other: "IDE-style dropdown that appears as you type, showing subcommands, flags, and descriptions."
+docs_autocomplete_specs:
+  other: "Built-in completion specs for:"
+docs_autocomplete_keys:
+  other: "Navigate with ↑/↓, accept with Tab, dismiss with Esc."
+
+docs_images_title:
+  other: "Inline Images"
+docs_images_desc:
+  other: "Display images directly in the terminal using the Kitty Graphics Protocol."
+docs_images_protocol:
+  other: "Supports PNG, JPEG, GIF. Uses Kitty protocol with chunked base64 transmission for large files."
+
+docs_profile_title:
+  other: "Automatic Profile Switching"
+docs_profile_desc:
+  other: "Theme changes automatically based on context — visual safety net for dangerous environments."
+docs_profile_ssh:
+  other: "SSH connections switch to a warning theme (e.g., Obsidian). Configurable per host pattern."
+docs_profile_dir:
+  other: "Directory Rules"
+docs_profile_dir_desc:
+  other: "Switch theme when entering specific directories. Match with regex patterns."
+
+docs_clickable_title:
+  other: "Clickable Paths & URLs"
+docs_clickable_desc:
+  other: "File paths and URLs in terminal output are clickable. ⌘+Click to open — paths open in Finder, URLs in your browser. Uses the OSC 8 hyperlink standard."
+
+docs_triggers_title:
+  other: "Regex Triggers"
+docs_triggers_desc:
+  other: "Automatic actions when terminal output matches a pattern. Configure in Settings → Appearance → Regex Triggers."
+docs_triggers_notify:
+  other: "Notifications"
+docs_triggers_notify_desc:
+  other: "macOS notification when output matches (e.g., 'BUILD SUCCEEDED')."
+docs_triggers_sound:
+  other: "Sound"
+docs_triggers_sound_desc:
+  other: "Play a sound on pattern match (e.g., 'BUILD FAILED')."
+
+docs_snippets_title:
+  other: "Parameterized Snippets"
+docs_snippets_desc:
+  other: "Reusable command templates with {{placeholder}} parameters. Double-click in the sidebar to run."
+docs_snippets_how:
+  other: "When executed, a form appears for each placeholder. Live preview shows the resolved command before running."
+
+docs_sticky_title:
+  other: "Sticky Command Header"
+docs_sticky_desc:
+  other: "When a command produces long output, its name stays pinned at the top of the terminal with an elapsed timer. You always know what's running."
+
+docs_blueprints_title:
+  other: "Session Blueprints"
+docs_blueprints_desc:
+  other: "Save workspace layouts as reusable templates. Each blueprint defines panes, starting directories, and auto-start commands."
+docs_blueprints_config:
+  other: "Configure in Settings → Integration → Session Blueprints. Launch from the sidebar BLUEPRINTS section."
+
+docs_panecolor_title:
+  other: "Pane Coloring"
+docs_panecolor_desc:
+  other: "Assign colors to panes via right-click on the pane header. Choose from 7 preset colors (green, red, yellow, blue, purple, orange, cyan) to visually distinguish environments."
+
+docs_pipeline_title:
+  other: "CI/CD Pipeline Monitor"
+docs_pipeline_desc:
+  other: "Monitor GitHub Actions directly in Relay. After git push, the pipeline status appears live in the sidebar."
+docs_pipeline_auto:
+  other: "Auto-Detection"
+docs_pipeline_auto_desc:
+  other: "Detects git push from any shell (Relay, external terminal, IDE) via filesystem watching."
+docs_pipeline_live:
+  other: "Live Updates"
+docs_pipeline_live_desc:
+  other: "Steps update every 5 seconds with animated progress bar and pulsing status dots."
+docs_pipeline_logs:
+  other: "Job Logs"
+docs_pipeline_logs_desc:
+  other: "Click any step to view its logs in a popover. Copy logs to clipboard with one click."

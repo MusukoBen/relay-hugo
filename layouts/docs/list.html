@@ -38,6 +38,20 @@
         <a href="#semantic" class="docs-nav-link">{{ i18n "docs_nav_semantic" }}</a>
       </div>
       <div class="docs-nav-group">
+        <div class="docs-nav-label">{{ i18n "docs_nav_superfeatures" }}</div>
+        <a href="#command-blocks" class="docs-nav-link">{{ i18n "docs_nav_command_blocks" }}</a>
+        <a href="#autocomplete" class="docs-nav-link">{{ i18n "docs_nav_autocomplete" }}</a>
+        <a href="#inline-images" class="docs-nav-link">{{ i18n "docs_nav_images" }}</a>
+        <a href="#profile-switching" class="docs-nav-link">{{ i18n "docs_nav_profile_switching" }}</a>
+        <a href="#clickable-paths" class="docs-nav-link">{{ i18n "docs_nav_clickable_paths" }}</a>
+        <a href="#triggers" class="docs-nav-link">{{ i18n "docs_nav_triggers" }}</a>
+        <a href="#snippets" class="docs-nav-link">{{ i18n "docs_nav_snippets" }}</a>
+        <a href="#sticky-header" class="docs-nav-link">{{ i18n "docs_nav_sticky_header" }}</a>
+        <a href="#blueprints" class="docs-nav-link">{{ i18n "docs_nav_blueprints" }}</a>
+        <a href="#pane-coloring" class="docs-nav-link">{{ i18n "docs_nav_pane_coloring" }}</a>
+        <a href="#pipeline" class="docs-nav-link">{{ i18n "docs_nav_pipeline" }}</a>
+      </div>
+      <div class="docs-nav-group">
         <div class="docs-nav-label">{{ i18n "docs_nav_config" }}</div>
         <a href="#settings" class="docs-nav-link">{{ i18n "docs_nav_settings" }}</a>
       </div>
@@ -430,6 +444,171 @@ scanlines · suggestedFontName · suggestedPromptStyle</code></div>
             <tr><td>{{ i18n "docs_sem_numbers" }}</td><td style="color:#bd79ff">{{ i18n "docs_sem_magenta" }}</td><td><code>340ms, 18.4MB</code></td></tr>
           </tbody>
         </table>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════ -->
+      <!-- ── SUPER FEATURES ── -->
+      <!-- ══════════════════════════════════════════════════════ -->
+
+      <!-- ── COMMAND BLOCKS ── -->
+      <div class="docs-section" id="command-blocks">
+        <h2>{{ i18n "docs_blocks_title" }}</h2>
+        <p>{{ i18n "docs_blocks_desc" }}</p>
+        <div class="docs-feature-list">
+          <div class="docs-feature-item">
+            <span class="docs-feature-icon">│</span>
+            <div>
+              <strong>{{ i18n "docs_blocks_separators" }}</strong>
+              <p>{{ i18n "docs_blocks_separators_desc" }}</p>
+            </div>
+          </div>
+          <div class="docs-feature-item">
+            <span class="docs-feature-icon">⧉</span>
+            <div>
+              <strong>{{ i18n "docs_blocks_actions" }}</strong>
+              <p>{{ i18n "docs_blocks_actions_desc" }}</p>
+            </div>
+          </div>
+          <div class="docs-feature-item">
+            <span class="docs-feature-icon">⌘⇧↑</span>
+            <div>
+              <strong>{{ i18n "docs_blocks_nav" }}</strong>
+              <p>{{ i18n "docs_blocks_nav_desc" }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── AUTOCOMPLETE ── -->
+      <div class="docs-section" id="autocomplete">
+        <h2>{{ i18n "docs_autocomplete_title" }}</h2>
+        <p>{{ i18n "docs_autocomplete_desc" }}</p>
+        <div class="docs-code">git commit --<span class="docs-code-dim">message, --amend, --all, --no-edit...</span></div>
+        <p>{{ i18n "docs_autocomplete_specs" }}</p>
+        <div class="docs-badge-row">
+          <span class="docs-badge">git</span>
+          <span class="docs-badge">docker</span>
+          <span class="docs-badge">npm</span>
+          <span class="docs-badge">cargo</span>
+          <span class="docs-badge">brew</span>
+        </div>
+        <p>{{ i18n "docs_autocomplete_keys" }}</p>
+      </div>
+
+      <!-- ── INLINE IMAGES ── -->
+      <div class="docs-section" id="inline-images">
+        <h2>{{ i18n "docs_images_title" }}</h2>
+        <p>{{ i18n "docs_images_desc" }}</p>
+        <div class="docs-code">relay imgcat ~/Desktop/photo.png</div>
+        <p>{{ i18n "docs_images_protocol" }}</p>
+      </div>
+
+      <!-- ── PROFILE SWITCHING ── -->
+      <div class="docs-section" id="profile-switching">
+        <h2>{{ i18n "docs_profile_title" }}</h2>
+        <p>{{ i18n "docs_profile_desc" }}</p>
+        <div class="docs-feature-list">
+          <div class="docs-feature-item">
+            <span class="docs-feature-icon">🔴</span>
+            <div>
+              <strong>SSH</strong>
+              <p>{{ i18n "docs_profile_ssh" }}</p>
+            </div>
+          </div>
+          <div class="docs-feature-item">
+            <span class="docs-feature-icon">📁</span>
+            <div>
+              <strong>{{ i18n "docs_profile_dir" }}</strong>
+              <p>{{ i18n "docs_profile_dir_desc" }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── CLICKABLE PATHS ── -->
+      <div class="docs-section" id="clickable-paths">
+        <h2>{{ i18n "docs_clickable_title" }}</h2>
+        <p>{{ i18n "docs_clickable_desc" }}</p>
+        <div class="docs-code">⌘+Click → <span class="docs-code-accent">/usr/local/bin/node</span> → opens in Finder</div>
+      </div>
+
+      <!-- ── REGEX TRIGGERS ── -->
+      <div class="docs-section" id="triggers">
+        <h2>{{ i18n "docs_triggers_title" }}</h2>
+        <p>{{ i18n "docs_triggers_desc" }}</p>
+        <div class="docs-feature-list">
+          <div class="docs-feature-item">
+            <span class="docs-feature-icon">🔔</span>
+            <div>
+              <strong>{{ i18n "docs_triggers_notify" }}</strong>
+              <p>{{ i18n "docs_triggers_notify_desc" }}</p>
+            </div>
+          </div>
+          <div class="docs-feature-item">
+            <span class="docs-feature-icon">🔊</span>
+            <div>
+              <strong>{{ i18n "docs_triggers_sound" }}</strong>
+              <p>{{ i18n "docs_triggers_sound_desc" }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SNIPPETS ── -->
+      <div class="docs-section" id="snippets">
+        <h2>{{ i18n "docs_snippets_title" }}</h2>
+        <p>{{ i18n "docs_snippets_desc" }}</p>
+        <div class="docs-code">deploy {{"{{service}}"}} to {{"{{env}}"}}</div>
+        <p>{{ i18n "docs_snippets_how" }}</p>
+      </div>
+
+      <!-- ── STICKY HEADER ── -->
+      <div class="docs-section" id="sticky-header">
+        <h2>{{ i18n "docs_sticky_title" }}</h2>
+        <p>{{ i18n "docs_sticky_desc" }}</p>
+      </div>
+
+      <!-- ── BLUEPRINTS ── -->
+      <div class="docs-section" id="blueprints">
+        <h2>{{ i18n "docs_blueprints_title" }}</h2>
+        <p>{{ i18n "docs_blueprints_desc" }}</p>
+        <p>{{ i18n "docs_blueprints_config" }}</p>
+      </div>
+
+      <!-- ── PANE COLORING ── -->
+      <div class="docs-section" id="pane-coloring">
+        <h2>{{ i18n "docs_panecolor_title" }}</h2>
+        <p>{{ i18n "docs_panecolor_desc" }}</p>
+      </div>
+
+      <!-- ── CI/CD PIPELINE ── -->
+      <div class="docs-section" id="pipeline">
+        <h2>{{ i18n "docs_pipeline_title" }}</h2>
+        <p>{{ i18n "docs_pipeline_desc" }}</p>
+        <div class="docs-feature-list">
+          <div class="docs-feature-item">
+            <span class="docs-feature-icon">⚡</span>
+            <div>
+              <strong>{{ i18n "docs_pipeline_auto" }}</strong>
+              <p>{{ i18n "docs_pipeline_auto_desc" }}</p>
+            </div>
+          </div>
+          <div class="docs-feature-item">
+            <span class="docs-feature-icon">📊</span>
+            <div>
+              <strong>{{ i18n "docs_pipeline_live" }}</strong>
+              <p>{{ i18n "docs_pipeline_live_desc" }}</p>
+            </div>
+          </div>
+          <div class="docs-feature-item">
+            <span class="docs-feature-icon">📋</span>
+            <div>
+              <strong>{{ i18n "docs_pipeline_logs" }}</strong>
+              <p>{{ i18n "docs_pipeline_logs_desc" }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="docs-code">Settings → CI/CD Pipeline → GitHub Token</div>
       </div>
 
       <!-- ── SETTINGS (7 Pages) ── -->

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lemon 3 — Layouts</title>
+<link rel="stylesheet" href="../shared.css">
+<style>
+  /* Tiny local helpers to draw 9 pane variants */
+  .pd--single { grid-template-columns: 1fr; }
+  .pd--vsplit { grid-template-columns: 1fr 1fr; }
+  .pd--hsplit { grid-template-rows: 1fr 1fr; }
+  .pd--triL { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+  .pd--triL > :nth-child(1) { grid-row: span 2; }
+  .pd--triR { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+  .pd--triR > :nth-child(3) { grid-row: span 2; grid-column: 2; }
+  .pd--quad { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+  .pd--stack3 { grid-template-rows: 1fr 1fr 1fr; }
+  .pd--cols3 { grid-template-columns: 1fr 1fr 1fr; }
+  .pd--mainRight { grid-template-columns: 1fr 2fr; grid-template-rows: 1fr 1fr; }
+  .pd--mainRight > :nth-child(1) { grid-row: span 2; }
+</style>
+</head>
+<body>
+<div class="post post--lemon">
+  <div class="bg-aurora"></div>
+  <div class="bg-grid"></div>
+
+  <div class="post-header">
+    <div class="post-logo">
+      <div class="post-logo-icon"></div>
+      <span>relay</span>
+    </div>
+    <div class="post-tagline">PANE LAYOUTS</div>
+  </div>
+
+  <div class="post-content">
+    <div class="post-label">9 preset layouts · instant switch</div>
+    <h1 class="post-title">
+      One window.<br>
+      <span class="post-title-acc">Nine</span> workflows.
+    </h1>
+
+    <div class="lemon-pane-grid">
+      <div class="lemon-pane-card">
+        <div class="lemon-pane-title">Single</div>
+        <div class="lemon-pane-diagram pd--single">
+          <div class="lemon-pane-cell lemon-pane-cell--acc"></div>
+        </div>
+      </div>
+      <div class="lemon-pane-card">
+        <div class="lemon-pane-title">V-Split</div>
+        <div class="lemon-pane-diagram pd--vsplit">
+          <div class="lemon-pane-cell lemon-pane-cell--acc"></div>
+          <div class="lemon-pane-cell"></div>
+        </div>
+      </div>
+      <div class="lemon-pane-card">
+        <div class="lemon-pane-title">H-Split</div>
+        <div class="lemon-pane-diagram pd--hsplit">
+          <div class="lemon-pane-cell lemon-pane-cell--acc"></div>
+          <div class="lemon-pane-cell"></div>
+        </div>
+      </div>
+      <div class="lemon-pane-card">
+        <div class="lemon-pane-title">Tri · Left</div>
+        <div class="lemon-pane-diagram pd--triL">
+          <div class="lemon-pane-cell lemon-pane-cell--acc"></div>
+          <div class="lemon-pane-cell"></div>
+          <div class="lemon-pane-cell"></div>
+        </div>
+      </div>
+      <div class="lemon-pane-card">
+        <div class="lemon-pane-title">Tri · Right</div>
+        <div class="lemon-pane-diagram pd--triR">
+          <div class="lemon-pane-cell"></div>
+          <div class="lemon-pane-cell"></div>
+          <div class="lemon-pane-cell lemon-pane-cell--acc"></div>
+        </div>
+      </div>
+      <div class="lemon-pane-card">
+        <div class="lemon-pane-title">Quad</div>
+        <div class="lemon-pane-diagram pd--quad">
+          <div class="lemon-pane-cell lemon-pane-cell--acc"></div>
+          <div class="lemon-pane-cell"></div>
+          <div class="lemon-pane-cell"></div>
+          <div class="lemon-pane-cell"></div>
+        </div>
+      </div>
+      <div class="lemon-pane-card">
+        <div class="lemon-pane-title">3-Stack</div>
+        <div class="lemon-pane-diagram pd--stack3">
+          <div class="lemon-pane-cell lemon-pane-cell--acc"></div>
+          <div class="lemon-pane-cell"></div>
+          <div class="lemon-pane-cell"></div>
+        </div>
+      </div>
+      <div class="lemon-pane-card">
+        <div class="lemon-pane-title">3-Columns</div>
+        <div class="lemon-pane-diagram pd--cols3">
+          <div class="lemon-pane-cell"></div>
+          <div class="lemon-pane-cell lemon-pane-cell--acc"></div>
+          <div class="lemon-pane-cell"></div>
+        </div>
+      </div>
+      <div class="lemon-pane-card">
+        <div class="lemon-pane-title">Main · Right</div>
+        <div class="lemon-pane-diagram pd--mainRight">
+          <div class="lemon-pane-cell lemon-pane-cell--acc"></div>
+          <div class="lemon-pane-cell"></div>
+          <div class="lemon-pane-cell"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-footer">
+    <span class="post-footer-url">→ relay.app</span>
+    <span class="post-footer-num">03 / 06</span>
+  </div>
+</div>
+</body>
+</html>

@@ -9,93 +9,40 @@
 
 <section class="pricing-full">
   <div class="section-inner">
-    <div class="pricing-cards pricing-cards--full">
+    <div class="pricing-pwyw">
 
-      <!-- FREE -->
-      <div class="pricing-card">
-        <div class="pricing-tier">{{ i18n "pricing_free" }}</div>
-        <div class="pricing-price-block">
-          <div class="pricing-price"><span class="pricing-amount">{{ i18n "pricing_free_price" }}</span></div>
-          <div class="pricing-period">{{ i18n "pricing_page_free_period" }}</div>
+      <!-- SINGLE PWYW CARD -->
+      <div class="pricing-card pricing-card--pwyw">
+        <div class="pwyw-price-block">
+          <span class="pwyw-from">{{ i18n "pricing_from" }}</span>
+          <span class="pwyw-amount">{{ i18n "pricing_amount" }}</span>
         </div>
-        <a href="{{ relLangURL "/download/" }}" class="btn btn--ghost btn--full">{{ i18n "pricing_page_free_cta" }}</a>
-        <div class="pricing-divider"></div>
-        <div class="pricing-feat-title">{{ i18n "pricing_free_feat_title" }}</div>
-        <ul class="pricing-features pricing-features--full">
-          <li class="pf-yes">{{ i18n "pricing_page_pf_free_1" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_free_2" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_free_3" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_free_4" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_free_5" }}</li>
-          <li class="pf-no">{{ i18n "pricing_page_pf_free_no_1" }}</li>
-          <li class="pf-no">{{ i18n "pricing_page_pf_free_no_2" }}</li>
-          <li class="pf-no">{{ i18n "pricing_page_pf_free_no_3" }}</li>
-          <li class="pf-no">{{ i18n "pricing_page_pf_free_no_4" }}</li>
-          <li class="pf-no">{{ i18n "pricing_page_pf_free_no_5" }}</li>
-          <li class="pf-no">{{ i18n "pricing_page_pf_free_no_6" }}</li>
-          <li class="pf-no">{{ i18n "pricing_page_pf_free_no_7" }}</li>
-        </ul>
-      </div>
+        <div class="pwyw-tagline">{{ i18n "pricing_tagline" }}</div>
 
-      <!-- PRO -->
-      <div class="pricing-card pricing-card--featured">
-        <div class="pricing-badge">{{ i18n "pricing_popular" }}</div>
-        <div class="pricing-tier">{{ i18n "pricing_pro" }}</div>
-        <div class="pricing-price-block">
-          <div class="pricing-toggle" id="pricingToggle">
-            <button class="pt-btn pt-btn--active" id="btnMonthly" onclick="showMonthly()">{{ i18n "pricing_monthly" }}</button>
-            <button class="pt-btn" id="btnYearly" onclick="showYearly()">{{ i18n "pricing_yearly" }} <span class="pt-save">–32%</span></button>
-          </div>
-          <div class="pricing-price" id="priceMonthly"><span class="pricing-amount">{{ i18n "pricing_pro_price" }}</span><span class="pricing-mo">{{ i18n "pricing_pro_mo" }}</span></div>
-          <div class="pricing-price" id="priceYearly" style="display:none"><span class="pricing-amount">{{ i18n "pricing_pro_price_yearly" }}</span><span class="pricing-mo">{{ i18n "pricing_pro_year" }}</span></div>
-          <div class="pricing-period" id="periodMonthly">{{ i18n "pricing_monthly_cancel" }}</div>
-          <div class="pricing-period" id="periodYearly" style="display:none">{{ i18n "pricing_yearly_equiv" }}</div>
-        </div>
-        <a href="#" class="btn btn--primary btn--full">{{ i18n "pricing_pro_cta" }}</a>
-        <div class="pricing-divider"></div>
-        <div class="pricing-feat-title">{{ i18n "pricing_pro_feat_title" }}</div>
-        <ul class="pricing-features pricing-features--full">
-          <li class="pf-yes">{{ i18n "pricing_page_pf_pro_1" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_pro_2" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_pro_3" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_pro_4" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_pro_5" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_pro_6" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_pro_7" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_pro_8" }}</li>
-        </ul>
-      </div>
+        <a href="https://relay-terminal.lemonsqueezy.com" class="btn btn--primary btn--full btn--lg">{{ i18n "pricing_page_cta" }}</a>
 
-      <!-- LIFETIME -->
-      <div class="pricing-card">
-        <div class="pricing-tier">{{ i18n "pricing_lifetime" }}</div>
-        <div class="pricing-price-block">
-          <div class="pricing-price"><span class="pricing-amount">{{ i18n "pricing_lifetime_price" }}</span></div>
-          <div class="pricing-period">{{ i18n "pricing_lt_period" }}</div>
-        </div>
-        <a href="#" class="btn btn--ghost btn--full">{{ i18n "pricing_lifetime_cta" }}</a>
         <div class="pricing-divider"></div>
-        <div class="pricing-feat-title">{{ i18n "pricing_lt_feat_title" }}</div>
-        <ul class="pricing-features pricing-features--full">
-          <li class="pf-yes">{{ i18n "pricing_page_pf_lt_1" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_lt_2" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_lt_3" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_lt_4" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_lt_5" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_lt_6" }}</li>
-          <li class="pf-yes">{{ i18n "pricing_page_pf_lt_7" }}</li>
+        <div class="pricing-feat-title">{{ i18n "pricing_page_feat_title" }}</div>
+        <ul class="pricing-features pricing-features--full pricing-features--two-col">
+          <li class="pf-yes">{{ i18n "pricing_page_pf_1" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_page_pf_2" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_page_pf_3" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_page_pf_4" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_page_pf_5" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_page_pf_6" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_page_pf_7" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_page_pf_8" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_page_pf_9" }}</li>
+          <li class="pf-yes">{{ i18n "pricing_page_pf_10" }}</li>
         </ul>
       </div>
 
     </div>
 
-    <!-- GUARANTEE -->
-    <div class="guarantee-block">
-      <div class="guarantee-icon">⌛</div>
-      <div class="guarantee-text">
-        <strong>{{ i18n "pricing_guarantee_title" }}</strong>
-        {{ i18n "pricing_guarantee_desc" }}
-      </div>
+    <!-- WHY PWYW -->
+    <div class="pwyw-note-block">
+      <div class="pwyw-note-title">{{ i18n "pricing_page_note_title" }}</div>
+      <p class="pwyw-note-desc">{{ i18n "pricing_page_note_desc" }}</p>
     </div>
 
     <!-- FAQ -->
