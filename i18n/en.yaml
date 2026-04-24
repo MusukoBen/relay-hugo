@@ -242,9 +242,9 @@ dl_label:
 dl_title:
   other: "Ready to build your terminal?"
 dl_sub:
-  other: "Download for free. No account. No email. Just open and go."
+  other: "Relay is currently in beta. Sign up to get notified when it launches."
 dl_btn:
-  other: "Download relay-1.0.dmg"
+  other: "Coming Soon"
 dl_brew_label:
   other: "or via Homebrew:"
 dl_brew_copy:
@@ -407,12 +407,12 @@ footer_zsh_integration:
   other: "Zsh Integration"
 footer_col_legal:
   other: "Legal"
+footer_impressum:
+  other: "Legal Notice"
 footer_privacy:
   other: "Privacy"
-footer_terms:
-  other: "Terms of Service"
-footer_press:
-  other: "Press Kit"
+footer_agb:
+  other: "Terms"
 footer_rights:
   other: "All rights reserved."
 
@@ -1144,3 +1144,53 @@ docs_pipeline_logs:
   other: "Job Logs"
 docs_pipeline_logs_desc:
   other: "Click any step to view its logs in a popover. Copy logs to clipboard with one click."
+
+# ── Legal: Imprint ──
+legal_impressum_title:
+  other: "Legal Notice"
+legal_info_heading:
+  other: "Information according to § 5 TMG"
+legal_contact:
+  other: "Contact"
+legal_responsible:
+  other: "Responsible for content"
+legal_dispute:
+  other: "Dispute Resolution"
+legal_dispute_text:
+  other: "The European Commission provides a platform for online dispute resolution (OS): https://ec.europa.eu/consumers/odr/. We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+
+# ── Legal: Privacy ──
+legal_privacy_title:
+  other: "Privacy Policy"
+
+# ── Legal: Terms ──
+legal_agb_title:
+  other: "Terms of Service"
+agb_scope:
+  other: "Scope"
+agb_scope_text:
+  other: "These terms apply to the use of the software 'Relay' (macOS terminal emulator), provided as a download via relay-app.dev."
+agb_license:
+  other: "License"
+agb_license_text:
+  other: "With your purchase, you acquire a personal, non-transferable license to use Relay on up to 3 devices. The software may not be resold, rented, or sublicensed."
+agb_trial:
+  other: "Trial"
+agb_trial_text:
+  other: "Relay offers a free 7-day trial period. After the trial expires, a license is required."
+agb_payment:
+  other: "Payment & Pricing"
+agb_payment_text:
+  other: "Payment is made as a one-time purchase via LemonSqueezy. The current price is listed at relay-app.dev/pricing. This is a one-time payment — no subscription."
+agb_liability:
+  other: "Limitation of Liability"
+agb_liability_text:
+  other: "The software is provided 'as is'. The provider is not liable for damages arising from the use of the software, unless caused by intent or gross negligence."
+agb_updates:
+  other: "Updates"
+agb_updates_text:
+  other: "Updates are provided free of charge as long as the current major version is supported. There is no entitlement to future updates or new features."
+agb_jurisdiction:
+  other: "Final Provisions"
+agb_jurisdiction_text:
+  other: "German law applies. If individual provisions of these terms are invalid, the validity of the remaining provisions shall not be affected."

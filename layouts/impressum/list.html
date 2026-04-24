@@ -1,0 +1,31 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="section-inner">
+    <h1 class="page-title">{{ i18n "legal_impressum_title" }}</h1>
+  </div>
+</section>
+
+<section class="legal">
+  <div class="legal-inner">
+    <h2>{{ i18n "legal_info_heading" }}</h2>
+    <p>
+      <!-- TODO: Deine echten Daten eintragen -->
+      <strong>[DEIN VOLLSTÄNDIGER NAME]</strong><br>
+      [STRASSE + HAUSNUMMER]<br>
+      [PLZ + ORT]<br>
+      Deutschland
+    </p>
+
+    <h2>{{ i18n "legal_contact" }}</h2>
+    <p>
+      E-Mail: relay-support@notetheco.de
+    </p>
+
+    <h2>{{ i18n "legal_responsible" }}</h2>
+    <p>[DEIN VOLLSTÄNDIGER NAME]</p>
+
+    <h2>{{ i18n "legal_dispute" }}</h2>
+    <p>{{ i18n "legal_dispute_text" }}</p>
+  </div>
+</section>
+{{ end }}
