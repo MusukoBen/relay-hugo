@@ -1,6 +1,5 @@
 baseURL = "https://relay-app.dev/"
 title = "Relay — A Terminal You Build"
-theme = ""
 defaultContentLanguage = "de"
 defaultContentLanguageInSubdir = false
 
