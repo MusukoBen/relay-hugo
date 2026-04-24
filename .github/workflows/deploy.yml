@@ -22,12 +22,14 @@ jobs:
         run: hugo --minify
 
       - name: Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          server: host254.checkdomain.de
-          port: 22
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          local_path: ./public/*
-          remote_path: ${{ secrets.SFTP_SERVER_DIR }}
-          sftp_only: true
+        env:
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASS: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_DIR: ${{ secrets.SFTP_SERVER_DIR }}
+        run: |
+          sudo apt-get install -y sshpass lftp > /dev/null 2>&1
+          lftp -u "$SFTP_USER","$SFTP_PASS" -p 22 sftp://host254.checkdomain.de -e "
+            set sftp:auto-confirm yes;
+            mirror --reverse --delete --verbose ./public/ $SFTP_DIR;
+            quit
+          "
