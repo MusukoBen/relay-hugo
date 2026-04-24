@@ -1107,7 +1107,7 @@ docs_triggers_sound_desc:
 docs_snippets_title:
   other: "Parameterized Snippets"
 docs_snippets_desc:
-  other: "Reusable command templates with {{placeholder}} parameters. Double-click in the sidebar to run."
+  other: "Reusable command templates with placeholder parameters. Double-click in the sidebar to run."
 docs_snippets_how:
   other: "When executed, a form appears for each placeholder. Live preview shows the resolved command before running."
 

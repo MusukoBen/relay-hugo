@@ -1118,7 +1118,7 @@ docs_triggers_sound_desc:
 docs_snippets_title:
   other: "Parametrisierte Snippets"
 docs_snippets_desc:
-  other: "Wiederverwendbare Befehlsvorlagen mit {{placeholder}}-Parametern. Doppelklick in der Sidebar zum Ausführen."
+  other: "Wiederverwendbare Befehlsvorlagen mit Platzhalter-Parametern. Doppelklick in der Sidebar zum Ausführen."
 docs_snippets_how:
   other: "Beim Ausführen erscheint ein Formular für jeden Platzhalter. Live-Vorschau zeigt den aufgelösten Befehl vor dem Ausführen."
 
