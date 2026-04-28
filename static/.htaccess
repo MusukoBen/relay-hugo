@@ -8,8 +8,9 @@ RewriteCond %{HTTPS} !=on
 RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-# ── WWW → non-WWW ──
+# ── WWW → non-WWW (skip ACME challenges) ──
 RewriteCond %{HTTP_HOST} ^www\.relay-app\.dev$ [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
 RewriteRule ^(.*)$ https://relay-app.dev/$1 [R=301,L]
 
 # ── Clean URLs (Hugo generates /page/index.html) ──
