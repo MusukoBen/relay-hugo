@@ -2,9 +2,10 @@
 # RELAY — Apache Configuration
 # ══════════════════════════════════════════════════════════════
 
-# ── HTTPS Redirect ──
+# ── HTTPS Redirect (skip ACME challenges for SSL validation) ──
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
 # ── WWW → non-WWW ──
