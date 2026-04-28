@@ -1,9 +1,13 @@
-name: Deploy to relay-app.dev
+name: Build & Deploy
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -19,17 +23,17 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify
+        run: hugo --minify --baseURL "https://relay-app.dev/"
 
-      - name: Deploy via SFTP
+      - name: Deploy via rsync
         env:
-          SFTP_USER: ${{ secrets.SFTP_USER }}
-          SFTP_PASS: ${{ secrets.SFTP_PASSWORD }}
-          SFTP_DIR: ${{ secrets.SFTP_SERVER_DIR }}
+          SSH_HOST: host254.checkdomain.de
+          SSH_USER: ${{ secrets.SFTP_USER }}
+          SSH_PASS: ${{ secrets.SFTP_PASSWORD }}
+          SSH_DIR: ${{ secrets.SFTP_SERVER_DIR }}
         run: |
-          sudo apt-get install -y sshpass lftp > /dev/null 2>&1
-          lftp -u "$SFTP_USER","$SFTP_PASS" -p 22 sftp://host254.checkdomain.de -e "
-            set sftp:auto-confirm yes;
-            mirror --reverse --delete --verbose ./public/ $SFTP_DIR;
-            quit
-          "
+          sudo apt-get install -y sshpass > /dev/null 2>&1
+          sshpass -p "$SSH_PASS" rsync -avz --delete \
+            -e "ssh -p 22 -o StrictHostKeyChecking=no" \
+            public/ \
+            "$SSH_USER@$SSH_HOST:$SSH_DIR/"

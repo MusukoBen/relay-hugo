@@ -1,0 +1,65 @@
+# ══════════════════════════════════════════════════════════════
+# RELAY — Apache Configuration
+# ══════════════════════════════════════════════════════════════
+
+# ── HTTPS Redirect ──
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# ── WWW → non-WWW ──
+RewriteCond %{HTTP_HOST} ^www\.relay-app\.dev$ [NC]
+RewriteRule ^(.*)$ https://relay-app.dev/$1 [R=301,L]
+
+# ── Clean URLs (Hugo generates /page/index.html) ──
+DirectoryIndex index.html
+
+# ── Error Pages ──
+ErrorDocument 404 /404.html
+
+# ── Caching ──
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # HTML — short cache (content changes)
+  ExpiresByType text/html "access plus 1 hour"
+  # CSS & JS — medium cache
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  # Fonts — long cache
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  # Images — long cache
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  # Manifest
+  ExpiresByType application/manifest+json "access plus 1 week"
+</IfModule>
+
+# ── Compression ──
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/manifest+json
+</IfModule>
+
+# ── Security Headers ──
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# ── MIME Types ──
+<IfModule mod_mime.c>
+  AddType image/svg+xml .svg
+  AddType application/manifest+json .webmanifest
+  AddType font/woff2 .woff2
+</IfModule>
