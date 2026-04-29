@@ -1,3 +1,53 @@
+// ── TOAST SYSTEM ─────────────────────────────────────────────
+function showToast(opts) {
+  var container = document.getElementById('toastContainer');
+  if (!container) return;
+  var type = opts.type || 'info';
+  var icons = { success: '\u2713', error: '!', info: 'i' };
+
+  var toast = document.createElement('div');
+  toast.className = 'toast toast--' + type;
+
+  var icon = document.createElement('span');
+  icon.className = 'toast-icon';
+  icon.textContent = icons[type] || 'i';
+  toast.appendChild(icon);
+
+  var body = document.createElement('div');
+  body.className = 'toast-body';
+  if (opts.title) {
+    var title = document.createElement('div');
+    title.className = 'toast-title';
+    title.textContent = opts.title;
+    body.appendChild(title);
+  }
+  if (opts.msg) {
+    var msg = document.createElement('div');
+    msg.className = 'toast-msg';
+    msg.textContent = opts.msg;
+    body.appendChild(msg);
+  }
+  toast.appendChild(body);
+
+  var closeBtn = document.createElement('button');
+  closeBtn.className = 'toast-close';
+  closeBtn.setAttribute('aria-label', 'Close');
+  closeBtn.textContent = '\u00d7';
+  closeBtn.addEventListener('click', function() { dismissToast(toast); });
+  toast.appendChild(closeBtn);
+
+  container.appendChild(toast);
+
+  var duration = opts.duration || (type === 'error' ? 6000 : 4000);
+  setTimeout(function() { dismissToast(toast); }, duration);
+}
+
+function dismissToast(el) {
+  if (!el || el.classList.contains('toast--out')) return;
+  el.classList.add('toast--out');
+  setTimeout(function() { if (el.parentNode) el.parentNode.removeChild(el); }, 300);
+}
+
 // ── NAV ──────────────────────────────────────────────────────
 const burger = document.getElementById('navBurger');
 const mobile = document.getElementById('navMobile');
@@ -12,7 +62,7 @@ function copyBrew() {
   const el = document.getElementById('brewCmd');
   if (!el) return;
   navigator.clipboard.writeText(el.textContent).then(() => {
-    showCopyFeedback(document.querySelector('.brew-copy'));
+    showToast({ type: 'success', title: 'Copied!', msg: el.textContent });
   });
 }
 
@@ -20,20 +70,8 @@ function copyCmd(id) {
   const el = document.getElementById(id);
   if (!el) return;
   navigator.clipboard.writeText(el.textContent).then(() => {
-    const btn = el.nextElementSibling;
-    showCopyFeedback(btn);
+    showToast({ type: 'success', title: 'Copied!', msg: el.textContent });
   });
-}
-
-function showCopyFeedback(btn) {
-  if (!btn) return;
-  const orig = btn.textContent;
-  btn.textContent = '✓';
-  btn.style.color = 'var(--acc)';
-  setTimeout(() => {
-    btn.textContent = orig;
-    btn.style.color = '';
-  }, 1800);
 }
 
 // ── NAV SCROLL (theme-aware) ──────────────────────────────────

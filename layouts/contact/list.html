@@ -59,13 +59,6 @@
       </button>
     </form>
 
-    <!-- Success message -->
-    <div class="form-success" id="formSuccess" style="display:none">
-      <div class="form-success-icon">✓</div>
-      <h3>{{ i18n "contact_success_title" }}</h3>
-      <p>{{ i18n "contact_success_desc" }}</p>
-    </div>
-
     <!-- Info sidebar -->
     <div class="contact-info">
       <div class="contact-info-card">
@@ -86,7 +79,6 @@
 <script>
 (function() {
   var form = document.getElementById('contactForm');
-  var success = document.getElementById('formSuccess');
   var submitBtn = document.getElementById('submitBtn');
   var submitText = document.getElementById('submitText');
   var submitSpinner = document.getElementById('submitSpinner');
@@ -171,22 +163,26 @@
     })
     .then(function(res) { return res.json().then(function(d) { return { ok: res.ok, data: d }; }); })
     .then(function(result) {
-      if (result.ok && result.data.ok) {
-        form.style.display = 'none';
-        success.style.display = 'block';
-      } else {
-        var msg = result.data.errors ? result.data.errors.join(' ') : (result.data.error || '{{ i18n "contact_err_server" }}');
-        showError('messageError', msg);
-        submitBtn.disabled = false;
-        submitText.style.display = '';
-        submitSpinner.style.display = 'none';
-      }
-    })
-    .catch(function() {
-      showError('messageError', '{{ i18n "contact_err_network" }}');
       submitBtn.disabled = false;
       submitText.style.display = '';
       submitSpinner.style.display = 'none';
+      if (result.ok && result.data.ok) {
+        form.reset();
+        document.querySelectorAll('.form-chip').forEach(function(c) { c.classList.remove('form-chip--active'); });
+        document.querySelector('[data-type="feedback"]').classList.add('form-chip--active');
+        typeInput.value = 'feedback';
+        charCount.textContent = '0 / 5000';
+        showToast({ type: 'success', title: '{{ i18n "contact_success_title" }}', msg: '{{ i18n "contact_success_desc" }}' });
+      } else {
+        var msg = result.data.errors ? result.data.errors.join(' ') : (result.data.error || '{{ i18n "contact_err_server" }}');
+        showToast({ type: 'error', title: 'Error', msg: msg });
+      }
+    })
+    .catch(function() {
+      submitBtn.disabled = false;
+      submitText.style.display = '';
+      submitSpinner.style.display = 'none';
+      showToast({ type: 'error', title: 'Error', msg: '{{ i18n "contact_err_network" }}' });
     });
   });
 })();
