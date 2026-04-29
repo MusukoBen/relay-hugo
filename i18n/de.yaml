@@ -1205,3 +1205,37 @@ agb_jurisdiction:
   other: "Schlussbestimmungen"
 agb_jurisdiction_text:
   other: "Es gilt das Recht der Bundesrepublik Deutschland. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt."
+
+# ── CHANGELOG ──
+changelog_label:
+  other: "Changelog"
+changelog_title:
+  other: "Was ist neu"
+changelog_sub:
+  other: "Alle Änderungen und neue Features in Relay."
+changelog_new:
+  other: "Neu"
+changelog_fix:
+  other: "Fix"
+changelog_improve:
+  other: "Verbessert"
+changelog_v1_date:
+  other: "April 2026 · Erster Release"
+changelog_v1_1:
+  other: "16 Themes — 6 Glass-Themes mit Glassmorphism, Glow und eigener Typografie. 10 Retro-Themes mit historischen Fonts und Scanlines (1971–1989)."
+changelog_v1_2:
+  other: "9 Pane-Layouts — Split-View ab zwei Tabs. Single, 2 Side, 2 Stack, 1+2, 2×2, Focus. Pro Workspace konfigurierbar und persistent."
+changelog_v1_3:
+  other: "12 Prompt-Stile — Robbyrussell, Pure, Agnoster, Powerlevel10k, Starship und mehr. Live wählbar in den Settings, keine .zshrc-Bearbeitung nötig."
+changelog_v1_4:
+  other: "Shell-Integration — zsh, bash und fish mit OSC 133 Hooks. Automatische Erkennung von Befehlen, Exit-Codes und Arbeitsverzeichnissen."
+changelog_v1_5:
+  other: "Project Memory — Info-Panel mit Git-Branch, Runtime, Recent Commands, Favorites, Open Ports und VPN-Erkennung (14+ Provider)."
+changelog_v1_6:
+  other: "AI Agent — Integrierter Assistent mit Shell-Kontext. OpenAI und Anthropic. Slash-Commands: /save, /run, /context, /model."
+changelog_v1_7:
+  other: "Semantic Colorizer — Automatische Farbgebung für Fehler, Warnungen, URLs, Pfade und Zahlen in der Terminal-Ausgabe."
+changelog_v1_8:
+  other: "Command Palette (⌘P) — Fuzzy-Suche über Workspaces, Tabs und Command-History."
+changelog_v1_9:
+  other: "Native SwiftUI — Kein Electron, kein Web-Renderer. Universal Binary für Apple Silicon und Intel."
