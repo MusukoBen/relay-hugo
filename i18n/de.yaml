@@ -1239,3 +1239,55 @@ changelog_v1_8:
   other: "Command Palette (⌘P) — Fuzzy-Suche über Workspaces, Tabs und Command-History."
 changelog_v1_9:
   other: "Native SwiftUI — Kein Electron, kein Web-Renderer. Universal Binary für Apple Silicon und Intel."
+
+# ── CONTACT ──
+contact_label:
+  other: "Kontakt"
+contact_title:
+  other: "Schreib uns"
+contact_sub:
+  other: "Bug gefunden? Feedback? Frage? Wir freuen uns auf deine Nachricht."
+contact_name:
+  other: "Name"
+contact_name_placeholder:
+  other: "Dein Name"
+contact_email:
+  other: "E-Mail"
+contact_email_placeholder:
+  other: "name@beispiel.de"
+contact_type:
+  other: "Art der Nachricht"
+contact_type_feedback:
+  other: "Feedback"
+contact_type_bug:
+  other: "Bug Report"
+contact_type_question:
+  other: "Frage"
+contact_type_other:
+  other: "Sonstiges"
+contact_message:
+  other: "Nachricht"
+contact_message_placeholder:
+  other: "Beschreibe dein Anliegen..."
+contact_send:
+  other: "Nachricht senden"
+contact_success_title:
+  other: "Nachricht gesendet!"
+contact_success_desc:
+  other: "Danke! Wir melden uns innerhalb von 48 Stunden."
+contact_info_email:
+  other: "E-Mail"
+contact_info_response:
+  other: "Antwortzeit"
+contact_info_response_time:
+  other: "In der Regel innerhalb von 48 Stunden."
+contact_err_name:
+  other: "Bitte gib deinen Namen ein (mind. 2 Zeichen)."
+contact_err_email:
+  other: "Bitte gib eine gültige E-Mail-Adresse ein."
+contact_err_message:
+  other: "Bitte beschreibe dein Anliegen (mind. 10 Zeichen)."
+contact_err_server:
+  other: "Fehler beim Senden. Bitte versuche es später erneut."
+contact_err_network:
+  other: "Netzwerkfehler. Bitte prüfe deine Verbindung."

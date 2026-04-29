@@ -1228,3 +1228,55 @@ changelog_v1_8:
   other: "Command Palette (⌘P) — Fuzzy search across workspaces, tabs, and command history."
 changelog_v1_9:
   other: "Native SwiftUI — No Electron, no web renderer. Universal Binary for Apple Silicon and Intel."
+
+# ── CONTACT ──
+contact_label:
+  other: "Contact"
+contact_title:
+  other: "Get in touch"
+contact_sub:
+  other: "Found a bug? Have feedback? Questions? We'd love to hear from you."
+contact_name:
+  other: "Name"
+contact_name_placeholder:
+  other: "Your name"
+contact_email:
+  other: "Email"
+contact_email_placeholder:
+  other: "name@example.com"
+contact_type:
+  other: "Message type"
+contact_type_feedback:
+  other: "Feedback"
+contact_type_bug:
+  other: "Bug Report"
+contact_type_question:
+  other: "Question"
+contact_type_other:
+  other: "Other"
+contact_message:
+  other: "Message"
+contact_message_placeholder:
+  other: "Describe your issue or feedback..."
+contact_send:
+  other: "Send message"
+contact_success_title:
+  other: "Message sent!"
+contact_success_desc:
+  other: "Thanks! We'll get back to you within 48 hours."
+contact_info_email:
+  other: "Email"
+contact_info_response:
+  other: "Response time"
+contact_info_response_time:
+  other: "Usually within 48 hours."
+contact_err_name:
+  other: "Please enter your name (min 2 characters)."
+contact_err_email:
+  other: "Please enter a valid email address."
+contact_err_message:
+  other: "Please describe your issue (min 10 characters)."
+contact_err_server:
+  other: "Failed to send. Please try again later."
+contact_err_network:
+  other: "Network error. Please check your connection."

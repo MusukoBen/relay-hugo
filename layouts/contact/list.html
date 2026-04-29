@@ -1,0 +1,194 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="section-inner">
+    <div class="section-label">{{ i18n "contact_label" }}</div>
+    <h1 class="page-title">{{ i18n "contact_title" }}</h1>
+    <p class="page-sub">{{ i18n "contact_sub" }}</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="contact-inner">
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <!-- Honeypot -->
+      <div style="position:absolute;left:-9999px" aria-hidden="true">
+        <input type="text" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <!-- Name -->
+      <div class="form-group">
+        <label class="form-label" for="name">{{ i18n "contact_name" }} <span class="form-required">*</span></label>
+        <input class="form-input" type="text" id="name" name="name" required minlength="2" maxlength="100" placeholder="{{ i18n "contact_name_placeholder" }}">
+        <span class="form-error" id="nameError"></span>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label class="form-label" for="email">{{ i18n "contact_email" }} <span class="form-required">*</span></label>
+        <input class="form-input" type="email" id="email" name="email" required placeholder="{{ i18n "contact_email_placeholder" }}">
+        <span class="form-error" id="emailError"></span>
+      </div>
+
+      <!-- Type -->
+      <div class="form-group">
+        <label class="form-label" for="type">{{ i18n "contact_type" }}</label>
+        <div class="form-type-chips">
+          <button type="button" class="form-chip form-chip--active" data-type="feedback">{{ i18n "contact_type_feedback" }}</button>
+          <button type="button" class="form-chip" data-type="bug">{{ i18n "contact_type_bug" }}</button>
+          <button type="button" class="form-chip" data-type="question">{{ i18n "contact_type_question" }}</button>
+          <button type="button" class="form-chip" data-type="other">{{ i18n "contact_type_other" }}</button>
+        </div>
+        <input type="hidden" id="type" name="type" value="feedback">
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label class="form-label" for="message">{{ i18n "contact_message" }} <span class="form-required">*</span></label>
+        <textarea class="form-input form-textarea" id="message" name="message" required minlength="10" maxlength="5000" rows="6" placeholder="{{ i18n "contact_message_placeholder" }}"></textarea>
+        <div class="form-meta">
+          <span class="form-error" id="messageError"></span>
+          <span class="form-charcount" id="charCount">0 / 5000</span>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn btn--primary btn--lg form-submit" id="submitBtn">
+        <span id="submitText">{{ i18n "contact_send" }}</span>
+        <span id="submitSpinner" class="form-spinner" style="display:none"></span>
+      </button>
+    </form>
+
+    <!-- Success message -->
+    <div class="form-success" id="formSuccess" style="display:none">
+      <div class="form-success-icon">✓</div>
+      <h3>{{ i18n "contact_success_title" }}</h3>
+      <p>{{ i18n "contact_success_desc" }}</p>
+    </div>
+
+    <!-- Info sidebar -->
+    <div class="contact-info">
+      <div class="contact-info-card">
+        <div class="contact-info-icon">✉</div>
+        <div class="contact-info-title">{{ i18n "contact_info_email" }}</div>
+        <a href="mailto:relay-support@notetheco.de" class="contact-info-link">relay-support@notetheco.de</a>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-icon">⏱</div>
+        <div class="contact-info-title">{{ i18n "contact_info_response" }}</div>
+        <p class="contact-info-text">{{ i18n "contact_info_response_time" }}</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function() {
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('formSuccess');
+  var submitBtn = document.getElementById('submitBtn');
+  var submitText = document.getElementById('submitText');
+  var submitSpinner = document.getElementById('submitSpinner');
+  var typeInput = document.getElementById('type');
+  var charCount = document.getElementById('charCount');
+  var messageEl = document.getElementById('message');
+
+  // Type chips
+  document.querySelectorAll('.form-chip').forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      document.querySelectorAll('.form-chip').forEach(function(c) {
+        c.classList.remove('form-chip--active');
+      });
+      chip.classList.add('form-chip--active');
+      typeInput.value = chip.dataset.type;
+    });
+  });
+
+  // Char counter
+  if (messageEl && charCount) {
+    messageEl.addEventListener('input', function() {
+      charCount.textContent = messageEl.value.length + ' / 5000';
+    });
+  }
+
+  // Validation
+  function validate() {
+    var ok = true;
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+
+    clearErrors();
+
+    if (!name.value.trim() || name.value.trim().length < 2) {
+      showError('nameError', '{{ i18n "contact_err_name" }}');
+      ok = false;
+    }
+    if (!email.value.trim() || !email.validity.valid) {
+      showError('emailError', '{{ i18n "contact_err_email" }}');
+      ok = false;
+    }
+    if (!messageEl.value.trim() || messageEl.value.trim().length < 10) {
+      showError('messageError', '{{ i18n "contact_err_message" }}');
+      ok = false;
+    }
+    return ok;
+  }
+
+  function showError(id, msg) {
+    var el = document.getElementById(id);
+    if (el) { el.textContent = msg; el.style.display = 'block'; }
+  }
+
+  function clearErrors() {
+    document.querySelectorAll('.form-error').forEach(function(el) {
+      el.textContent = '';
+      el.style.display = 'none';
+    });
+  }
+
+  // Submit
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validate()) return;
+
+    submitBtn.disabled = true;
+    submitText.style.display = 'none';
+    submitSpinner.style.display = 'inline-block';
+
+    var data = {
+      name: document.getElementById('name').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      type: typeInput.value,
+      message: messageEl.value.trim(),
+      website: form.querySelector('[name="website"]').value
+    };
+
+    fetch('/api/contact.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(function(res) { return res.json().then(function(d) { return { ok: res.ok, data: d }; }); })
+    .then(function(result) {
+      if (result.ok && result.data.ok) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } else {
+        var msg = result.data.errors ? result.data.errors.join(' ') : (result.data.error || '{{ i18n "contact_err_server" }}');
+        showError('messageError', msg);
+        submitBtn.disabled = false;
+        submitText.style.display = '';
+        submitSpinner.style.display = 'none';
+      }
+    })
+    .catch(function() {
+      showError('messageError', '{{ i18n "contact_err_network" }}');
+      submitBtn.disabled = false;
+      submitText.style.display = '';
+      submitSpinner.style.display = 'none';
+    });
+  });
+})();
+</script>
+{{ end }}
