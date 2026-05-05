@@ -141,6 +141,63 @@
     </div>
   </div>
 
+  <!-- ── PIPELINE MONITOR ── -->
+  <div class="feat-deep-row feat-deep-row--rev">
+    <div class="feat-deep-text">
+      <div class="section-label">{{ i18n "feat_pipeline_label" }}</div>
+      <h2>{{ i18n "feat_pipeline_title" }}</h2>
+      <p>{{ i18n "feat_pipeline_desc" }}</p>
+      <ul class="feat-deep-list">
+        <li>{{ i18n "feat_pipeline_li_1" }}</li>
+        <li>{{ i18n "feat_pipeline_li_2" }}</li>
+        <li>{{ i18n "feat_pipeline_li_3" }}</li>
+        <li>{{ i18n "feat_pipeline_li_4" }}</li>
+      </ul>
+    </div>
+    <div class="feat-deep-visual">
+
+      <!-- Pipeline sidebar mock -->
+      <div class="plm-win">
+        <div class="plm-chrome">
+          <div class="plm-dots">
+            <span style="background:#ff5f57"></span>
+            <span style="background:#ffbd2e"></span>
+            <span style="background:#28c840"></span>
+          </div>
+          <span class="plm-label">PIPELINE</span>
+          <span class="plm-badge" id="plmBadge">●</span>
+        </div>
+        <div class="plm-body">
+          <div class="plm-meta">
+            <span class="plm-repo">my-app</span>
+            <span class="plm-sep">·</span>
+            <span class="plm-branch">main</span>
+          </div>
+          <div class="plm-bar-wrap">
+            <div class="plm-bar-track">
+              <div class="plm-bar-fill" id="plmBar"></div>
+            </div>
+          </div>
+          <div class="plm-steps" id="plmSteps">
+            <!-- filled by JS -->
+          </div>
+          <div class="plm-actions">
+            <span class="plm-action plm-action--link">GitHub</span>
+            <span class="plm-action plm-action--cancel" id="plmCancel">Cancel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Provider chips -->
+      <div class="plm-chips">
+        <button class="plm-chip plm-chip--active" data-plm="github">GitHub Actions</button>
+        <button class="plm-chip" data-plm="gitlab">GitLab CI</button>
+        <button class="plm-chip" data-plm="circleci">CircleCI</button>
+      </div>
+
+    </div>
+  </div>
+
 <script>
 (function () {
 'use strict';
@@ -513,6 +570,129 @@ document.querySelectorAll('.pp-chip').forEach(function (chip) {
 // Init
 buildPaneBody('single');
 buildPrompt('pure');
+
+// ── PIPELINE MONITOR ──────────────────────────────────────────────────────────
+
+var PLM_PROVIDERS = {
+  github: {
+    branch: 'main',
+    steps: [
+      { name: 'Setup Node',       dur: '8s'    },
+      { name: 'Install deps',     dur: '42s'   },
+      { name: 'Lint',             dur: '15s'   },
+      { name: 'Test',             dur: '1m 04s'},
+      { name: 'Build',            dur: '38s'   },
+      { name: 'Deploy to Fly.io', dur: '22s'   }
+    ]
+  },
+  gitlab: {
+    branch: 'feature/auth',
+    steps: [
+      { name: 'prepare · install', dur: '31s'   },
+      { name: 'test · unit',       dur: '58s'   },
+      { name: 'test · e2e',        dur: '2m 11s'},
+      { name: 'build · docker',    dur: '1m 03s'},
+      { name: 'deploy · staging',  dur: '47s'   }
+    ]
+  },
+  circleci: {
+    branch: 'release/v2',
+    steps: [
+      { name: 'checkout',      dur: '4s'    },
+      { name: 'restore_cache', dur: '12s'   },
+      { name: 'run tests',     dur: '1m 22s'},
+      { name: 'save_cache',    dur: '8s'    },
+      { name: 'deploy',        dur: '34s'   }
+    ]
+  }
+};
+
+var plmInterval = null;
+var plmCurrentProvider = 'github';
+var plmAnimStep = 0;
+
+function makePlmStepEl(state, name, dur) {
+  var row = document.createElement('div');
+  row.className = 'plm-step plm-step--' + state;
+
+  var icon = document.createElement('span');
+  icon.className = 'plm-step-icon plm-step-icon--' + state;
+  if (state === 'success') icon.textContent = '\u2713';
+  row.appendChild(icon);
+
+  var nameEl = document.createElement('span');
+  nameEl.className = 'plm-step-name';
+  nameEl.textContent = name;
+  row.appendChild(nameEl);
+
+  if (state === 'success' && dur) {
+    var durEl = document.createElement('span');
+    durEl.className = 'plm-step-dur';
+    durEl.textContent = dur;
+    row.appendChild(durEl);
+  }
+  return row;
+}
+
+function buildPipelineMock(provider, animStep) {
+  var data     = PLM_PROVIDERS[provider];
+  var steps    = data.steps;
+  var stepsEl  = document.getElementById('plmSteps');
+  var barEl    = document.getElementById('plmBar');
+  var badgeEl  = document.getElementById('plmBadge');
+  var cancelEl = document.getElementById('plmCancel');
+  var branchEl = document.querySelector('.plm-branch');
+  if (!stepsEl || !barEl || !badgeEl) return;
+
+  branchEl.textContent = data.branch;
+
+  while (stepsEl.firstChild) { stepsEl.removeChild(stepsEl.firstChild); }
+  for (var i = 0; i < steps.length; i++) {
+    var state = i < animStep ? 'success' : (i === animStep ? 'running' : 'queued');
+    stepsEl.appendChild(makePlmStepEl(state, steps[i].name, steps[i].dur));
+  }
+
+  var progress = animStep >= steps.length ? 1 : (animStep / steps.length);
+  barEl.style.width = Math.round(progress * 100) + '%';
+
+  if (animStep >= steps.length) {
+    badgeEl.textContent = '\u2713';
+    badgeEl.style.color = '#4af09a';
+    if (cancelEl) { cancelEl.style.display = 'none'; }
+  } else {
+    badgeEl.textContent = '\u25cf';
+    badgeEl.style.color = '#f0c674';
+    if (cancelEl) { cancelEl.style.display = ''; }
+  }
+}
+
+function plmStartAnimation(provider) {
+  if (plmInterval) { clearInterval(plmInterval); }
+  plmCurrentProvider = provider;
+  plmAnimStep = 0;
+  buildPipelineMock(provider, 0);
+
+  plmInterval = setInterval(function () {
+    plmAnimStep++;
+    buildPipelineMock(plmCurrentProvider, plmAnimStep);
+    if (plmAnimStep >= PLM_PROVIDERS[plmCurrentProvider].steps.length) {
+      clearInterval(plmInterval);
+      setTimeout(function () { plmStartAnimation(plmCurrentProvider); }, 2000);
+    }
+  }, 900);
+}
+
+document.querySelectorAll('.plm-chip').forEach(function (chip) {
+  chip.addEventListener('click', function () {
+    document.querySelectorAll('.plm-chip').forEach(function (c) {
+      c.classList.remove('plm-chip--active');
+    });
+    chip.classList.add('plm-chip--active');
+    plmStartAnimation(chip.dataset.plm);
+  });
+});
+
+plmStartAnimation('github');
 
 }());
 </script>

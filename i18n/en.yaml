@@ -123,6 +123,26 @@ feat_prompt_li_3:
   other: "Minimal, Fino, Lambda, Typewritten"
 feat_prompt_li_4:
   other: ".zshrc is generated automatically"
+feat_pipeline_label:
+  other: "Pipeline Monitor"
+feat_pipeline_title:
+  other: "CI/CD live in your terminal."
+feat_pipeline_desc:
+  other: "After every push, see exactly what your pipeline is doing — right in the sidebar. No tab switching, no browser."
+feat_pipeline_li_1:
+  other: "GitHub Actions · GitLab CI · CircleCI"
+feat_pipeline_li_2:
+  other: "Jobs and steps in real time — with live status"
+feat_pipeline_li_3:
+  other: "Logs available directly in a popover"
+feat_pipeline_li_4:
+  other: "Rerun failed jobs with one click"
+feat_pipeline_tag_gh:
+  other: "GitHub Actions"
+feat_pipeline_tag_gl:
+  other: "GitLab CI"
+feat_pipeline_tag_cc:
+  other: "CircleCI"
 
 # =============================================================================
 # RETRO SECTION

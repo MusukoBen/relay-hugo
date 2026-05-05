@@ -3499,3 +3499,184 @@ html[data-theme="light"] .toast {
     max-width: none;
   }
 }
+
+/* ── PIPELINE MONITOR feature card demo (homepage) ── */
+.feat-demo--pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 14px;
+}
+.pl-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 10px;
+}
+.pl-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.pl-dot--success { background: #4af09a; }
+.pl-dot--running {
+  background: #f0c674;
+  animation: plPulse 1s ease-in-out infinite alternate;
+}
+.pl-dot--queued  { background: var(--sec); opacity: .4; }
+.pl-name { color: var(--sec); flex: 1; }
+.pl-dur  { color: var(--dim); font-size: 9px; }
+.pl-row--success .pl-name { color: var(--text); }
+.pl-row--running .pl-name { color: #f0c674; }
+
+@keyframes plPulse {
+  from { opacity: .5; }
+  to   { opacity: 1; }
+}
+
+/* ── PIPELINE MONITOR deep-dive (features page) ── */
+.plm-win {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--rad);
+  overflow: hidden;
+  min-width: 260px;
+}
+.plm-chrome {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  height: 34px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  gap: 8px;
+}
+.plm-dots {
+  display: flex;
+  gap: 6px;
+}
+.plm-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.plm-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  color: var(--dim);
+  margin-left: 4px;
+}
+.plm-badge {
+  margin-left: auto;
+  font-size: 11px;
+  transition: color .3s;
+}
+.plm-body {
+  padding: 12px 14px 10px;
+}
+.plm-meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+}
+.plm-repo   { color: var(--text); font-weight: 600; }
+.plm-sep    { color: var(--dim); }
+.plm-branch { color: var(--acc); }
+.plm-bar-wrap { margin-bottom: 10px; }
+.plm-bar-track {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.plm-bar-fill {
+  height: 100%;
+  background: var(--acc);
+  border-radius: 2px;
+  transition: width .5s ease;
+}
+.plm-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+.plm-step {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 2px 0;
+}
+.plm-step-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+}
+.plm-step-icon--success {
+  background: rgba(74,240,154,.15);
+  color: #4af09a;
+  font-size: 9px;
+}
+.plm-step-icon--running {
+  background: #f0c674;
+  animation: plPulse 0.8s ease-in-out infinite alternate;
+}
+.plm-step-icon--queued {
+  border: 1.5px solid var(--border);
+  background: transparent;
+}
+.plm-step-name {
+  flex: 1;
+  color: var(--sec);
+}
+.plm-step--success .plm-step-name { color: var(--text); }
+.plm-step--running .plm-step-name { color: #f0c674; }
+.plm-step-dur {
+  font-size: 9px;
+  color: var(--dim);
+}
+.plm-actions {
+  display: flex;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 9px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+}
+.plm-action         { cursor: default; }
+.plm-action--link   { color: var(--acc); }
+.plm-action--cancel { color: #ff5f57; }
+.plm-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.plm-chip {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--sec);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.plm-chip:hover      { color: var(--text); border-color: var(--dim); }
+.plm-chip--active    { color: var(--acc); border-color: var(--acc); background: var(--acc-dim); }
