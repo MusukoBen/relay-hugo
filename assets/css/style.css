@@ -3680,3 +3680,49 @@ html[data-theme="light"] .toast {
 }
 .plm-chip:hover      { color: var(--text); border-color: var(--dim); }
 .plm-chip--active    { color: var(--acc); border-color: var(--acc); background: var(--acc-dim); }
+
+/* ── WAITLIST FORM ── */
+.waitlist-form {
+  margin-top: 24px;
+  position: relative;
+}
+.waitlist-row {
+  display: flex;
+  gap: 10px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.waitlist-input {
+  flex: 1;
+  font-family: var(--font);
+  font-size: 15px;
+  color: var(--text);
+  background: rgba(255,255,255,.06);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 12px 18px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.waitlist-input:focus {
+  border-color: var(--acc);
+  box-shadow: 0 0 0 3px var(--acc-dim);
+}
+.waitlist-input::placeholder {
+  color: var(--dim);
+}
+.waitlist-btn {
+  flex-shrink: 0;
+  min-width: 160px;
+  justify-content: center;
+}
+.waitlist-error {
+  display: none;
+  font-size: 12px;
+  color: #ff5f57;
+  margin-top: 8px;
+  text-align: center;
+}
+html[data-theme="light"] .waitlist-input {
+  background: #fff;
+}

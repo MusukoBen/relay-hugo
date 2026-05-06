@@ -7,7 +7,7 @@
 header('Content-Type: application/json; charset=utf-8');
 
 // ── Config ──
-$recipient = 'relay-support@notetheco.de';
+$recipient = 'support@relay-app.dev';
 $subject_prefix = '[Relay Contact]';
 $allowed_types = ['bug', 'feedback', 'question', 'other'];
 

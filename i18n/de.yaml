@@ -8,7 +8,7 @@
 
 # --- Hero ---
 hero_badge:
-  other: "Neu"
+  other: "In Entwicklung · Coming Soon"
 hero_title_line1:
   other: "Ein Terminal"
 hero_title_line2:
@@ -1333,3 +1333,37 @@ legal_copyright:
   other: "Die erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet."
 legal_dispute_os:
   other: "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:"
+
+# ── COMING SOON ──
+hero_cta_notify:
+  other: "Benachrichtigt werden"
+hero_cta_features:
+  other: "Features entdecken →"
+hero_meta_coming_soon:
+  other: "Coming Soon · 2026"
+dl_coming_title:
+  other: "Relay kommt bald."
+dl_coming_sub:
+  other: "Relay befindet sich aktuell in der Entwicklung. Trag dich ein, um benachrichtigt zu werden, sobald es verfügbar ist."
+dl_coming_notify:
+  other: "Benachrichtigt werden →"
+dl_coming_soon:
+  other: "Coming Soon"
+
+# ── WAITLIST ──
+waitlist_placeholder:
+  other: "deine@email.de"
+waitlist_cta:
+  other: "Eintragen"
+waitlist_err:
+  other: "Bitte gib eine gültige E-Mail-Adresse ein."
+waitlist_err_server:
+  other: "Fehler beim Speichern. Bitte versuche es später erneut."
+waitlist_success_title:
+  other: "Du bist dabei!"
+waitlist_success_msg:
+  other: "Wir benachrichtigen dich, sobald Relay verfügbar ist."
+waitlist_already_title:
+  other: "Bereits eingetragen"
+waitlist_already_msg:
+  other: "Diese E-Mail ist bereits auf der Warteliste."

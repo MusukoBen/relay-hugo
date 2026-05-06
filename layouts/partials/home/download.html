@@ -3,20 +3,79 @@
     <div class="dl-cta-inner">
       <div class="dl-cta-aurora"></div>
       <div class="section-label">{{ i18n "dl_label" }}</div>
-      <h2 class="dl-cta-title">{{ i18n "dl_title" }}</h2>
-      <p class="dl-cta-sub">{{ i18n "dl_sub" }}</p>
-      <div class="dl-cta-btns">
-        <a href="#" class="btn btn--primary btn--xl">
-          {{ partial "ui/icon-download.html" . }}
-          {{ i18n "dl_btn" }}
-        </a>
-        <span class="dl-cta-meta">macOS {{ .Site.Params.macosMin }}+ · Universal Binary · 18 MB</span>
-      </div>
-      <div class="dl-cta-brew">
-        <span class="brew-label">{{ i18n "dl_brew_label" }}</span>
-        <code class="brew-cmd" id="brewCmd">brew install --cask relay</code>
-        <button class="brew-copy" onclick="copyBrew()" aria-label="{{ i18n "dl_brew_copy" }}">⎘</button>
-      </div>
+      <h2 class="dl-cta-title">{{ i18n "dl_coming_title" }}</h2>
+      <p class="dl-cta-sub">{{ i18n "dl_coming_sub" }}</p>
+      <form class="waitlist-form" id="waitlistForm">
+        <div style="position:absolute;left:-9999px" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="waitlist-row">
+          <input class="waitlist-input" type="email" id="waitlistEmail" name="email" required placeholder="{{ i18n "waitlist_placeholder" }}">
+          <button type="submit" class="btn btn--primary btn--lg waitlist-btn" id="waitlistBtn">
+            <span id="waitlistText">{{ i18n "waitlist_cta" }}</span>
+            <span id="waitlistSpinner" class="form-spinner" style="display:none"></span>
+          </button>
+        </div>
+        <span class="waitlist-error" id="waitlistError"></span>
+      </form>
+      <span class="dl-cta-meta">macOS {{ .Site.Params.macosMin }}+ · Universal Binary · {{ i18n "dl_coming_soon" }}</span>
     </div>
   </div>
 </section>
+
+<script>
+(function() {
+  var form = document.getElementById('waitlistForm');
+  var emailEl = document.getElementById('waitlistEmail');
+  var btn = document.getElementById('waitlistBtn');
+  var btnText = document.getElementById('waitlistText');
+  var spinner = document.getElementById('waitlistSpinner');
+  var errorEl = document.getElementById('waitlistError');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    errorEl.textContent = '';
+    errorEl.style.display = 'none';
+    var email = emailEl.value.trim();
+    if (!email || !emailEl.validity.valid) {
+      errorEl.textContent = '{{ i18n "waitlist_err" }}';
+      errorEl.style.display = 'block';
+      return;
+    }
+    btn.disabled = true;
+    btnText.style.display = 'none';
+    spinner.style.display = 'inline-block';
+
+    var data = { email: email, website: form.querySelector('[name="website"]').value };
+
+    fetch('/api/waitlist.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(function(r) { return r.json().then(function(d) { return { ok: r.ok, data: d }; }); })
+    .then(function(res) {
+      btn.disabled = false;
+      btnText.style.display = '';
+      spinner.style.display = 'none';
+      if (res.ok && res.data.ok) {
+        if (res.data.already) {
+          showToast({ type: 'info', title: '{{ i18n "waitlist_already_title" }}', msg: '{{ i18n "waitlist_already_msg" }}' });
+        } else {
+          showToast({ type: 'success', title: '{{ i18n "waitlist_success_title" }}', msg: '{{ i18n "waitlist_success_msg" }}' });
+        }
+        emailEl.value = '';
+      } else {
+        showToast({ type: 'error', title: 'Error', msg: res.data.error || '{{ i18n "waitlist_err_server" }}' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btnText.style.display = '';
+      spinner.style.display = 'none';
+      showToast({ type: 'error', title: 'Error', msg: '{{ i18n "waitlist_err_server" }}' });
+    });
+  });
+})();
+</script>
