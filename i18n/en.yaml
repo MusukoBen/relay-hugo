@@ -1300,3 +1300,25 @@ contact_err_server:
   other: "Failed to send. Please try again later."
 contact_err_network:
   other: "Network error. Please check your connection."
+
+# ── IMPRESSUM (extended) ──
+legal_vat:
+  other: "VAT ID"
+legal_vat_text:
+  other: "VAT identification number pursuant to § 27a UStG:"
+legal_address_above:
+  other: "address as above"
+legal_liability_content_heading:
+  other: "Liability for Content"
+legal_liability_content:
+  other: "The contents of these pages were created with the utmost care. However, no guarantee can be given for the accuracy, completeness, or timeliness of the content. As a service provider, we are responsible for our own content on these pages in accordance with general laws pursuant to § 7 (1) DDG. However, pursuant to §§ 8-10 DDG, we are not obligated to monitor transmitted or stored third-party information."
+legal_liability_links_heading:
+  other: "Liability for Links"
+legal_liability_links:
+  other: "This website contains links to external third-party websites over whose content we have no influence. No guarantee can be given for this third-party content. The respective provider or operator is always responsible for the content of linked pages."
+legal_copyright_heading:
+  other: "Copyright"
+legal_copyright:
+  other: "The content and works on these pages created by the operator are subject to German copyright law. Reproduction, editing, distribution, and any kind of use beyond the limits of copyright law require written consent. Downloads and copies of this site are only permitted for private, non-commercial use."
+legal_dispute_os:
+  other: "The European Commission provides a platform for online dispute resolution:"

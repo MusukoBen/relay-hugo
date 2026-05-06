@@ -1311,3 +1311,25 @@ contact_err_server:
   other: "Fehler beim Senden. Bitte versuche es später erneut."
 contact_err_network:
   other: "Netzwerkfehler. Bitte prüfe deine Verbindung."
+
+# ── IMPRESSUM (erweitert) ──
+legal_vat:
+  other: "Umsatzsteuer-ID"
+legal_vat_text:
+  other: "Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:"
+legal_address_above:
+  other: "Anschrift wie oben"
+legal_liability_content_heading:
+  other: "Haftung für Inhalte"
+legal_liability_content:
+  other: "Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen."
+legal_liability_links_heading:
+  other: "Haftung für Links"
+legal_liability_links:
+  other: "Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte kann keine Gewähr übernommen werden. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich."
+legal_copyright_heading:
+  other: "Urheberrecht"
+legal_copyright:
+  other: "Die erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet."
+legal_dispute_os:
+  other: "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:"

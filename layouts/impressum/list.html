@@ -1,18 +1,13 @@
 {{ define "main" }}
-<section class="page-hero">
-  <div class="section-inner">
-    <h1 class="page-title">{{ i18n "legal_impressum_title" }}</h1>
-  </div>
-</section>
+{{ partial "ui/page-hero.html" (dict "title" (i18n "legal_impressum_title")) }}
 
 <section class="legal">
   <div class="legal-inner">
     <h2>{{ i18n "legal_info_heading" }}</h2>
     <p>
-      <!-- TODO: Deine echten Daten eintragen -->
-      <strong>[DEIN VOLLSTÄNDIGER NAME]</strong><br>
-      [STRASSE + HAUSNUMMER]<br>
-      [PLZ + ORT]<br>
+      <strong>Bünyamin Goldfarb-Tunc</strong><br>
+      Simonstraße 17<br>
+      90763 Fürth<br>
       Deutschland
     </p>
 
@@ -21,10 +16,26 @@
       E-Mail: relay-support@notetheco.de
     </p>
 
+    <h2>{{ i18n "legal_vat" }}</h2>
+    <p>
+      {{ i18n "legal_vat_text" }}<br>
+      DE50736142930
+    </p>
+
     <h2>{{ i18n "legal_responsible" }}</h2>
-    <p>[DEIN VOLLSTÄNDIGER NAME]</p>
+    <p>Bünyamin Goldfarb-Tunc<br>({{ i18n "legal_address_above" }})</p>
+
+    <h2>{{ i18n "legal_liability_content_heading" }}</h2>
+    <p>{{ i18n "legal_liability_content" }}</p>
+
+    <h2>{{ i18n "legal_liability_links_heading" }}</h2>
+    <p>{{ i18n "legal_liability_links" }}</p>
+
+    <h2>{{ i18n "legal_copyright_heading" }}</h2>
+    <p>{{ i18n "legal_copyright" }}</p>
 
     <h2>{{ i18n "legal_dispute" }}</h2>
+    <p>{{ i18n "legal_dispute_os" }} <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
     <p>{{ i18n "legal_dispute_text" }}</p>
   </div>
 </section>
