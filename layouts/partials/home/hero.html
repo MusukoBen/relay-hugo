@@ -1,0 +1,28 @@
+<div class="hero-bg">
+  <div class="hero-aurora"></div>
+  <div class="hero-grid"></div>
+</div>
+<div class="hero-inner">
+  <div class="hero-badge">
+    <span class="hero-badge-dot"></span>
+    macOS {{ .Site.Params.macosMin }} · Version {{ .Site.Params.version }} · {{ i18n "hero_badge" }}
+  </div>
+  <h1 class="hero-title">
+    {{ i18n "hero_title_line1" }}<br>
+    <span class="hero-title-acc">{{ i18n "hero_title_line2" }}</span><br>
+    {{ i18n "hero_title_line3" }}
+  </h1>
+  <p class="hero-sub">{{ i18n "hero_sub" }}</p>
+  <div class="hero-cta">
+    <a href="#download" class="btn btn--primary btn--lg">
+      {{ partial "ui/icon-download.html" . }}
+      {{ i18n "hero_cta_download" }}
+    </a>
+    <a href="#pricing" class="btn btn--ghost btn--lg">{{ i18n "hero_cta_pricing" }}</a>
+  </div>
+  <div class="hero-meta">
+    <span>{{ i18n "hero_meta_platform" }}</span>
+    <span class="hero-meta-sep">·</span>
+    <span>{{ i18n "hero_meta_free" }}</span>
+  </div>
+</div>

@@ -1,11 +1,5 @@
 {{ define "main" }}
-<section class="page-hero">
-  <div class="section-inner">
-    <div class="section-label">Themes</div>
-    <h1 class="page-title">{{ i18n "themes_page_title" }}</h1>
-    <p class="page-sub">{{ i18n "themes_page_sub" }}</p>
-  </div>
-</section>
+{{ partial "ui/page-hero.html" (dict "label" "Themes" "title" (i18n "themes_page_title") "sub" (i18n "themes_page_sub")) }}
 
 <!-- ── INTERACTIVE THEME PICKER ── -->
 <section class="theme-picker-section">

@@ -1,0 +1,86 @@
+{{- /* Terminal Preview — interactive theme switcher on homepage */ -}}
+<div class="hero-preview">
+  <div class="preview-win" id="hpWin">
+    <div class="preview-chrome" id="hpChrome">
+      {{ partial "ui/window-chrome.html" . }}
+      <div class="preview-chrome-center">
+        <div class="preview-pane-badge active" id="hpPaneBadge">
+          <span class="preview-pane-dot"></span>
+          <span>pane 0</span>
+        </div>
+        <span class="preview-pane-cwd" id="hpPaneCwd">~/dev/myproject</span>
+      </div>
+      <div class="preview-chrome-right" id="hpChromeRight">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:.5"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/></svg>
+        <span class="preview-chrome-app">relay</span>
+      </div>
+    </div>
+    <div class="preview-body">
+      {{- /* Left sidebar — tab list + icons */ -}}
+      <div class="preview-sidebar" id="hpSidebar">
+        <div class="preview-tab">
+          <span class="preview-tab-dot" style="color:var(--dim)"></span>
+          <span class="preview-tab-label">java B…</span>
+          <span class="preview-tab-count">4</span>
+        </div>
+        <div class="preview-tab active" id="hpTabActive">
+          <span class="preview-tab-dot"></span>
+          <span class="preview-tab-label">noteth…</span>
+          <span class="preview-tab-count">1</span>
+        </div>
+        <div class="preview-tab">
+          <span class="preview-tab-dot" style="color:var(--dim)"></span>
+          <span class="preview-tab-label">dev</span>
+          <span class="preview-tab-count">1</span>
+        </div>
+        <div class="preview-sidebar-sep"></div>
+        <div class="preview-sidebar-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </div>
+        <div class="preview-sidebar-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </div>
+        <div class="preview-sidebar-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.4"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.4"/><path d="M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/></svg>
+        </div>
+        <div style="flex:1"></div>
+        <div class="preview-sidebar-icon preview-sidebar-icon--bottom">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15h18"/><path d="M9 15v6"/></svg>
+        </div>
+        <div class="preview-sidebar-icon preview-sidebar-icon--bottom">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+      </div>
+      {{- /* Terminal area */ -}}
+      <div class="preview-main">
+        <div class="preview-term" id="hpTerm"></div>
+      </div>
+      {{- /* Right info panel — PROJECT MEMORY */ -}}
+      {{ partial "home/preview-infopanel.html" . }}
+    </div>
+  </div>
+  <div class="preview-aurora" id="hpAurora"></div>
+
+  {{- /* Theme chips */ -}}
+  <div class="hp-chips">
+    <button class="hp-chip hp-chip--active" data-theme="relay-dark" style="--cc:#4af09a;--cb:#0c0c0f">
+      <span class="hp-chip-dot"></span>Relay Dark
+    </button>
+    <button class="hp-chip" data-theme="midnight" style="--cc:#6c8fff;--cb:#070810">
+      <span class="hp-chip-dot"></span>Midnight
+    </button>
+    <button class="hp-chip" data-theme="aurora" style="--cc:#c084fc;--cb:#08080e">
+      <span class="hp-chip-dot"></span>Aurora
+    </button>
+    <button class="hp-chip" data-theme="obsidian" style="--cc:#f59e0b;--cb:#0d0d0d">
+      <span class="hp-chip-dot"></span>Obsidian
+    </button>
+    <button class="hp-chip" data-theme="sunset" style="--cc:#ff6b6b;--cb:#0f0a09">
+      <span class="hp-chip-dot"></span>Sunset
+    </button>
+    <button class="hp-chip" data-theme="arctic" style="--cc:#67e8f9;--cb:#01050a">
+      <span class="hp-chip-dot"></span>Arctic
+    </button>
+    <a href="#themes" class="hp-chip hp-chip--more">+10 Retro →</a>
+  </div>
+</div>

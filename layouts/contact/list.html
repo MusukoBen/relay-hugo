@@ -1,16 +1,18 @@
 {{ define "main" }}
-<section class="page-hero">
-  <div class="section-inner">
-    <div class="section-label">{{ i18n "contact_label" }}</div>
-    <h1 class="page-title">{{ i18n "contact_title" }}</h1>
-    <p class="page-sub">{{ i18n "contact_sub" }}</p>
-  </div>
-</section>
+{{ partial "ui/page-hero.html" (dict "label" (i18n "contact_label") "title" (i18n "contact_title") "sub" (i18n "contact_sub")) }}
 
 <section class="contact">
   <div class="contact-inner">
 
-    <form class="contact-form" id="contactForm" novalidate>
+    <form class="contact-form" id="contactForm" novalidate
+          data-err-name="{{ i18n "contact_err_name" }}"
+          data-err-email="{{ i18n "contact_err_email" }}"
+          data-err-message="{{ i18n "contact_err_message" }}"
+          data-err-server="{{ i18n "contact_err_server" }}"
+          data-err-network="{{ i18n "contact_err_network" }}"
+          data-success-title="{{ i18n "contact_success_title" }}"
+          data-success-desc="{{ i18n "contact_success_desc" }}"
+    >
       <!-- Honeypot -->
       <div style="position:absolute;left:-9999px" aria-hidden="true">
         <input type="text" name="website" tabindex="-1" autocomplete="off">
@@ -76,115 +78,8 @@
   </div>
 </section>
 
-<script>
-(function() {
-  var form = document.getElementById('contactForm');
-  var submitBtn = document.getElementById('submitBtn');
-  var submitText = document.getElementById('submitText');
-  var submitSpinner = document.getElementById('submitSpinner');
-  var typeInput = document.getElementById('type');
-  var charCount = document.getElementById('charCount');
-  var messageEl = document.getElementById('message');
+{{ end }}
 
-  // Type chips
-  document.querySelectorAll('.form-chip').forEach(function(chip) {
-    chip.addEventListener('click', function() {
-      document.querySelectorAll('.form-chip').forEach(function(c) {
-        c.classList.remove('form-chip--active');
-      });
-      chip.classList.add('form-chip--active');
-      typeInput.value = chip.dataset.type;
-    });
-  });
-
-  // Char counter
-  if (messageEl && charCount) {
-    messageEl.addEventListener('input', function() {
-      charCount.textContent = messageEl.value.length + ' / 5000';
-    });
-  }
-
-  // Validation
-  function validate() {
-    var ok = true;
-    var name = document.getElementById('name');
-    var email = document.getElementById('email');
-
-    clearErrors();
-
-    if (!name.value.trim() || name.value.trim().length < 2) {
-      showError('nameError', '{{ i18n "contact_err_name" }}');
-      ok = false;
-    }
-    if (!email.value.trim() || !email.validity.valid) {
-      showError('emailError', '{{ i18n "contact_err_email" }}');
-      ok = false;
-    }
-    if (!messageEl.value.trim() || messageEl.value.trim().length < 10) {
-      showError('messageError', '{{ i18n "contact_err_message" }}');
-      ok = false;
-    }
-    return ok;
-  }
-
-  function showError(id, msg) {
-    var el = document.getElementById(id);
-    if (el) { el.textContent = msg; el.style.display = 'block'; }
-  }
-
-  function clearErrors() {
-    document.querySelectorAll('.form-error').forEach(function(el) {
-      el.textContent = '';
-      el.style.display = 'none';
-    });
-  }
-
-  // Submit
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    if (!validate()) return;
-
-    submitBtn.disabled = true;
-    submitText.style.display = 'none';
-    submitSpinner.style.display = 'inline-block';
-
-    var data = {
-      name: document.getElementById('name').value.trim(),
-      email: document.getElementById('email').value.trim(),
-      type: typeInput.value,
-      message: messageEl.value.trim(),
-      website: form.querySelector('[name="website"]').value
-    };
-
-    fetch('/api/contact.php', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    })
-    .then(function(res) { return res.json().then(function(d) { return { ok: res.ok, data: d }; }); })
-    .then(function(result) {
-      submitBtn.disabled = false;
-      submitText.style.display = '';
-      submitSpinner.style.display = 'none';
-      if (result.ok && result.data.ok) {
-        form.reset();
-        document.querySelectorAll('.form-chip').forEach(function(c) { c.classList.remove('form-chip--active'); });
-        document.querySelector('[data-type="feedback"]').classList.add('form-chip--active');
-        typeInput.value = 'feedback';
-        charCount.textContent = '0 / 5000';
-        showToast({ type: 'success', title: '{{ i18n "contact_success_title" }}', msg: '{{ i18n "contact_success_desc" }}' });
-      } else {
-        var msg = result.data.errors ? result.data.errors.join(' ') : (result.data.error || '{{ i18n "contact_err_server" }}');
-        showToast({ type: 'error', title: 'Error', msg: msg });
-      }
-    })
-    .catch(function() {
-      submitBtn.disabled = false;
-      submitText.style.display = '';
-      submitSpinner.style.display = 'none';
-      showToast({ type: 'error', title: 'Error', msg: '{{ i18n "contact_err_network" }}' });
-    });
-  });
-})();
-</script>
+{{ define "page-scripts" }}
+<script src="/js/contact-form.js"></script>
 {{ end }}

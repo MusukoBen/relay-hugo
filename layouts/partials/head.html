@@ -50,4 +50,5 @@
       font-display: swap;
     }
   </style>
-  <link rel="stylesheet" href="/css/style.css">
+  {{- $style := resources.Get "css/style.css" | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">

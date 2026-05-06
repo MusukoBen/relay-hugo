@@ -1,0 +1,22 @@
+<section class="dl-cta" id="download">
+  <div class="section-inner">
+    <div class="dl-cta-inner">
+      <div class="dl-cta-aurora"></div>
+      <div class="section-label">{{ i18n "dl_label" }}</div>
+      <h2 class="dl-cta-title">{{ i18n "dl_title" }}</h2>
+      <p class="dl-cta-sub">{{ i18n "dl_sub" }}</p>
+      <div class="dl-cta-btns">
+        <a href="#" class="btn btn--primary btn--xl">
+          {{ partial "ui/icon-download.html" . }}
+          {{ i18n "dl_btn" }}
+        </a>
+        <span class="dl-cta-meta">macOS {{ .Site.Params.macosMin }}+ · Universal Binary · 18 MB</span>
+      </div>
+      <div class="dl-cta-brew">
+        <span class="brew-label">{{ i18n "dl_brew_label" }}</span>
+        <code class="brew-cmd" id="brewCmd">brew install --cask relay</code>
+        <button class="brew-copy" onclick="copyBrew()" aria-label="{{ i18n "dl_brew_copy" }}">⎘</button>
+      </div>
+    </div>
+  </div>
+</section>

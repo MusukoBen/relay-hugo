@@ -1,0 +1,8 @@
+{{- /* Usage: {{ partial "ui/page-hero.html" (dict "label" "..." "title" "..." "sub" "...") }} */ -}}
+<section class="page-hero">
+  <div class="section-inner">
+    {{ with .label }}<div class="section-label">{{ . }}</div>{{ end }}
+    <h1 class="page-title">{{ .title }}</h1>
+    {{ with .sub }}<p class="page-sub">{{ . }}</p>{{ end }}
+  </div>
+</section>

@@ -1,11 +1,5 @@
 {{ define "main" }}
-<section class="page-hero">
-  <div class="section-inner">
-    <div class="section-label">{{ i18n "features_label" }}</div>
-    <h1 class="page-title">{{ i18n "feat_page_title" }}</h1>
-    <p class="page-sub">{{ i18n "feat_page_sub" }}</p>
-  </div>
-</section>
+{{ partial "ui/page-hero.html" (dict "label" (i18n "features_label") "title" (i18n "feat_page_title") "sub" (i18n "feat_page_sub")) }}
 
 <section class="feat-deep section-inner">
 
